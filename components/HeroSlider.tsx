@@ -12,7 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-// Dữ liệu bây giờ chỉ cần đường dẫn ảnh và alt text
+// Dữ liệu ảnh
 const slideImages = [
   {
     url: '/anh/1.webp',
@@ -34,33 +34,38 @@ const slideImages = [
 
 const HeroSlider = () => {
   return (
-    <section className="relative w-full h-[500px] lg:h-[600px]">
+    <section className="relative w-full h-[15vh] lg:h-[47vh]">
       <Swiper
         modules={[Navigation, Autoplay, EffectFade]}
         slidesPerView={1}
-        loop={true}
-        effect={'fade'} // Hiệu ứng mờ ảo khi chuyển ảnh
-        autoplay={{
-          delay: 4000, // Tự chuyển ảnh sau 4 giây
-          disableOnInteraction: false,
+        loop
+        effect="fade"
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         }}
-        navigation={true} // Giữ lại nút next/prev để người dùng điều khiển
         className="h-full"
       >
         {slideImages.map((slide, index) => (
           <SwiperSlide key={index}>
-            {/* Bây giờ bên trong slide chỉ còn duy nhất component Image */}
-            <Image
-              src={slide.url}
-              alt={slide.alt}
-              fill
-              style={{ objectFit: 'cover' }}
-              priority={index === 0}
-              sizes="100vw"
-              quality={85}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={slide.url}
+                alt={slide.alt}
+                fill
+                className="object-contain sm:object-cover"
+                priority={index === 0}
+                sizes="100vw"
+                quality={90}
+              />
+            </div>
           </SwiperSlide>
         ))}
+        
+        {/* Custom Navigation Buttons */}
+        <div className="swiper-button-prev !text-white !w-8 !h-8 sm:!w-10 sm:!h-10 !left-2 sm:!left-4 !bg-black/30 !rounded-full hover:!bg-black/50 transition-colors"></div>
+        <div className="swiper-button-next !text-white !w-8 !h-8 sm:!w-10 sm:!h-10 !right-2 sm:!right-4 !bg-black/30 !rounded-full hover:!bg-black/50 transition-colors"></div>
       </Swiper>
     </section>
   );

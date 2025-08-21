@@ -99,3 +99,23 @@ body {
 /* Các class cho Button, Card, Table, Form, Footer 
    đã được Tailwind CSS xử lý thông qua các utility class trong file HTML gốc.
    Vì vậy, bạn không cần thêm chúng vào đây nữa. */
+   .swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff !important; /* Dùng !important để ghi đè các style khác nếu có xung đột */
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
