@@ -1,23 +1,16 @@
-'use client';
-
-import { useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
+// app/san-pham/page.tsx
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
-export default function ProductsPage() {
-  const searchParams = useSearchParams();
-  const initialCategory = searchParams.get('category') || 'all';
-  
-  const filteredProducts = useMemo(() => {
-    if (initialCategory === 'all') {
-      return products;
-    }
-    return products.filter(p => p.categorySlug === initialCategory);
-  }, [initialCategory]);
+export default function SanPhamPage({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+  const initialCategory = (searchParams.category as string) || 'all';
+
+  const filteredProducts =
+    initialCategory === 'all'
+      ? products
+      : products.filter(p => p.categorySlug === initialCategory);
 
   return (
-    // 👇 THAY ĐỔI CHÍNH: Chúng ta sử dụng Fragment <> thay vì div có nền trắng
     <>
       <h1 className="text-3xl font-bold mb-8 pb-4 border-b text-blue-primary">
         Tất cả sản phẩm
