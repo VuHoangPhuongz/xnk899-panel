@@ -3,12 +3,12 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// ✅ Kiểu cho params
-type PageProps = {
+// ✅ dùng type chuẩn App Router
+interface NewsDetailPageProps {
   params: {
     slug: string;
   };
-};
+}
 
 // ✅ generateStaticParams cho SSG
 export async function generateStaticParams() {
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 // ✅ Trang chi tiết bài viết
-export default function NewsDetailPage({ params }: PageProps) {
+export default function NewsDetailPage({ params }: NewsDetailPageProps) {
   const article = newsData.find((p) => p.slug === params.slug);
 
   if (!article) {
