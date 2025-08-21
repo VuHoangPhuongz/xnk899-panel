@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #ffffff;
 }
+
+/* =========================
+       Green & Blue Brand Colors
+    ========================= */
+/* Các class này sẽ được thay thế bằng cấu hình của Tailwind, 
+   nhưng giữ lại để đảm bảo không bị lỗi giao diện trong quá trình chuyển đổi */
+.text-green-primary { color: #2ca84c; }
+.bg-green-primary { background-color: #2ca84c; }
+.hover\:bg-green-secondary:hover { background-color: #238b3d; }
+.border-green-primary { border-color: #2ca84c; }
+.group:hover .group-hover-text-green { color: #2ca84c; }
+
+.text-blue-primary { color: #004d80; }
+.bg-blue-primary { background-color: #004d80; }
+.hover\:bg-blue-secondary:hover { background-color: #00375c; }
+.border-blue-primary { border-color: #004d80; }
+.group:hover .group-hover-text-blue { color: #004d80; }
+
+/* =========================
+       Section Titles
+    ========================= */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2ca84c, #004d80);
+    margin: 8px auto 0;
+}
+
+.contact-section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #2ca84c, #004d80);
+    margin-top: 8px;
+}
+
+/* =========================
+       Page Navigation
+    ========================= */
+/* Trong Next.js, việc hiển thị trang được xử lý bởi routing, 
+   nên các class này không còn cần thiết, nhưng có thể giữ lại để tham chiếu. */
+.page-content { display: none; }
+.page-content.active { display: block; }
+
+.main-nav-link.active {
+    color: #166534; /* Tailwind green-800 */
+}
+
+.sidebar-link.active {
+    background-color: #004d80;
+    color: white;
+    border-right: 4px solid #2ca84c;
+}
+
+/* Các hiệu ứng hover đã được Tailwind xử lý, nhưng có thể giữ lại
+   hoặc chuyển đổi thành các class của Tailwind sau này. */
+.main-nav-link:hover,
+.sidebar-link:hover {
+    color: #2ca84c;
+    transition: color 0.3s ease;
+}
+
+/* =========================
+       Shape Dividers
+    ========================= */
+.ux-shape-divider--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.ux-shape-divider--top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.ux-shape-fill { fill: #FFFFFF; }
+
+/* Các class cho Button, Card, Table, Form, Footer 
+   đã được Tailwind CSS xử lý thông qua các utility class trong file HTML gốc.
+   Vì vậy, bạn không cần thêm chúng vào đây nữa. */
