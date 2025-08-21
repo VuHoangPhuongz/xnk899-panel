@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// ✅ dùng type chuẩn App Router
+// ✅ Đặt tên type khác, tránh conflict với PageProps của Next.js
 interface NewsDetailPageProps {
   params: {
     slug: string;
