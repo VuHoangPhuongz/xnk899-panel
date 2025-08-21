@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   return newsData.map((article) => ({ slug: article.slug }));
 }
 
-export default function NewsDetailPage({ params }: { params: { slug: string } }) {
+export default async function NewsDetailPage({ params }: { params: { slug: string } }) {
   const article = newsData.find(p => p.slug === params.slug);
 
   if (!article) {
