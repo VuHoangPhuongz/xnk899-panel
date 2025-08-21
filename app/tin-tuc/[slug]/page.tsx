@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Khai báo kiểu cho params
+// ✅ Kiểu cho params
 type PageProps = {
   params: {
     slug: string;
@@ -16,11 +16,11 @@ export async function generateStaticParams() {
 }
 
 // ✅ Trang chi tiết bài viết
-export default async function NewsDetailPage({ params }: PageProps) {
+export default function NewsDetailPage({ params }: PageProps) {
   const article = newsData.find((p) => p.slug === params.slug);
 
   if (!article) {
-    notFound(); // return notFound() là đúng, nhưng không cần return luôn
+    notFound();
   }
 
   return (
