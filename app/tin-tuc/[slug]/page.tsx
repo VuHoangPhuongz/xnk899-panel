@@ -3,10 +3,13 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// 🚀 Không dùng interface nữa, nhận props kiểu any và ép lại
-export default function NewsDetailPage(props: any) {
-  const { params } = props as { params: { slug: string } };
+type NewsDetailPageProps = {
+  params: {
+    slug: string;
+  };
+};
 
+export default function NewsDetailPage({ params }: NewsDetailPageProps) {
   const article = newsData.find((p) => p.slug === params.slug);
 
   if (!article) {
@@ -53,7 +56,6 @@ export default function NewsDetailPage(props: any) {
   );
 }
 
-// ✅ generateStaticParams cho SSG
 export async function generateStaticParams() {
   return newsData.map((article) => ({ slug: article.slug }));
 }
