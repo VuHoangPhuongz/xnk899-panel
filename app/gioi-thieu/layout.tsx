@@ -69,13 +69,13 @@ export default function GioiThieuLayout({
 
         {/* Nội dung */}
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase">Sản phẩm</h1>
+          <h1 className="text-4xl md:text-5xl font-bold uppercase">Giới thiệu</h1>
           <div className="mt-4 text-sm">
             <Link href="/" className="hover:text-green-primary transition-colors">
               Trang chủ
             </Link>
             <span className="mx-2">/</span>
-            <span>Sản phẩm</span>
+            <span>Giới thiệu</span>
           </div>
         </div>
       </section>

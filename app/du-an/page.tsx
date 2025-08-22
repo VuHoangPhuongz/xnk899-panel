@@ -16,6 +16,15 @@ const projects = [
     { imgSrc: "/anh/nha-xuong-tkg-eco-material-vina-68a481bbc7110.webp", title: "CÔNG TY TKG ECO MATERIAL VINA" },
     { imgSrc: "/anh/phu-son-68a481bdd3a9c.webp", title: "NHÀ MÁY XỬ LÝ RÁC THẢI PHÚ SƠN" },
     { imgSrc: "/anh/khu-cong-nghiep-hai-phong-68a481b13e312.webp", title: "Nhà máy A10 Khu công nghiệp Hải Phòng" },
+     { imgSrc: "/anh/projects/cong-ty-panel-viet-nam.jpg", title: "Công ty TNHH Công nghệ điện tử Panel Việt Nam - VSIP Bắc Ninh" },
+    { imgSrc: "/anh/projects/vpbank-diamond-lounge.webp", title: "KHU VỰC VPBANK DIAMOND LOUNGE - TẦNG 3 TÒA NHÀ NEXUS" },
+    { imgSrc: "/anh/projects/charm-long-hai-resort.webp", title: "CHARM LONG HẢI RESORT & SPA - Vũng Tàu" },
+    { imgSrc: "/anh/projects/cong-an-yen-bai.webp", title: "Công An Tỉnh Yên Bái" },
+    { imgSrc: "/anh/projects/nha-khach-my-khe.wedp", title: "Nhà khách Mỹ Khê (T50)/ Quân khu 5" },
+    { imgSrc: "/anh/projects/nha-kho-lanh-itl.webp", title: "NHÀ KHO LẠNH ITL, KCN VSIP, Bình Dương" },
+    { imgSrc: "/anh/projects/ubnd-yen-bai.jpg", title: "Trụ sở UBND Tỉnh Yên Bái" },
+    { imgSrc: "/anh/projects/kcn-dong-van-3.webp", title: "Khu công nghiệp hỗ trợ Đồng Văn III" },
+    { imgSrc: "/anh/projects/dh-y-khoa-pnt.webp", title: "Đại Học Y Khoa Phạm Ngọc Thạch - TP HCM" },
 ];
 
 export default function DuAnPage() {
