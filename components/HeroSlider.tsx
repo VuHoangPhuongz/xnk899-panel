@@ -15,20 +15,28 @@ import 'swiper/css/effect-fade';
 // Dữ liệu ảnh
 const slideImages = [
   {
-    url: '/anh/1.webp',
-    alt: 'Hình ảnh slider 1 - Giải pháp PCCC',
+    url: '/anh/slides/1.png',
+    alt: 'Hình ảnh slider 1 - Tổng họp sản phẩm ngăn cháy',
   },
   {
-    url: '/anh/2.webp',
-    alt: 'Hình ảnh slider 2 - Màn ngăn cháy tự động',
+    url: '/anh/slides/2.png',
+    alt: 'Hình ảnh slider 2 - Công nghệ và nhà máy sản xuất',
   },
   {
-    url: '/anh/3.webp',
-    alt: 'Hình ảnh slider 3 - Panel chống cháy',
+    url: '/anh/slides/3.png',
+    alt: 'Hình ảnh slider 3 - Màn ngăn cháy ',
   },
   {
-    url: '/anh/4.webp',
-    alt: 'Hình ảnh slider 4',
+    url: '/anh/slides/4.png',
+    alt: 'Hình ảnh slider 4 - Kính ngăn cháy',
+  },
+    {
+    url: '/anh/slides/5.png',
+    alt: 'Hình ảnh slider 5 - Cửa thép chống cháy ',
+  },
+    {
+    url: '/anh/slides/6.png',
+    alt: 'Hình ảnh slider 6 - Thông tin chung',
   },
 ];
 

@@ -4,7 +4,7 @@ export type Product = {
   name: string;
   price: number | null; // Cho phép giá là null nếu chỉ có "Liên hệ"
   category: string;
-  categorySlug: 'rem' | 'mgo' | 'panel' | 'keo' | 'ron';
+  categorySlug: 'rem' | 'mgo' | 'panel' | 'keo' | 'ron' | 'kinh-chong-chay';
   sku: string;
   images: string[];
   short_desc: string;
@@ -50,6 +50,139 @@ export const products: Product[] = [
     short_desc: 'Giải pháp cân bằng giữa chi phí và hiệu quả, cung cấp khả năng ngăn cháy và cách nhiệt trong 60 phút, phù hợp với đa số các công trình dân dụng và công nghiệp.',
     description: `<p>Rèm ngăn cháy EI 60 là lựa chọn phổ biến nhất hiện nay. Sản phẩm không chỉ đảm bảo các yêu cầu về PCCC mà còn có thiết kế hiện đại, dễ dàng lắp đặt và vận hành.</p>`,
     specs: {'Giới hạn chịu lửa': 'EI 60 phút (ngăn lửa và cách nhiệt)', 'Vật liệu': 'Vải thủy tinh phủ hợp chất chống cháy', 'Độ dày': '1.5mm - 2.5mm', 'Cơ chế hoạt động': 'Tự động, kết nối hệ thống báo cháy', 'Tiêu chuẩn': 'TCVN 9383:2012'}
+  },
+  {
+    "id": "kinh-chong-chay-e60-day-8mm",
+    "name": "Kính chống cháy E60, dày 8mm",
+    "price": 0,
+    "category": "Kính chống cháy",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-E60-8",
+    "images": [
+      "/files/sanpham/138/200_1/jpg/kinh-chong-chay-e60-day-8mm_200x200.jpg"
+    ],
+    "short_desc": "Kính chống cháy loại E60 với độ dày 8mm, đạt giới hạn chịu lửa 60 phút, chỉ ngăn lửa và khói, không ngăn nhiệt. Phù hợp cho vách ngăn, cửa quan sát tại các khu vực yêu cầu PCCC cơ bản.",
+    "description": "<p><strong>Kính chống cháy E60, dày 8mm</strong> là giải pháp kinh tế cho các công trình cần đảm bảo an toàn PCCC theo quy định. Kính duy trì tính toàn vẹn (E) trong 60 phút khi tiếp xúc với lửa, ngăn chặn hiệu quả sự lan truyền của lửa và khói.</p><h4>Đặc điểm kỹ thuật:</h4><ul><li><strong>Giới hạn chịu lửa:</strong> E60 (chỉ ngăn lửa, không ngăn nhiệt).</li><li><strong>Độ dày:</strong> 8mm.</li><li><strong>Cấu tạo:</strong> Kính cường lực được xử lý đặc biệt.</li><li><strong>Ứng dụng:</strong> Cửa đi, cửa sổ, vách ngăn trong các tòa nhà văn phòng, chung cư, nhà xưởng.</li></ul>",
+    "specs": {
+      "Giới hạn chịu lửa": "E60 (60 phút)",
+      "Độ dày": "8mm",
+      "Loại kính": "Kính cường lực chống cháy",
+      "Khả năng cách nhiệt": "Không (Chỉ ngăn lửa)"
+    }
+  },
+  {
+    "id": "kinh-chong-chay-cach-nhiet-ei30-day-22mm",
+    "name": "KÍNH CHỐNG CHÁY CÁCH NHIỆT EI30, KÍNH DÀY 22MM",
+    "price": 0,
+    "category": "Kính chống cháy cách nhiệt",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-EI30-22",
+    "images": [
+      "/files/sanpham/137/200_1/png/kinh-chong-chay-cach-nhiet-ei30-kinh-day-22mm_200x200.png"
+    ],
+    "short_desc": "Kính chống cháy cách nhiệt EI30, dày 22mm, có khả năng ngăn lửa, khói và cả nhiệt lượng trong 30 phút. Đảm bảo an toàn cho lối thoát hiểm, giúp người di tản không bị ảnh hưởng bởi sức nóng của đám cháy.",
+    "description": "<p><strong>Kính chống cháy cách nhiệt EI30</strong> là loại kính cao cấp, vừa duy trì tính toàn vẹn (E) vừa có khả năng cách nhiệt (I) trong 30 phút. Khi có hỏa hoạn, một mặt kính tiếp xúc với lửa nhưng mặt còn lại vẫn giữ nhiệt độ an toàn, không gây bỏng khi chạm vào.</p><h4>Ưu điểm vượt trội:</h4><ul><li><strong>An toàn tối đa:</strong> Ngăn chặn cả lửa, khói và nhiệt, bảo vệ lối thoát hiểm.</li><li><strong>Tầm nhìn rõ ràng:</strong> Giữ được độ trong suốt ngay cả khi tiếp xúc với nhiệt độ cao.</li><li><strong>Cấu tạo nhiều lớp:</strong> Gồm nhiều lớp kính và lớp keo ngăn cháy cách nhiệt ở giữa.</li></ul>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI30 (30 phút)",
+      "Độ dày": "22mm",
+      "Loại kính": "Kính nhiều lớp có keo cách nhiệt",
+      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
+    }
+  },
+  {
+    "id": "kinh-chong-chay-cach-nhiet-ei90-day-38mm",
+    "name": "Kính chống cháy cách nhiệt EI90, dày 38mm",
+    "price": 0,
+    "category": "Kính chống cháy cách nhiệt",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-EI90-38",
+    "images": [
+      "/files/sanpham/133/200_1/jpg/kinh-chong-chay-cach-nhiet-ei90-day-38mm_200x200.jpg"
+    ],
+    "short_desc": "Kính chống cháy cách nhiệt EI90, dày 38mm, cung cấp khả năng bảo vệ vượt trội, ngăn lửa, khói và nhiệt lên đến 90 phút. Giải pháp an toàn cho các công trình có yêu cầu PCCC nghiêm ngặt.",
+    "description": "<p><strong>Kính chống cháy cách nhiệt EI90, dày 38mm</strong> đáp ứng các tiêu chuẩn PCCC khắt khe nhất. Với khả năng chịu lửa và cách nhiệt lên tới 90 phút, sản phẩm là lựa chọn hàng đầu cho các khu vực trọng yếu như phòng máy, kho chứa vật liệu dễ cháy, và các khu vực cần thời gian di tản dài.</p><h4>Ứng dụng:</h4><ul><li>Vách kính ngăn cháy cho các khu vực có nguy cơ cháy nổ cao.</li><li>Cửa kính cho lối thoát hiểm trong các tòa nhà cao tầng, trung tâm thương mại.</li><li>Đảm bảo an toàn và tuân thủ Nghị định 136 về PCCC.</li></ul>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI90 (90 phút)",
+      "Độ dày": "38mm",
+      "Loại kính": "Kính nhiều lớp có keo cách nhiệt cao cấp",
+      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
+    }
+  },
+  {
+    "id": "kinh-chong-chay-cach-nhiet-ei120-day-38mm",
+    "name": "Kính chống cháy cách nhiệt EI120, dày 38mm",
+    "price": 0,
+    "category": "Kính chống cháy cách nhiệt",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-EI120-38",
+    "images": [
+      "/files/sanpham/132/200_1/jpg/kinh-chong-chay-cach-nhiet-ei120-day-38mm_200x200.jpg"
+    ],
+    "short_desc": "Kính chống cháy cách nhiệt EI120, dày 38mm. Đây là giải pháp an toàn PCCC cao cấp nhất, với khả năng ngăn lửa, khói và cách nhiệt toàn diện trong 120 phút.",
+    "description": "<p><strong>Kính chống cháy cách nhiệt EI120</strong> mang lại mức độ bảo vệ tối đa, đảm bảo tính toàn vẹn và khả năng cách nhiệt trong suốt 120 phút. Sản phẩm được sử dụng cho những công trình trọng điểm, yêu cầu an toàn PCCC ở mức cao nhất, giúp kéo dài thời gian vàng cho công tác cứu hộ và di tản.</p>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI120 (120 phút)",
+      "Độ dày": "38mm",
+      "Loại kính": "Kính nhiều lớp có keo cách nhiệt đặc biệt",
+      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
+    }
+  },
+  {
+    "id": "kinh-chong-chay-e90-day-10mm",
+    "name": "Kính chống cháy E90, dày 10mm",
+    "price": 0,
+    "category": "Kính chống cháy",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-E90-10",
+    "images": [
+      "/files/sanpham/131/200_1/jpg/kinh-chong-chay-e90-day-10mm_200x200.jpg"
+    ],
+    "short_desc": "Kính chống cháy loại E90, dày 10mm, có khả năng ngăn chặn lửa và khói trong thời gian tối thiểu 90 phút. Là lựa chọn tối ưu về chi phí cho các vách ngăn lớn cần thời gian chống cháy dài.",
+    "description": "<p><strong>Kính chống cháy E90, dày 10mm</strong> được thiết kế để duy trì tính toàn vẹn (ngăn lửa, khói) trong 90 phút. Sản phẩm không có chức năng cách nhiệt nhưng vẫn đảm bảo ngăn chặn sự bùng phát và lan truyền của đám cháy hiệu quả, tạo điều kiện cho việc sơ tán.</p>",
+    "specs": {
+      "Giới hạn chịu lửa": "E90 (90 phút)",
+      "Độ dày": "10mm",
+      "Loại kính": "Kính cường lực chống cháy",
+      "Khả năng cách nhiệt": "Không (Chỉ ngăn lửa)"
+    }
+  },
+  {
+    "id": "cua-kinh-ngan-chay-ei45-1-canh-mo-2-chieu",
+    "name": "CỬA KÍNH NGĂN CHÁY EI45 - 1 CÁNH MỞ 2 CHIỀU",
+    "price": 0,
+    "category": "Cửa kính chống cháy",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "CKCC-EI45-1C2C",
+    "images": [
+      "/files/sanpham/150/200_1/jpg/cua-kinh-ngan-chay-ei45-1-canh-mo-2-chieu_200x200.jpg"
+    ],
+    "short_desc": "Cửa kính ngăn cháy EI45 một cánh, sử dụng bản lề sàn mở 2 chiều tiện lợi. Hệ cửa đảm bảo khả năng ngăn lửa và cách nhiệt trong 45 phút, phù hợp làm cửa thoát hiểm, cửa thông phòng.",
+    "description": "<p>Hệ <strong>cửa kính ngăn cháy EI45</strong> được thiết kế hiện đại với khung thép chắc chắn và kính chống cháy cách nhiệt EI45. Bản lề sàn cho phép cửa mở được cả hai chiều, tự động đóng lại sau khi mở, luôn đảm bảo trạng thái an toàn PCCC. Sản phẩm vừa đảm bảo an toàn, vừa mang lại tính thẩm mỹ cao cho công trình.</p>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI45 (45 phút)",
+      "Vật liệu khung": "Thép sơn tĩnh điện",
+      "Kính": "Kính chống cháy cách nhiệt EI45",
+      "Phụ kiện": "Bản lề sàn, tay nắm, gioăng ngăn khói"
+    }
+  },
+  {
+    "id": "vach-kinh-ngan-chay-ei90",
+    "name": "VÁCH KÍNH NGĂN CHÁY EI90",
+    "price": 0,
+    "category": "Vách kính chống cháy",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "VKCC-EI90",
+    "images": [
+      "/files/sanpham/149/200_1/jpg/vach-kinh-ngan-chay-ei90_200x200.jpg"
+    ],
+    "short_desc": "Hệ vách kính cố định ngăn cháy tiêu chuẩn EI90. Sử dụng khung thép kiên cố và kính chống cháy cách nhiệt EI90, tạo ra một bức tường lửa trong suốt, ngăn chặn lửa, khói và nhiệt trong 90 phút.",
+    "description": "<p><strong>Vách kính ngăn cháy EI90</strong> là giải pháp phân chia không gian an toàn cho các hành lang, sảnh chờ, khu vực sản xuất. Hệ vách kính không chỉ đáp ứng yêu cầu nghiêm ngặt về PCCC mà còn giúp không gian thông thoáng, tận dụng ánh sáng tự nhiên.</p>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI90 (90 phút)",
+      "Vật liệu khung": "Thép, Inox",
+      "Kính": "Kính chống cháy cách nhiệt EI90",
+      "Đặc điểm": "Vách cố định"
+    }
   },
   // --- Tấm MGO ---
   {
@@ -198,7 +331,8 @@ export const products: Product[] = [
     short_desc: 'Loại ron dẻo, dễ dàng uốn lượn và lắp đặt cho các vị trí phức tạp, đảm bảo độ kín khít và khả năng ngăn cháy lan.',
     description: `<p>Giải pháp linh hoạt cho các loại cửa có hình dạng đặc biệt hoặc các khe hở không đồng đều.</p>`,
     specs: {'Vật liệu': 'Polymer chống cháy', 'Đóng gói': 'Cuộn', 'Tính năng': 'Linh hoạt, ngăn khói'}
-  }
+  },
+  
 ];
 
 // Định nghĩa danh mục sản phẩm để sử dụng cho sidebar và lọc
@@ -209,4 +343,6 @@ export const categories = [
     { name: 'Tấm Panel chống cháy', slug: 'panel' },
     { name: 'Keo chống cháy', slug: 'keo' },
     { name: 'Ron chống cháy', slug: 'ron' },
+    { name: 'Kính chống cháy', slug: 'kinh-chong-chay' },
+    { name: 'Cửa thép chống cháy', slug: 'kinh' },
 ];
