@@ -17,7 +17,7 @@ export default function HoSoNangLucPage() {
         <p><strong>Điện thoại:</strong> 0987 822 311 - 0987811 158 - 0989 253 992</p>
         <p><strong>Email:</strong> xnk899@gmail.com</p>
         <p><strong>Website:</strong> https://xnk899.com/</p>
-        <p><strong>Đại diện:</strong> Ông Nguyễn Văn Khánh - Chức vụ: Giám Đốc</p>
+        <p><strong>Đại diện:</strong> Ông  Hoàng Quốc Chiến - Chức vụ: Tổng Giám Đốc</p>
       </div>
       <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Lĩnh vực hoạt động</h3>
       <ul className="list-disc list-inside text-gray-600 space-y-2">

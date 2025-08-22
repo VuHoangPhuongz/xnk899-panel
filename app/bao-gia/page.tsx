@@ -27,9 +27,72 @@ export default function BaoGiaPage() {
                 
                 <h3 className="text-2xl font-bold mt-8">THÔNG TIN SẢN PHẨM</h3>
                 {/* Phần này trống theo yêu cầu, có thể bạn sẽ thêm nội dung sau */}
-                  <figure className="my-8">
-                    <Image src="/anh/baogia/thongtinsanpham.jpg" alt="So sánh trực quan các sản phẩm màn ngăn cháy" width={800} height={450} className="w-full rounded-lg shadow-md" />
-                </figure>
+                  <div className="overflow-x-auto border rounded-lg my-8 not-prose">
+      <table className="w-full text-sm">
+        <thead className="bg-gray-100 text-gray-800">
+          <tr>
+            <th className="p-4 font-bold text-left w-[20%]">Hạng mục</th>
+            <th className="p-4 font-bold text-left w-[30%]">Thông số kỹ thuật</th>
+            <th className="p-4 font-bold text-left w-[50%]">Mô tả chi tiết</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-200">
+          {/* Row 1 */}
+          <tr className="hover:bg-gray-50">
+            <td className="p-4 font-semibold align-top">Tên sản phẩm</td>
+            <td className="p-4 align-top">Màn ngăn cháy tự động</td>
+            <td className="p-4 align-top">
+              Giúp ngăn chặn sự lan truyền của khói và lửa, đảm bảo an toàn cho khu
+              vực lân cận.
+            </td>
+          </tr>
+          {/* Row 2 */}
+          <tr className="hover:bg-gray-50">
+            <td className="p-4 font-semibold align-top">Vải màn</td>
+            <td className="p-4 align-top">Sợi thủy tinh chịu nhiệt</td>
+            <td className="p-4 align-top">
+              Khả năng chịu nhiệt lên tới 120 phút (EI120) theo tiêu chuẩn quốc
+              tế.
+            </td>
+          </tr>
+          {/* Row 3 */}
+          <tr className="hover:bg-gray-50">
+            <td className="p-4 font-semibold align-top">Hộp kỹ thuật</td>
+            <td className="p-4 align-top">Thép mạ kẽm sơn tĩnh điện</td>
+            <td className="p-4 align-top">
+              Hộp cuộn màn được lắp đặt âm trần hoặc lộ thiên, đảm bảo thẩm mỹ và
+              an toàn.
+            </td>
+          </tr>
+          {/* Row 4 */}
+          <tr className="hover:bg-gray-50">
+            <td className="p-4 font-semibold align-top">Motor</td>
+            <td className="p-4 align-top">Ống quay chuyên dụng</td>
+            <td className="p-4 align-top">
+              Motor chạy êm, hiệu suất cao, có thể kết nối với hệ thống báo cháy
+              tự động.
+            </td>
+          </tr>
+          {/* Row 5 */}
+          <tr className="hover:bg-gray-50">
+            <td className="p-4 font-semibold align-top">Kích thước</td>
+            <td className="p-4 align-top">Tùy chỉnh theo yêu cầu</td>
+            <td className="p-4 align-top">
+              Chúng tôi sản xuất theo kích thước thực tế của từng công trình.
+            </td>
+          </tr>
+          {/* Row 6 */}
+          <tr className="hover:bg-gray-50">
+            <td className="p-4 font-semibold align-top">Chứng chỉ</td>
+            <td className="p-4 align-top">Giấy chứng nhận kiểm định PCCC</td>
+            <td className="p-4 align-top">
+              Sản phẩm đã được kiểm định và cấp phép bởi Cục Cảnh sát PCCC Việt
+              Nam.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
                 <h3 className="text-2xl font-bold mt-8"><strong>SO SÁNH TRỰC QUAN SẢN PHẨM</strong></h3>
                 <p>Mỗi sản phẩm đều có ưu điểm và tính chất riêng biệt, phù hợp với nhu cầu đa dạng của mọi khách hàng. Dưới đây là một bảng so sánh nhỏ để bạn có thể tham khảo thêm về sản phẩm của chúng tôi trước khi cân nhắc lựa chọn sản phẩm phù hợp:</p>
                 
@@ -39,9 +102,49 @@ export default function BaoGiaPage() {
                 <p>Màn ngăn cháy tại 899 IM-EX được sản xuất từ vải sợi thủy tinh phủ lớp chống cháy đặc biệt, chịu nhiệt lên đến 1000°C, giúp ngăn chặn lửa và khói lan rộng. Sản phẩm đạt tiêu chuẩn PCCC, thích hợp cho các tòa nhà, nhà xưởng, trung tâm thương mại và kho bãi.</p>
                 <p>Việc lựa chọn loại màn ngăn cháy nào phụ thuộc vào tính chất của công trình, yêu cầu PCCC của cơ quan chức năng và ngân sách đầu tư. Chúng tôi luôn sẵn sàng tư vấn để quý khách lựa chọn được sản phẩm phù hợp và an toàn nhất.</p>
 
-                  <figure className="my-8">
-                    <Image src="/anh/baogia/sosanhsanpham.jpg" alt="So sánh trực quan các sản phẩm màn ngăn cháy" width={800} height={450} className="w-full rounded-lg shadow-md" />
-                </figure>
+                  <div className="overflow-x-auto border rounded-lg my-8 not-prose">
+  <table className="w-full text-sm">
+    <thead className="bg-gray-100 text-gray-800">
+      <tr>
+        <th className="p-4 font-bold text-left w-1/5">Tiêu chí</th>
+        <th className="p-4 font-bold text-left w-2/5">Màn ngăn cháy EI30</th>
+        <th className="p-4 font-bold text-left w-2/5">Màn ngăn cháy EI90</th>
+      </tr>
+    </thead>
+    <tbody className="divide-y">
+      {/* Row 1: Khả năng chịu lửa & cách nhiệt */}
+      <tr className="hover:bg-gray-50">
+        <td className="p-4 font-semibold align-top">Khả năng chịu lửa & cách nhiệt</td>
+        <td className="p-4">Chịu lửa và cách nhiệt trong tối thiểu <strong>30 phút</strong>.</td>
+        <td className="p-4">Chịu lửa và cách nhiệt trong tối thiểu <strong>90 phút</strong>.</td>
+      </tr>
+      {/* Row 2: Cấu tạo */}
+      <tr className="hover:bg-gray-50">
+        <td className="p-4 font-semibold align-top">Cấu tạo</td>
+        <td className="p-4">Sử dụng vải chống cháy thông thường, có cấu tạo đơn giản.</td>
+        <td className="p-4">Sử dụng vải chống cháy cao cấp, độ dày và mật độ vật liệu cách nhiệt lớn hơn.</td>
+      </tr>
+      {/* Row 3: Ứng dụng */}
+      <tr className="hover:bg-gray-50">
+        <td className="p-4 font-semibold align-top">Ứng dụng</td>
+        <td className="p-4">Phù hợp cho các công trình dân dụng, chung cư, văn phòng có yêu cầu chống cháy cơ bản, nơi thời gian sơ tán ngắn.</td>
+        <td className="p-4">Được sử dụng tại các khu vực có nguy cơ cháy cao hơn như nhà xưởng, kho bãi, trung tâm thương mại lớn, nơi yêu cầu thời gian sơ tán dài hơn.</td>
+      </tr>
+      {/* Row 4: Giá thành */}
+      <tr className="hover:bg-gray-50">
+        <td className="p-4 font-semibold align-top">Giá thành</td>
+        <td className="p-4">Mức giá thấp, phù hợp với ngân sách tiết kiệm.</td>
+        <td className="p-4">Mức giá cao hơn, nhưng mang lại hiệu quả bảo vệ và an toàn vượt trội.</td>
+      </tr>
+      {/* Row 5: Điểm nổi bật */}
+      <tr className="hover:bg-gray-50">
+        <td className="p-4 font-semibold align-top">Điểm nổi bật</td>
+        <td className="p-4">Giải pháp kinh tế, hiệu quả cho các công trình có yêu cầu PCCC ở mức cơ bản.</td>
+        <td className="p-4">An toàn vượt trội, đáp ứng yêu cầu PCCC nghiêm ngặt tại các công trình trọng điểm.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
                 <div className="bg-blue-50 p-6 rounded-lg my-8 border-l-4 border-blue-primary">
                     <h3 className="mt-0">Phân biệt màn ngăn cháy theo tiêu chuẩn EI</h3>
