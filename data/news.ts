@@ -63,23 +63,34 @@ export const newsData: NewsArticle[] = [
       </p>
     `
   },
-  {
+   {
     id: 3,
     slug: '5-loi-ich-khi-chon-man-ngan-chay-899',
     title: '5 Lợi ích có được khi chọn màn ngăn cháy 899',
     excerpt: 'Không chỉ dừng lại ở chức năng bảo vệ, sản phẩm màn cuốn ngăn cháy của 899 IM-EX còn mang đến sự tiện nghi, tính thẩm mỹ và độ bền vượt trội.',
-    imageUrl: '/anh/news/5-loi-ich.jpg', // Thay bằng ảnh đại diện phù hợp
+    imageUrl: '/anh/news/5-loi-ich.jpg', // Ảnh chờ sẵn, bạn hãy đặt ảnh thật vào đây
     date: '2025-08-24',
     content: `
-      <p>Trong bối cảnh an toàn cháy nổ ngày càng được đặt lên hàng đầu, việc lựa chọn giải pháp phòng cháy hiệu quả không chỉ bảo vệ tài sản mà còn là bảo vệ tính mạng con người. Dưới đây là 5 lợi ích nổi bật mà bạn nhận được khi chọn màn ngăn cháy của chúng tôi:</p>
-      <ol>
-        <li><strong>An Toàn Tối Đa:</strong> Màn cuốn được làm từ vật liệu chống cháy đạt tiêu chuẩn quốc tế, có khả năng chịu lửa lên đến 90 phút, giúp ngăn lửa và khói lan rộng.</li>
-        <li><strong>Thiết Kế Gọn Gàng:</strong> Khác với các vách ngăn cứng, màn cuốn có thiết kế nhỏ gọn, chỉ hạ xuống khi cần thiết, đảm bảo thẩm mỹ và không gian sử dụng.</li>
-        <li><strong>Hoạt Động Tự Động:</strong> Hệ thống vận hành thông minh, tự động kích hoạt khi có tín hiệu báo cháy, không phụ thuộc vào thao tác thủ công.</li>
-        <li><strong>Độ Bền Cao:</strong> Sản phẩm được sản xuất từ vật liệu chất lượng cao, chống ăn mòn, chịu nhiệt tốt, tuổi thọ lên đến hàng chục năm.</li>
-        <li><strong>Dịch Vụ Trọn Gói:</strong> 899 IM-EX cung cấp dịch vụ tư vấn – thiết kế – lắp đặt – bảo trì tại tất cả các tỉnh thành trên cả nước.</li>
-      </ol>
-      <p>Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn.</p>
+      <p>Trong bối cảnh an toàn cháy nổ ngày càng được đặt lên hàng đầu, việc lựa chọn giải pháp phòng cháy hiệu quả không chỉ bảo vệ tài sản mà còn là bảo vệ tính mạng con người. <strong>Màn cuốn ngăn cháy</strong> của <strong>Công ty CP Xuất Nhập Khẩu 899 (899 IM-EX)</strong> chính là lựa chọn đáng tin cậy mà nhiều chủ đầu tư, doanh nghiệp và hộ gia đình đang tin dùng.</p>
+      <p>Dưới đây là 5 lợi ích nổi bật mà bạn nhận được khi chọn màn ngăn cháy của chúng tôi:</p>
+      
+      <h3>1. An Toàn Tối Đa – Bảo Vệ Con Người và Tài Sản</h3>
+      <p>Màn cuốn được làm từ vật liệu chống cháy đạt tiêu chuẩn quốc tế, có khả năng chịu lửa lên đến <strong>90 phút</strong>, giúp ngăn lửa và khói lan rộng. Khoảng thời gian quý giá này tạo điều kiện cho mọi người thoát hiểm an toàn và giảm thiểu thiệt hại tài sản.</p>
+      
+      <h3>2. Thiết Kế Gọn Gàng – Linh Hoạt Mọi Không Gian</h3>
+      <p>Khác với các vách ngăn cứng, màn cuốn ngăn cháy có thiết kế nhỏ gọn, chỉ hạ xuống khi cần thiết, đảm bảo <strong>thẩm mỹ và không gian sử dụng</strong>. Dù là nhà xưởng, văn phòng, trung tâm thương mại hay căn hộ cao tầng, sản phẩm vẫn phù hợp.</p>
+
+      <h3>3. Hoạt Động Tự Động – Tiết Kiệm Nhân Lực</h3>
+      <p>Hệ thống vận hành thông minh, tự động kích hoạt khi có tín hiệu báo cháy, không phụ thuộc vào thao tác thủ công. Điều này đặc biệt hữu ích trong tình huống khẩn cấp, khi mỗi giây đều quý giá.</p>
+      
+      <h3>4. Độ Bền Cao – Chi Phí Hợp Lý</h3>
+      <p>Sản phẩm được sản xuất từ vật liệu chất lượng cao, chống ăn mòn, chịu nhiệt tốt, <strong>tuổi thọ lên đến hàng chục năm</strong> nếu được bảo trì định kỳ. Đây là khoản đầu tư một lần nhưng mang lại giá trị lâu dài.</p>
+      
+      <h3>5. Dịch Vụ Trọn Gói – Hỗ Trợ Toàn Quốc</h3>
+      <p>Với đội ngũ kỹ thuật viên dày dặn kinh nghiệm, <strong>899 IM-EX</strong> cung cấp dịch vụ <strong>tư vấn – thiết kế – lắp đặt – bảo trì</strong> tại tất cả các tỉnh thành trên cả nước, đảm bảo khách hàng luôn yên tâm sử dụng.</p>
+
+      <p>🔥 <strong>Kết luận:</strong> Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là <strong>đầu tư vào sự an toàn và bền vững</strong> cho công trình của bạn.</p>
+      <p>📞 <strong>Liên hệ ngay hôm nay</strong> để được tư vấn giải pháp phù hợp nhất cho nhu cầu của bạn.</p>
     `
   },
     {
@@ -92,26 +103,26 @@ export const newsData: NewsArticle[] = [
     content: `
       <p>Trong bối cảnh các vụ cháy nổ tại nhà xưởng, trung tâm thương mại và tòa nhà cao tầng gia tăng, nhu cầu tìm kiếm giải pháp ngăn cháy hiệu quả đang trở thành mối quan tâm hàng đầu của các chủ đầu tư và đơn vị quản lý công trình trên khắp cả nước. Trong số các phương án được khuyến nghị, <strong>màn cuốn ngăn cháy</strong> đang nổi lên như một giải pháp an toàn – linh hoạt – thẩm mỹ.</p>
       
-      [cite_start]<p>Theo thống kê của Cục Cảnh sát PCCC và CNCH, chỉ trong 6 tháng đầu năm 2025, cả nước đã xảy ra hơn 1.500 vụ cháy, gây thiệt hại hàng trăm tỷ đồng[cite: 194]. [cite_start]Nhiều vụ hỏa hoạn cho thấy nguyên nhân thương vong cao là do lửa lan nhanh qua các khu vực thông tầng, cửa ra vào hoặc hành lang không có hệ thống ngăn cách phù hợp[cite: 195].</p>
+      <p>Theo thống kê của Cục Cảnh sát PCCC và CNCH, chỉ trong 6 tháng đầu năm 2025, cả nước đã xảy ra hơn 1.500 vụ cháy, gây thiệt hại hàng trăm tỷ đồng[cite: 194]. [cite_start]Nhiều vụ hỏa hoạn cho thấy nguyên nhân thương vong cao là do lửa lan nhanh qua các khu vực thông tầng, cửa ra vào hoặc hành lang không có hệ thống ngăn cách phù hợp[cite: 195].</p>
       
-      [cite_start]<p>Màn cuốn ngăn cháy được chế tạo từ vật liệu chịu nhiệt đặc biệt, có khả năng ngăn lửa và khói lan rộng, giúp kéo dài thời gian thoát hiểm và giảm thiểu thiệt hại[cite: 196]. [cite_start]So với vách ngăn cố định, màn cuốn có thể thu gọn khi không sử dụng, giữ nguyên không gian thoáng đãng và tính thẩm mỹ cho công trình[cite: 197].</p>
+      <p>Màn cuốn ngăn cháy được chế tạo từ vật liệu chịu nhiệt đặc biệt, có khả năng ngăn lửa và khói lan rộng, giúp kéo dài thời gian thoát hiểm và giảm thiểu thiệt hại[cite: 196]. [cite_start]So với vách ngăn cố định, màn cuốn có thể thu gọn khi không sử dụng, giữ nguyên không gian thoáng đãng và tính thẩm mỹ cho công trình[cite: 197].</p>
 
       <figure class="my-6">
         <img src="/anh/news/man-cuon-trong-nha.jpg" alt="Màn cuốn ngăn cháy lắp đặt tại lối đi" class="w-full rounded-lg shadow-md" />
       </figure>
 
-      [cite_start]<p>Ông Lê Đức Toàn, đại diện Công ty Cổ phần Xuất nhập khẩu 899 – đơn vị cung cấp và thi công màn cuốn ngăn cháy trên toàn quốc – cho biết: “Chúng tôi đã triển khai lắp đặt màn cuốn ngăn cháy cho nhiều công trình từ Bắc vào Nam, bao gồm trung tâm thương mại, nhà xưởng và tòa nhà văn phòng. Giải pháp này vừa tiết kiệm chi phí xây dựng, vừa đạt tiêu chuẩn PCCC khắt khe.” [cite: 198, 199]</p>
+      <p>Ông Lê Đức Toàn, đại diện Công ty Cổ phần Xuất nhập khẩu 899 – đơn vị cung cấp và thi công màn cuốn ngăn cháy trên toàn quốc – cho biết: “Chúng tôi đã triển khai lắp đặt màn cuốn ngăn cháy cho nhiều công trình từ Bắc vào Nam, bao gồm trung tâm thương mại, nhà xưởng và tòa nhà văn phòng. Giải pháp này vừa tiết kiệm chi phí xây dựng, vừa đạt tiêu chuẩn PCCC khắt khe.” [cite: 198, 199]</p>
       
-      [cite_start]<p>Đặc biệt, màn cuốn ngăn cháy hiện nay có thể tích hợp hệ thống báo cháy tự động: khi phát hiện nhiệt độ hoặc khói bất thường, màn sẽ tự động hạ xuống, tạo lớp chắn an toàn và hạn chế tối đa nguy cơ cháy lan[cite: 200].</p>
+      <p>Đặc biệt, màn cuốn ngăn cháy hiện nay có thể tích hợp hệ thống báo cháy tự động: khi phát hiện nhiệt độ hoặc khói bất thường, màn sẽ tự động hạ xuống, tạo lớp chắn an toàn và hạn chế tối đa nguy cơ cháy lan[cite: 200].</p>
       
       <figure class="my-6">
         <img src="/anh/news/man-cuon-trung-tam-thuong-mai.jpg" alt="Màn cuốn ngăn cháy lắp đặt tại trung tâm thương mại" class="w-full rounded-lg shadow-md" />
       </figure>
 
-      [cite_start]<p>Với ưu điểm an toàn, tiện lợi và tính ứng dụng cao, màn cuốn ngăn cháy đang trở thành lựa chọn ưu tiên của nhiều công trình hiện đại trên toàn quốc[cite: 201]. [cite_start]Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn[cite: 202].</p>
+      <p>Với ưu điểm an toàn, tiện lợi và tính ứng dụng cao, màn cuốn ngăn cháy đang trở thành lựa chọn ưu tiên của nhiều công trình hiện đại trên toàn quốc[cite: 201]. [cite_start]Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn[cite: 202].</p>
       
       <h3>📞 Liên hệ ngay hôm nay để được tư vấn giải pháp phù hợp nhất:</h3>
-      [cite_start]<p>0987822311 / 0987811158 / 0384 358 988 / 0383 522 018 [cite: 204]</p>
+      <p>0987822311 / 0987811158 / 0384 358 988 / 0383 522 018 [cite: 204]</p>
     `
   },
   {
@@ -241,7 +252,7 @@ export const newsData: NewsArticle[] = [
     slug: 'man-cuon-va-cua-cuon-ngan-chay-giai-phap-nao-toi-uu',
     title: 'Màn cuốn và cửa cuốn ngăn cháy: Đâu là giải pháp tối ưu?',
     excerpt: 'Cả hai đều có khả năng chống cháy, nhưng sự khác biệt lại quyết định đến tính an toàn, thẩm mỹ và chi phí lâu dài của công trình.',
-    imageUrl: '/anh/news/so-sanh-man-cua.jpg',
+    imageUrl: '/anh/news/man-cuon-trung-tam-thuong-mai.jpg',
     date: '2025-08-12',
     content: `
       <p>Trên thị trường hiện nay, hai sản phẩm phổ biến nhất là màn cuốn ngăn cháy và cửa cuốn ngăn cháy. Đâu là giải pháp tối ưu?</p>
