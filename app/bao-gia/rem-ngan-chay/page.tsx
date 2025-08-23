@@ -31,7 +31,7 @@ export default function BaoGiaRemPage() {
                         <td className="p-4 font-semibold align-top">Vải màn</td>
                         <td className="p-4 align-top">Sợi thủy tinh chịu nhiệt</td>
                         <td className="p-4 align-top">
-                          Khả năng chịu nhiệt lên tới 120 phút (EI120) theo tiêu chuẩn quốc
+                          Khả năng chịu nhiệt lên tới 90 phút (EI90) theo tiêu chuẩn quốc
                           tế.
                         </td>
                       </tr>

@@ -9,7 +9,7 @@ import NewsSidebar from '@/components/NewsSidebar'; // 👈 Import sidebar tin t
 const BaoGiaSidebar = () => {
   const pathname = usePathname();
   const links = [
-    { href: '/bao-gia/rem-ngan-chay', label: 'Báo giá Rèm ngăn cháy' },
+    { href: '/bao-gia/rem-ngan-chay', label: 'Báo giá Màn/Rèm ngăn cháy' },
     { href: '/bao-gia/kinh-chong-chay', label: 'Báo giá Kính chống cháy' },
     { href: '/bao-gia/cua-thep-chong-chay', label: 'Báo giá Cửa thép chống cháy' },
   ];

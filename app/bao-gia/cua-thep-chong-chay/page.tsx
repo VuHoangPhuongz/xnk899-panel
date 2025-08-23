@@ -52,7 +52,12 @@ export default function BaoGiaCuaThepPage() {
                         <tr><td className="p-3 font-semibold align-top">Điểm nổi bật</td><td className="p-3">Giải pháp kinh tế cho nhu cầu chống cháy cơ bản.</td><td className="p-3">Hiệu quả bảo vệ và an toàn vượt trội, đáp ứng yêu cầu PCCC khắt khe.</td><td className="p-3">Đạt chuẩn cao nhất về PCCC, đảm bảo an toàn tuyệt đối cho khu vực quan trọng.</td></tr>
                     </tbody>
                 </table>
+                
             </div>
+            <p>Báo giá Màn ngăn cháy phụ thuộc bởi nhiều yếu tố như các số liệu, kích thước, giới hạn chịu lửa, chi phí lắp đặt. Vì vậy, để nhận được báo giá chính xác và tốt nhất, Quý khách hàng vui lòng liên hệ trực tiếp với chúng tôi.</p>
+                            <p className="font-semibold">
+                                Hotline: 0987822311 / 0987811158 / 0384 358 988 / 0383 522 018
+                            </p>
         </>
     )
 }
