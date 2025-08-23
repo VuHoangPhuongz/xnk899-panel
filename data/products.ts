@@ -371,5 +371,5 @@ export const categories = [
     { name: 'Keo chống cháy', slug: 'keo' },
     { name: 'Ron chống cháy', slug: 'ron' },
     { name: 'Kính chống cháy', slug: 'kinh-chong-chay' },
-    { name: 'Cửa thép chống cháy', slug: 'kinh' },
+    { name: 'Cửa thép chống cháy', slug: 'cua-thep' },
 ];
