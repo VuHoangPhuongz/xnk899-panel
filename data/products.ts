@@ -128,7 +128,7 @@ export const products: Product[] = [
   },
   {
     "id": "kinh-chong-chay-cach-nhiet-ei30-day-22mm",
-    "name": "Kính chống cháy cách nheiejt EI30, dày 22mm",
+    "name": "Kính chống cháy cách nhiệt EI30, dày 22mm",
     "price": 0,
     "category": "Kính chống cháy cách nhiệt",
     "categorySlug": "kinh-chong-chay",
@@ -196,7 +196,7 @@ export const products: Product[] = [
   },
   {
     "id": "cua-kinh-ngan-chay-ei45-1-canh-mo-2-chieu",
-    "name": "CỬA KÍNH NGĂN CHÁY EI45 - 1 CÁNH MỞ 2 CHIỀU",
+    "name": "Cửa kính ngăn cháy EI45 - 1 cánh mở 2 chiều",
     "price": 0,
     "category": "Cửa kính chống cháy",
     "categorySlug": "kinh-chong-chay",
@@ -251,7 +251,7 @@ export const products: Product[] = [
   // --- Tấm Panel ---
   {
     id: 'panel-xop-10cm',
-    name: 'PANEL LÕI XỐP THƯỜNG DÀY 10 CM',
+    name: 'Panel lõi xốp thường dày 10cm',
     price: 0,
     category: 'Tấm Panel chống cháy',
     categorySlug: 'panel',
@@ -263,7 +263,7 @@ export const products: Product[] = [
   },
   {
     id: 'panel-bong-khoang-100mm',
-    name: 'PANEL LÕI BÔNG KHOÁNG DÀY 100 MM',
+    name: 'Panel lõi bông khoáng 100mm',
     price: 0,
     category: 'Tấm Panel chống cháy',
     categorySlug: 'panel',
@@ -275,7 +275,7 @@ export const products: Product[] = [
   },
   {
     id: 'panel-mai-rockwool',
-    name: 'PANEL MÁI LÕI BÔNG KHOÁNG (ROCKWOOL)',
+    name: 'Panel mái lõi bông khoáng (ROCKWOOL)',
     price: 0,
     category: 'Tấm Panel chống cháy',
     categorySlug: 'panel',

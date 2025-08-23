@@ -10,7 +10,7 @@ export default function HoSoNangLucPage() {
     <div className="prose max-w-none prose-p:my-3">
       <h1 className="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b mt-0">Hồ Sơ Năng Lực</h1>
       <div className="space-y-4 text-gray-700">
-        <p><strong>Tên công ty:</strong> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</p>
+        <p><strong>Tên công ty:</strong> <strong>CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</strong></p>
         <p><strong>Mã số thuế:</strong> 0109676893</p>
         <p><strong>Trụ sở:</strong> Số 97 ngõ 143 đường Xuân Phương, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</p>
         <p><strong>VPGD:</strong> Housinco Premium - 288 Nguyễn Xiển - Thanh Liệt - Hà Nội.</p>
