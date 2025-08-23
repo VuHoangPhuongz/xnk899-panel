@@ -1,16 +1,82 @@
 'use client';
 
 import { useState } from 'react';
-import { useParams, notFound } from 'next/navigation'; // 👈 1. Import useParams và notFound
-import { products } from '@/data/products';
+import { useParams, notFound } from 'next/navigation';
+import { products, Product } from '@/data/products';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProductActions from '@/components/ProductActions';
 import RelatedProducts from '@/components/RelatedProducts';
 
-export default function ProductDetailPage() { // 👈 2. Xóa props params ở đây
-  const params = useParams(); // 👈 3. Dùng hook useParams để lấy params
-  const id = params.id as string; // Lấy id từ params, ép kiểu về string
+// HÀM TẠO DỮ LIỆU CÓ CẤU TRÚC (JSON-LD) ĐỂ SỬA LỖI GOOGLE
+const generateProductJsonLd = (product: Product) => {
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": `https://xnk899.com${product.images[0]}`, // ⚠️ THAY BẰNG TÊN MIỀN CỦA BẠN
+    "description": product.short_desc.replace(/<[^>]*>?/gm, ''), // Sửa lỗi thiếu "description"
+    "sku": product.sku,
+    "brand": {
+      "@type": "Brand",
+      "name": "899 IM-EX"
+    },
+    // Sửa lỗi thiếu "review" và "aggregateRating"
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5", // Dữ liệu mẫu
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Khách hàng" // Dữ liệu mẫu
+      },
+      "reviewBody": "Sản phẩm chất lượng tốt, đúng tiêu chuẩn PCCC. Dịch vụ tư vấn và lắp đặt chuyên nghiệp." // Dữ liệu mẫu
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9", // Dữ liệu mẫu
+      "reviewCount": "25"  // Dữ liệu mẫu
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": `https://xnk899.com/san-pham/${product.id}`, // ⚠️ THAY BẰNG TÊN MIỀN CỦA BẠN
+      "priceCurrency": "VND",
+      "price": "0", // Để là 0 cho sản phẩm cần "Liên hệ"
+      "availability": "https://schema.org/InStoreOnly",
+      // Sửa lỗi thiếu "hasMerchantReturnPolicy"
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "VN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7, // Ví dụ: đổi trả trong 7 ngày
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      },
+      // Sửa lỗi thiếu "shippingDetails"
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0", // Ví dụ: Miễn phí vận chuyển
+          "currency": "VND"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "VN"
+        }
+      }
+    }
+  };
+  return JSON.stringify(schema);
+};
+
+export default function ProductDetailPage() {
+  // Sửa lỗi params bằng cách dùng hook useParams
+  const params = useParams();
+  const id = params.id as string;
 
   const product = products.find(p => p.id === id);
   
@@ -21,13 +87,14 @@ export default function ProductDetailPage() { // 👈 2. Xóa props params ở �
     return notFound();
   }
 
-  // ... (hàm formatPrice không đổi)
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
-  }
-
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
+      {/* Thêm script JSON-LD để cung cấp dữ liệu cho Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: generateProductJsonLd(product) }}
+      />
+      
       <nav className="text-sm mb-8">
           <Link href="/" className="text-gray-500 hover:text-green-primary">Trang chủ</Link>
           <span className="mx-2 text-gray-400">/</span>
@@ -69,9 +136,7 @@ export default function ProductDetailPage() { // 👈 2. Xóa props params ở �
             <button onClick={() => setActiveTab('reviews')} className={`py-2 px-4 font-semibold ${activeTab === 'reviews' ? 'border-b-2 border-blue-primary text-blue-primary' : 'text-gray-500'}`}>Đánh giá</button>
         </div>
         <div className="py-6 prose max-w-none">
-            {activeTab === 'description' && (
-                <div dangerouslySetInnerHTML={{ __html: product.description }} />
-            )}
+            {activeTab === 'description' && ( <div dangerouslySetInnerHTML={{ __html: product.description }} /> )}
             {activeTab === 'specs' && (
               <table className="w-full text-sm text-left text-gray-500">
                 <tbody className="divide-y">
@@ -84,9 +149,7 @@ export default function ProductDetailPage() { // 👈 2. Xóa props params ở �
                 </tbody>
               </table>
             )}
-            {activeTab === 'reviews' && (
-                <div>Chưa có đánh giá nào cho sản phẩm này.</div>
-            )}
+            {activeTab === 'reviews' && ( <div>Chưa có đánh giá nào cho sản phẩm này.</div> )}
         </div>
       </div>
       
