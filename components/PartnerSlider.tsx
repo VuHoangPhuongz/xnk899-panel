@@ -7,7 +7,7 @@ import 'swiper/css';
 
 const partners = [
      { src: "/anh/789 bo quoc phong.jpg", alt: "Bộ quốc phòng logo" },
-    { src: "/anh/logo-saokim-cong-ty.png", alt: "GRAND M & E Logo" },
+    { src: "/anh/grand m-e.jpg", alt: "GRAND M & E Logo" },
     { src: "/anh/logocongtyimc6.png", alt: "IMC Logo" },
     // Thêm các logo khác nếu có, có thể lặp lại để slider trông đầy đặn hơn
     { src: "/anh/logo-songda.png", alt: "Sông Đà logo" },
