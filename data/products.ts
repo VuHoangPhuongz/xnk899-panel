@@ -70,7 +70,7 @@ export const products: Product[] = [
   },
   {
     "id": "kinh-chong-chay-cach-nhiet-ei30-day-22mm",
-    "name": "KÍNH CHỐNG CHÁY CÁCH NHIỆT EI30, KÍNH DÀY 22MM",
+    "name": "Kính chống cháy cách nheiejt EI30, dày 22mm",
     "price": 0,
     "category": "Kính chống cháy cách nhiệt",
     "categorySlug": "kinh-chong-chay",
