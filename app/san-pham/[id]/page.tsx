@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ProductActions from '@/components/ProductActions';
 import RelatedProducts from '@/components/RelatedProducts';
-
+import ProductReviews from '@/components/ProductReviews';
 // HÀM TẠO DỮ LIỆU CÓ CẤU TRÚC (JSON-LD) ĐỂ SỬA LỖI GOOGLE
 const generateProductJsonLd = (product: Product) => {
   const schema = {
@@ -149,7 +149,9 @@ export default function ProductDetailPage() {
                 </tbody>
               </table>
             )}
-            {activeTab === 'reviews' && ( <div>Chưa có đánh giá nào cho sản phẩm này.</div> )}
+            {activeTab === 'reviews' && (
+                <ProductReviews />
+            )}
         </div>
       </div>
       
