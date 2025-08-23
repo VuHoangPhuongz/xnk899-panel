@@ -12,8 +12,8 @@ export default function HoSoNangLucPage() {
       <div className="space-y-4 text-gray-700">
         <p><strong>Tên công ty:</strong> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</p>
         <p><strong>Mã số thuế:</strong> 0109676893</p>
-        <p><strong>Trụ sở:</strong> Số 97 ngõ 143 đường Xuân Phương, Phường Phương Canh, Quận Nam Từ Liêm, Thành phố Hà Nội, Việt Nam</p>
-        <p><strong>VPGD:</strong> Phòng 403, tầng 4 Tòa HOUSINCO Premium, số 288 Nguyễn Xiển, Tân Triều, Thanh Trì, TP. Hà Nội.</p>
+        <p><strong>Trụ sở:</strong> Số 97 ngõ 143 đường Xuân Phương, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</p>
+        <p><strong>VPGD:</strong> Housinco Premium - 288 Nguyễn Xiển - Thanh Liệt - Hà Nội.</p>
         <p><strong>Điện thoại:</strong> 0987 822 311 - 0987811 158 - 0989 253 992</p>
         <p><strong>Email:</strong> xnk899@gmail.com</p>
         <p><strong>Website:</strong> https://xnk899.com/</p>

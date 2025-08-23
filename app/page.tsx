@@ -21,7 +21,7 @@ export default function HomePage() {
                 <div className="relative">
                     <div className="absolute -top-4 -left-4 w-full h-full border-4 border-green-primary rounded-lg z-0"></div>
                     <Image 
-                      src="/anh/anh gioi thieu.png" 
+                      src="/anh/gioi thieu.png" 
                       alt="Về chúng tôi"
                       width={600}
                       height={400}
