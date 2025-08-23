@@ -15,7 +15,7 @@ export default function ChinhSachBaoMatPage() {
         </div>
         <div>
           <h4 className="text-lg font-bold text-gray-700 mb-2">2. Phạm vi sử dụng thông tin</h4>
-          <p>Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ Công ty CP SX TM XNK 899. Chúng tôi cam kết không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng cho một bên thứ ba nào khác.</p>
+          <p>Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ Công ty CP XNK & XD 899. Chúng tôi cam kết không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng cho một bên thứ ba nào khác.</p>
         </div>
         <div>
           <h4 className="text-lg font-bold text-gray-700 mb-2">3. Thời gian lưu trữ thông tin</h4>

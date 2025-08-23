@@ -6,9 +6,9 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const partners = [
-    { src: "/anh/gobiz logo.webp", alt: "Gobiz Logo" },
-    { src: "/anh/logo-vietnordic-68a481b36be2d.webp", alt: "Vietnordic Logo" },
-    { src: "/anh/vntradesg-logo-68a481ca0cea0.webp", alt: "Vntradesg Logo" },
+     { src: "/anh/logo-songda.png", alt: "Sông Đà logo" },
+    { src: "/anh/Logo.svg", alt: "Conteccons Logo" },
+    { src: "/anh/logocongtyimc6.png", alt: "IMC Logo" },
     // Thêm các logo khác nếu có, có thể lặp lại để slider trông đầy đặn hơn
     { src: "/anh/logo-songda.png", alt: "Sông Đà logo" },
     { src: "/anh/Logo.svg", alt: "Conteccons Logo" },

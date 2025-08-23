@@ -30,7 +30,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-gray-700 leading-relaxed">
                     <h2 className="text-3xl lg:text-4xl font-bold text-blue-primary mb-6">
-                        Giới thiệu về XNK và Xây Dựng 899
+                        Giới thiệu về 899 IMEX
                     </h2>
                     <p className='mb-4'><strong>Công ty cổ phần xuất nhập khẩu và xây dựng 899</strong> xin gửi tới Quý khách hàng lời chào trân trọng nhất!</p>
                     <p className='mb-4'>Với kinh nghiệm chuyên sâu về các sản phẩm PCCC, Công ty xuất nhập khẩu 899 phủ sóng toàn quốc các mặt hàng: Rèm/ Màn ngăn cháy, kính ngăn cháy hệ E, EI, khung thép ngăn cháy, và các sản phẩm ngăn cháy khác.</p>

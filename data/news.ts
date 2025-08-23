@@ -174,7 +174,7 @@ export const newsData: NewsArticle[] = [
     slug: 'hieu-dung-ve-co-che-hoat-dong-cua-man-cuon-ngan-chay',
     title: 'Hiểu đúng về cơ chế hoạt động của màn cuốn ngăn cháy',
     excerpt: 'Màn cuốn ngăn cháy không chỉ đơn thuần là “hạ xuống khi có cháy” mà là cả một chuỗi cơ chế liên hoàn giữa hệ thống báo cháy, bộ điều khiển, motor điện...',
-    imageUrl: '/anh/news/man-cuon-co-che.jpg',
+    imageUrl: '/anh/news/Co-che-man-ngan-chay.jpg',
     date: '2025-08-20',
     content: `
       <p>Màn cuốn ngăn cháy được thiết kế vận hành hoàn toàn tự động, đồng bộ với hệ thống báo cháy trung tâm. Nguyên lý hoạt động có thể mô tả qua các bước sau:</p>

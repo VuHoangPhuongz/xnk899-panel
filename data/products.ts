@@ -4,7 +4,7 @@ export type Product = {
   name: string;
   price: number | null; // Cho phép giá là null nếu chỉ có "Liên hệ"
   category: string;
-   categorySlug: 'rem' | 'mgo' | 'panel' | 'keo' | 'ron' | 'kinh-chong-chay' | 'cua-thep';
+   categorySlug: 'rem' | 'mgo' | 'panel' | 'kinh-chong-chay' | 'cua-thep';
   sku: string;
   images: string[];
   short_desc: string;
@@ -285,81 +285,6 @@ export const products: Product[] = [
     description: `<p>Thiết kế sóng tôn đặc biệt giúp tăng độ cứng và khả năng thoát nước cho mái nhà xưởng, nhà kho.</p>`,
     specs: {'Loại': 'Panel lợp mái', 'Lõi': 'Bông khoáng (Rockwool)', 'Số sóng': '3 sóng / 5 sóng', 'Chống cháy': 'Lên đến 2 giờ'}
   },
-  // --- Keo Chống Cháy ---
-  {
-    id: 'keo-f200',
-    name: 'Keo Silicone chống cháy Ssangkom Topseal F200',
-    price: 0,
-    category: 'Keo chống cháy',
-    categorySlug: 'keo',
-    sku: 'KEO-01',
-    images: ['/anh/keo-f200-68a481ae7cd20.webp'],
-    short_desc: 'Keo silicone cao cấp gốc Acrylic, chuyên dụng để trám, bịt kín các khe hở, mối nối trong hệ thống PCCC, ngăn cháy lan hiệu quả.',
-    description: `<p>Sản phẩm có khả năng bám dính tốt trên nhiều loại vật liệu xây dựng và chịu được nhiệt độ cao.</p>`,
-    specs: {'Thương hiệu': 'Ssangkom Topseal', 'Mã sản phẩm': 'F200', 'Gốc': 'Acrylic', 'Ứng dụng': 'Trám khe hở, ống gió, vách ngăn'}
-  },
-  {
-    id: 'keo-m1',
-    name: 'Keo silicone chống cháy Fixacryl M1 Grey 300 ml',
-    price: 0,
-    category: 'Keo chống cháy',
-    categorySlug: 'keo',
-    sku: 'KEO-02',
-    images: ['/anh/keo-m1-68a481af49245.webp'],
-    short_desc: 'Keo silicone chống cháy lan gốc Acrylic Polymer, đạt tiêu chuẩn M1 của Pháp về chống cháy.',
-    description: `<p>Dùng để bịt kín các khe co giãn, mối nối tường, cửa chống cháy, đảm bảo tính toàn vẹn của kết cấu khi có hỏa hoạn.</p>`,
-    specs: {'Thương hiệu': 'Fixacryl', 'Mã sản phẩm': 'M1', 'Màu sắc': 'Xám (Grey)', 'Dung tích': '300 ml'}
-  },
-  {
-    id: 'keo-m1c',
-    name: 'KEO SILICONE CHỐNG CHÁY LAN SELSIL M1C',
-    price: 0,
-    category: 'Keo chống cháy',
-    categorySlug: 'keo',
-    sku: 'KEO-03',
-    images: ['/anh/keo-m1c-68a481b03777f.webp'],
-    short_desc: 'Keo trám gốc Acrylic có khả năng trương nở khi gặp nhiệt độ cao, tạo thành một lớp than hóa ngăn chặn lửa và khói hiệu quả.',
-    description: `<p>Được sử dụng rộng rãi trong việc thi công các hệ thống PCCC cho tòa nhà cao tầng, nhà máy.</p>`,
-    specs: {'Thương hiệu': 'Selsil', 'Mã sản phẩm': 'M1C', 'Tính năng': 'Trương nở khi gặp nhiệt', 'Đóng gói': 'Tuýp 310ml'}
-  },
-  // --- Ron Chống Cháy ---
-  {
-    id: 'ron-cua-thep',
-    name: 'Ron chống cháy cửa thép',
-    price: 0,
-    category: 'Ron chống cháy',
-    categorySlug: 'ron',
-    sku: 'RON-01',
-    images: ['/anh/ron-chong-chay-cua-thep-300x300-68a481c75cc6f.webp'],
-    short_desc: 'Ron (gioăng) cao su chuyên dụng cho cửa thép chống cháy, giúp làm kín khít giữa cánh và khung cửa, ngăn khói độc lan tỏa.',
-    description: `<p>Ron cao su có độ đàn hồi tốt, chịu được nhiệt độ cao và không bị lão hóa theo thời gian.</p>`,
-    specs: {'Vật liệu': 'Cao su EPDM', 'Ứng dụng': 'Lắp đặt trên khung cửa thép chống cháy', 'Tính năng': 'Ngăn khói, giảm chấn'}
-  },
-  {
-    id: 'ron-thanh',
-    name: 'Ron chống cháy thanh',
-    price: 0,
-    category: 'Ron chống cháy',
-    categorySlug: 'ron',
-    sku: 'RON-02',
-    images: ['/anh/ron-chong-chay-thanh-300x300-68a481c837eba.webp'],
-    short_desc: 'Thanh ron (intumescent strip) có khả năng trương nở gấp nhiều lần thể tích ban đầu khi tiếp xúc nhiệt độ cao, bịt kín hoàn toàn khe hở cửa.',
-    description: `<p>Thường được dán vào mép cánh cửa hoặc khung bao, là thành phần bắt buộc trong cửa chống cháy EI.</p>`,
-    specs: {'Vật liệu': 'Graphite trương nở', 'Kích thước': '10x2mm, 20x2mm,...', 'Tính năng': 'Trương nở, ngăn lửa và khói'}
-  },
-  {
-    id: 'ron-mem',
-    name: 'Ron chống cháy mềm',
-    price: 0,
-    category: 'Ron chống cháy',
-    categorySlug: 'ron',
-    sku: 'RON-03',
-    images: ['/anh/ron-chong-chay-mem-300x300-68a481c7da4bc.webp'],
-    short_desc: 'Loại ron dẻo, dễ dàng uốn lượn và lắp đặt cho các vị trí phức tạp, đảm bảo độ kín khít và khả năng ngăn cháy lan.',
-    description: `<p>Giải pháp linh hoạt cho các loại cửa có hình dạng đặc biệt hoặc các khe hở không đồng đều.</p>`,
-    specs: {'Vật liệu': 'Polymer chống cháy', 'Đóng gói': 'Cuộn', 'Tính năng': 'Linh hoạt, ngăn khói'}
-  },
-
 ];
 
 // Định nghĩa danh mục sản phẩm để sử dụng cho sidebar và lọc
@@ -368,8 +293,6 @@ export const categories = [
     { name: 'Rèm/Màn cuốn ngăn cháy', slug: 'rem' },
     { name: 'Tấm MGO chống cháy', slug: 'mgo' },
     { name: 'Tấm Panel chống cháy', slug: 'panel' },
-    { name: 'Keo chống cháy', slug: 'keo' },
-    { name: 'Ron chống cháy', slug: 'ron' },
     { name: 'Kính chống cháy', slug: 'kinh-chong-chay' },
     { name: 'Cửa thép chống cháy', slug: 'cua-thep' },
 ];

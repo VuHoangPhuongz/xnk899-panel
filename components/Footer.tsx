@@ -17,7 +17,8 @@ const Footer = () => {
                       />
                     </div>
                     <p className="font-bold text-white mb-2 uppercase">CÔNG TY CP XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</p>
-                    <p className="text-sm leading-relaxed"><i className="fa-solid fa-location-dot w-4 mr-2"></i>Trụ sở: Số 97 ngõ 143 Xuân Phương, P. Phương Canh, Q. Nam Từ Liêm, Hà Nội</p>
+                    <p className="text-sm leading-relaxed "><i className="fa-solid fa-location-dot w-4 mr-2"></i>Trụ sở: Số 97 ngõ 143 Xuân Phương, P. Phương Canh, Q. Nam Từ Liêm, Hà Nội</p>
+                    <p className="text-sm leading-relaxed mt-2"><i className="fa-solid fa-location-dot w-4 mr-2"></i>Văn phòng: Tòa HOUSINCO Premium, Số 288 Nguyễn Xiển, X. Tân Triều, H. Thanh Trì, Hà Nội</p>
                     <p className="text-sm mt-2"><i className="fa-solid fa-phone w-4 mr-2"></i>Hotline:<br /> 0987.811.158 <br />0987 822 311 <br />0384 358 988<br />0383 522 018</p>
                     <p className="text-sm mt-2"><i className="fa-solid fa-envelope w-4 mr-2"></i>Email: xnk899@gmail.com</p>
                 </div>
@@ -44,8 +45,8 @@ const Footer = () => {
                         <li><Link href="/san-pham?category=rem" className="hover:text-green-primary transition-colors">Rèm/Màn cuốn ngăn cháy</Link></li>
                         <li><Link href="/san-pham?category=mgo" className="hover:text-green-primary transition-colors">Tấm MGO chống cháy</Link></li>
                         <li><Link href="/san-pham?category=panel" className="hover:text-green-primary transition-colors">Tấm Panel chống cháy</Link></li>
-                        <li><Link href="/san-pham?category=keo" className="hover:text-green-primary transition-colors">Keo chống cháy</Link></li>
-                        <li><Link href="/san-pham?category=ron" className="hover:text-green-primary transition-colors">Ron chống cháy</Link></li>
+                        <li><Link href="/san-pham?category=kinh-chong-chay" className="hover:text-green-primary transition-colors">Kính chống cháy</Link></li>
+                        <li><Link href="/san-pham?category=cua-thep" className="hover:text-green-primary transition-colors">Cửa thép chống cháy</Link></li>
                     </ul>
                 </div>
             </div>
