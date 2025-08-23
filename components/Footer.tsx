@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
                     <p className="font-bold text-white mb-2 uppercase">CÔNG TY CP XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</p>
                     <p className="text-sm leading-relaxed "><i className="fa-solid fa-location-dot w-4 mr-2"></i>Trụ sở: Số 97 ngõ 143 đường Xuân Phương, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</p>
-                    <p className="text-sm leading-relaxed mt-2"><i className="fa-solid fa-location-dot w-4 mr-2"></i>Văn phòng: Housinco Premium - 288 Nguyễn Xiển - Thanh Liệt - Hà Nội</p>
+                    <p className="text-sm leading-relaxed mt-2"><i className="fa-solid fa-location-dot w-4 mr-2"></i>Văn phòng: Housinco Premium, 288 Nguyễn Xiển, Thanh Liệt, Hà Nội</p>
                     <p className="text-sm mt-2"><i className="fa-solid fa-phone w-4 mr-2"></i>Hotline:<br /> 0987.811.158 <br />0987 822 311 <br />0384 358 988<br />0383 522 018</p>
                     <p className="text-sm mt-2"><i className="fa-solid fa-envelope w-4 mr-2"></i>Email: xnk899@gmail.com</p>
                 </div>
