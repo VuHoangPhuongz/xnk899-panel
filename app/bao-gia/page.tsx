@@ -153,7 +153,7 @@ export default function BaoGiaPage() {
                         <li><strong>E (Integrity - Tính toàn vẹn):</strong> Khả năng chịu lửa mà không bị nứt, vỡ, gãy hoặc biến dạng.</li>
                         <li><strong>I (Insulation - Tính cách nhiệt):</strong> Khả năng ngăn chặn sự truyền nhiệt từ đám cháy sang khu vực an toàn.</li>
                     </ul>
-                    <p>Thời gian (60, 90, 120 phút) đi kèm với ký hiệu EI chính là thời gian tối thiểu mà sản phẩm có thể duy trì được cả hai tính năng trên khi xảy ra hỏa hoạn.</p>
+                    <p>Thời gian (30, 60, 90 phút) đi kèm với ký hiệu EI chính là thời gian tối thiểu mà sản phẩm có thể duy trì được cả hai tính năng trên khi xảy ra hỏa hoạn.</p>
                 </div>
 
                 {/* HÌNH ẢNH SỐ 2 ĐƯỢC CHÈN TẠI ĐÂY */}
