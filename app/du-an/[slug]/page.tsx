@@ -7,8 +7,8 @@ const projects = [
     { 
         slug: "kcn-keinhing-muramato", 
         imgSrc: "/anh/Công ty TNHH Keinhing Muramato Việt Nam.webp", 
-        title: "Công ty Keinhing Muramato Việt Nam", 
-        content: "Nội dung chi tiết về dự án Công ty Keinhing Muramato Việt Nam đang được cập nhật..." 
+        title: "Công ty Keinhing Muramoto Việt Nam", 
+        content: "Nội dung chi tiết về dự án Công ty Keinhing Muramoto Việt Nam đang được cập nhật..." 
     },
     { 
         slug: "dh-gtvt-ha-noi", 
@@ -25,8 +25,8 @@ const projects = [
     { 
         slug: "marriott-da-nang", 
         imgSrc: "/anh/marriott-da-nang-68a481b7734b2.webp", 
-        title: "KHÁCH SẠN MARRIOT ĐÀ NẴNG", 
-        content: "Nội dung chi tiết về dự án Khách sạn Marriot Đà Nẵng đang được cập nhật..." 
+        title: "KHÁCH SẠN MARRIOTT ĐÀ NẴNG", 
+        content: "Nội dung chi tiết về dự án Khách sạn Marriott Đà Nẵng đang được cập nhật..." 
     },
     { 
         slug: "nha-may-soi-bao-long", 

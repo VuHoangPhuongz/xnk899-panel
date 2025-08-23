@@ -103,7 +103,7 @@ export default function HomePage() {
                 <Image src="/anh/Công ty TNHH Keinhing Muramato Việt Nam.webp" alt="Dự án công ty Muramato" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">Công ty Keinhing Muramato Việt Nam</h3>
+                    <h3 className="font-semibold">Công ty Keinhing Muramoto Việt Nam</h3>
                 </div>
             </Link>
             
@@ -121,7 +121,7 @@ export default function HomePage() {
                 <Image src="/anh/marriott-da-nang-68a481b7734b2.webp" alt="Dự án Marriot Đà Nẵng" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">Khách sạn Marriot Đà Nẵng</h3>
+                    <h3 className="font-semibold">Khách sạn Marriott Đà Nẵng</h3>
                 </div>
             </Link>
             
