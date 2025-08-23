@@ -61,11 +61,11 @@ export default function LienHePage() {
                 <div className="space-y-4 text-gray-700">
                   <div className="flex items-start space-x-4">
                       <i className="fa-solid fa-location-dot text-orange-primary text-xl mt-1 w-5 text-center"></i>
-                      <span><strong className="text-gray-800">Địa chỉ:</strong> Số 97 ngõ 143 đường Xuân Phương, P. Phương Canh, Q. Nam Từ Liêm, TP. Hà Nội</span>
+                      <span><strong className="text-gray-800">Địa chỉ:</strong> Số 97 ngõ 143 đường Xuân Phương, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</span>
                   </div>
                   <div className="flex items-start space-x-4">
                       <i className="fa-solid fa-phone text-orange-primary text-xl mt-1 w-5 text-center"></i>
-                      <span><strong className="text-gray-800">Hotline:</strong> 0987.811.158</span>
+                      <span><strong className="text-gray-800">Hotline:</strong> 0987.811.158 / 0987.822.311 / 0384.358.988 / 0383.522.018</span>
                   </div>
                     <div className="flex items-start space-x-4">
                       <i className="fa-solid fa-envelope text-orange-primary text-xl mt-1 w-5 text-center"></i>
