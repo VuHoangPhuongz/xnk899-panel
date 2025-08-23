@@ -59,10 +59,6 @@ const Header = () => {
             <div className="hidden md:block font-semibold tracking-wide">
               CHÀO MỪNG BẠN ĐẾN VỚI 899 IM-EX
             </div>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-green-200"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="hover:text-green-200"><i className="fab fa-youtube"></i></a>
-            </div>
           </div>
         </div>
 
