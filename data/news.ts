@@ -103,26 +103,26 @@ export const newsData: NewsArticle[] = [
     content: `
       <p>Trong bối cảnh các vụ cháy nổ tại nhà xưởng, trung tâm thương mại và tòa nhà cao tầng gia tăng, nhu cầu tìm kiếm giải pháp ngăn cháy hiệu quả đang trở thành mối quan tâm hàng đầu của các chủ đầu tư và đơn vị quản lý công trình trên khắp cả nước. Trong số các phương án được khuyến nghị, <strong>màn cuốn ngăn cháy</strong> đang nổi lên như một giải pháp an toàn – linh hoạt – thẩm mỹ.</p>
       
-      <p>Theo thống kê của Cục Cảnh sát PCCC và CNCH, chỉ trong 6 tháng đầu năm 2025, cả nước đã xảy ra hơn 1.500 vụ cháy, gây thiệt hại hàng trăm tỷ đồng[cite: 194]. [cite_start]Nhiều vụ hỏa hoạn cho thấy nguyên nhân thương vong cao là do lửa lan nhanh qua các khu vực thông tầng, cửa ra vào hoặc hành lang không có hệ thống ngăn cách phù hợp[cite: 195].</p>
+      <p>Theo thống kê của Cục Cảnh sát PCCC và CNCH, chỉ trong 6 tháng đầu năm 2025, cả nước đã xảy ra hơn 1.500 vụ cháy, gây thiệt hại hàng trăm tỷ đồng. Nhiều vụ hỏa hoạn cho thấy nguyên nhân thương vong cao là do lửa lan nhanh qua các khu vực thông tầng, cửa ra vào hoặc hành lang không có hệ thống ngăn cách phù hợp.</p>
       
-      <p>Màn cuốn ngăn cháy được chế tạo từ vật liệu chịu nhiệt đặc biệt, có khả năng ngăn lửa và khói lan rộng, giúp kéo dài thời gian thoát hiểm và giảm thiểu thiệt hại[cite: 196]. [cite_start]So với vách ngăn cố định, màn cuốn có thể thu gọn khi không sử dụng, giữ nguyên không gian thoáng đãng và tính thẩm mỹ cho công trình[cite: 197].</p>
+      <p>Màn cuốn ngăn cháy được chế tạo từ vật liệu chịu nhiệt đặc biệt, có khả năng ngăn lửa và khói lan rộng, giúp kéo dài thời gian thoát hiểm và giảm thiểu thiệt hại.So với vách ngăn cố định, màn cuốn có thể thu gọn khi không sử dụng, giữ nguyên không gian thoáng đãng và tính thẩm mỹ cho công trình.</p>
 
       <figure class="my-6">
         <img src="/anh/news/man-cuon-trong-nha.jpg" alt="Màn cuốn ngăn cháy lắp đặt tại lối đi" class="w-full rounded-lg shadow-md" />
       </figure>
 
-      <p>Ông Lê Đức Toàn, đại diện Công ty Cổ phần Xuất nhập khẩu 899 – đơn vị cung cấp và thi công màn cuốn ngăn cháy trên toàn quốc – cho biết: “Chúng tôi đã triển khai lắp đặt màn cuốn ngăn cháy cho nhiều công trình từ Bắc vào Nam, bao gồm trung tâm thương mại, nhà xưởng và tòa nhà văn phòng. Giải pháp này vừa tiết kiệm chi phí xây dựng, vừa đạt tiêu chuẩn PCCC khắt khe.” [cite: 198, 199]</p>
+      <p>Ông Lê Đức Toàn, đại diện Công ty Cổ phần Xuất nhập khẩu 899 – đơn vị cung cấp và thi công màn cuốn ngăn cháy trên toàn quốc – cho biết: “Chúng tôi đã triển khai lắp đặt màn cuốn ngăn cháy cho nhiều công trình từ Bắc vào Nam, bao gồm trung tâm thương mại, nhà xưởng và tòa nhà văn phòng. Giải pháp này vừa tiết kiệm chi phí xây dựng, vừa đạt tiêu chuẩn PCCC khắt khe.”</p>
       
-      <p>Đặc biệt, màn cuốn ngăn cháy hiện nay có thể tích hợp hệ thống báo cháy tự động: khi phát hiện nhiệt độ hoặc khói bất thường, màn sẽ tự động hạ xuống, tạo lớp chắn an toàn và hạn chế tối đa nguy cơ cháy lan[cite: 200].</p>
+      <p>Đặc biệt, màn cuốn ngăn cháy hiện nay có thể tích hợp hệ thống báo cháy tự động: khi phát hiện nhiệt độ hoặc khói bất thường, màn sẽ tự động hạ xuống, tạo lớp chắn an toàn và hạn chế tối đa nguy cơ cháy lan.</p>
       
       <figure class="my-6">
         <img src="/anh/news/man-cuon-trung-tam-thuong-mai.jpg" alt="Màn cuốn ngăn cháy lắp đặt tại trung tâm thương mại" class="w-full rounded-lg shadow-md" />
       </figure>
 
-      <p>Với ưu điểm an toàn, tiện lợi và tính ứng dụng cao, màn cuốn ngăn cháy đang trở thành lựa chọn ưu tiên của nhiều công trình hiện đại trên toàn quốc[cite: 201]. [cite_start]Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn[cite: 202].</p>
+      <p>Với ưu điểm an toàn, tiện lợi và tính ứng dụng cao, màn cuốn ngăn cháy đang trở thành lựa chọn ưu tiên của nhiều công trình hiện đại trên toàn quốc.Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn.</p>
       
       <h3>📞 Liên hệ ngay hôm nay để được tư vấn giải pháp phù hợp nhất:</h3>
-      <p>0987822311 / 0987811158 / 0384 358 988 / 0383 522 018 [cite: 204]</p>
+      <p>0987822311 / 0987811158 / 0384 358 988 / 0383 522 018 </p>
     `
   },
   {

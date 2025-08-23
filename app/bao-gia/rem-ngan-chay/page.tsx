@@ -1,14 +1,5 @@
-import type { Metadata } from 'next';
-
-// Metadata này dành cho trang báo giá chung
-export const metadata: Metadata = {
-  title: 'Báo giá Vật liệu PCCC - 899 IMEX',
-  description: 'Báo giá tham khảo Rèm ngăn cháy, Kính chống cháy, Cửa thép chống cháy và các phụ kiện PCCC mới nhất từ 899 IM-EX.',
-};
-
-// Nội dung của trang này sẽ là nội dung của trang Báo giá Rèm ngăn cháy
-export default function BaoGiaPage() {
- return (
+export default function BaoGiaRemPage() {
+    return (
         <>
           
                           <div className="bg-white rounded-lg shadow-md p-6 md:p-8 prose max-w-none">

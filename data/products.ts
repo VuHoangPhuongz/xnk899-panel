@@ -4,7 +4,7 @@ export type Product = {
   name: string;
   price: number | null; // Cho phép giá là null nếu chỉ có "Liên hệ"
   category: string;
-  categorySlug: 'rem' | 'mgo' | 'panel' | 'keo' | 'ron' | 'kinh-chong-chay';
+   categorySlug: 'rem' | 'mgo' | 'panel' | 'keo' | 'ron' | 'kinh-chong-chay' | 'cua-thep';
   sku: string;
   images: string[];
   short_desc: string;
@@ -14,11 +14,69 @@ export type Product = {
 
 // Mảng chứa tất cả sản phẩm
 export const products: Product[] = [
+     {
+    id: 'cua-thep-chong-chay-ei60',
+    name: 'Cửa thép chống cháy EI60',
+    price: null,
+    category: 'Cửa thép chống cháy',
+    categorySlug: 'cua-thep',
+    sku: 'CTCC-EI60',
+    images: ['/anh/sanpham/1.webp'], // Thay bằng đường dẫn ảnh thực tế
+    short_desc: 'Cửa thép EI60, chịu lửa và cách nhiệt 60 phút. Giải pháp kinh tế cho nhu cầu chống cháy cơ bản như văn phòng, nhà dân dụng.',
+    description: `<p><strong>Cửa thép chống cháy EI60</strong> là giải pháp quan trọng nhằm đảm bảo an toàn cho công trình. Cửa được thiết kế chuyên dụng để ngăn cháy, hạn chế khói lan trong tối thiểu 60 phút, đáp ứng các tiêu chuẩn PCCC Việt Nam.</p><h4>Điểm nổi bật:</h4><ul><li>Giải pháp kinh tế cho nhu cầu chống cháy cơ bản.</li><li>Được kiểm định PCCC, đảm bảo yêu cầu an toàn và pháp lý.</li><li>Phù hợp cho văn phòng nhỏ, khu vực dân dụng.</li></ul>`,
+    specs: {
+      'Giới hạn chịu lửa': 'EI60 (60 phút)',
+      'Vật liệu cánh': 'Thép tấm dày 0.8–1.0mm',
+      'Lõi chống cháy': 'Giấy tổ ong hoặc Bông thủy tinh',
+      'Khung cửa': 'Thép dày 1.2 – 2.0mm, sơn tĩnh điện',
+      'Phụ kiện': 'Bản lề thép, khóa chống cháy, tay co thủy lực, gioăng chống cháy',
+      'Ứng dụng': 'Dân dụng, văn phòng nhỏ, khu vực yêu cầu chống cháy cơ bản.'
+    }
+  },
+  {
+    id: 'cua-thep-chong-chay-ei90',
+    name: 'Cửa thép chống cháy EI90',
+    price: null,
+    category: 'Cửa thép chống cháy',
+    categorySlug: 'cua-thep',
+    sku: 'CTCC-EI90',
+    images: ['/anh/sanpham/6.jpg'], // Thay bằng đường dẫn ảnh thực tế
+    short_desc: 'Cửa thép EI90, chịu lửa và cách nhiệt 90 phút. Giải pháp cân bằng giữa an toàn và chi phí cho tòa nhà cao tầng, trung tâm thương mại.',
+    description: `<p><strong>Cửa thép chống cháy EI90</strong> cung cấp khả năng bảo vệ vượt trội, chịu lửa và cách nhiệt trong tối thiểu 90 phút. Đây là lựa chọn tối ưu cho các công trình có yêu cầu PCCC khắt khe.</p><h4>Điểm nổi bật:</h4><ul><li>Hiệu quả bảo vệ và an toàn vượt trội.</li><li>Cân bằng giữa chi phí và mức độ an toàn.</li><li>Lõi bằng bông gốm chống cháy mật độ cao.</li></ul>`,
+    specs: {
+      'Giới hạn chịu lửa': 'EI90 (90 phút)',
+      'Vật liệu cánh': 'Thép tấm dày 1.0–1.2mm',
+      'Lõi chống cháy': 'Bông gốm chống cháy mật độ cao',
+      'Khung cửa': 'Thép dày 1.2 – 2.0mm, sơn tĩnh điện',
+      'Phụ kiện': 'Bản lề thép, khóa chống cháy, tay co thủy lực, gioăng chống cháy',
+      'Ứng dụng': 'Tòa nhà cao tầng, trung tâm thương mại, kho xưởng vừa.'
+    }
+  },
+  {
+    id: 'cua-thep-chong-chay-ei120',
+    name: 'Cửa thép chống cháy EI120',
+    price: null,
+    category: 'Cửa thép chống cháy',
+    categorySlug: 'cua-thep',
+    sku: 'CTCC-EI120',
+    images: ['/anh/sanpham/5.jpg'], // Thay bằng đường dẫn ảnh thực tế
+    short_desc: 'Cửa thép EI120, chịu lửa và cách nhiệt 120 phút. Mức độ an toàn PCCC cao nhất cho nhà máy, kho hóa chất, khu vực nguy cơ cháy nổ cao.',
+    description: `<p><strong>Cửa thép chống cháy EI120</strong> là giải pháp an toàn tối đa, đạt chuẩn cao nhất về PCCC. Với khả năng ngăn lửa và cách nhiệt lên đến 120 phút, sản phẩm đảm bảo an toàn tuyệt đối cho các khu vực quan trọng.</p><h4>Điểm nổi bật:</h4><ul><li>An toàn PCCC ở mức cao nhất.</li><li>Cấu tạo vững chắc với thép dày và lõi vật liệu cao cấp.</li><li>Bảo vệ tuyệt đối cho khu vực có nguy cơ cháy nổ cao.</li></ul>`,
+    specs: {
+      'Giới hạn chịu lửa': 'EI120 (120 phút)',
+      'Vật liệu cánh': 'Thép tấm dày ≥1.2mm',
+      'Lõi chống cháy': 'Vật liệu gốm – bông khoáng cao cấp, gioăng chống cháy chuyên dụng',
+      'Khung cửa': 'Thép dày 1.2 – 2.0mm, sơn tĩnh điện',
+      'Phụ kiện': 'Bản lề thép, khóa chống cháy, tay co thủy lực, gioăng chống cháy',
+      'Ứng dụng': 'Nhà máy lớn, kho hóa chất, tầng hầm, khu vực trọng điểm nguy cơ cháy nổ cao.'
+    }
+  },
   // --- Rèm/Màn ngăn cháy ---
   {
+    
     id: 'rem-1-lop',
     name: 'Rèm/ màn ngăn cháy 1 lớp',
-    price: 4500000,
+    price: 0,
     category: 'Rèm/Màn cuốn ngăn cháy',
     categorySlug: 'rem',
     sku: 'RNC-01',
@@ -30,7 +88,7 @@ export const products: Product[] = [
   {
     id: 'rem-ei-90',
     name: 'Rèm/ màn ngăn cháy EI 90 phút',
-    price: 6650000,
+    price: 0,
     category: 'Rèm/Màn cuốn ngăn cháy',
     categorySlug: 'rem',
     sku: 'RNC-02',
@@ -42,7 +100,7 @@ export const products: Product[] = [
   {
     id: 'rem-ei-60',
     name: 'Rèm/ màn ngăn cháy EI 60 phút',
-    price: 5060000,
+    price: 0,
     category: 'Rèm/Màn cuốn ngăn cháy',
     categorySlug: 'rem',
     sku: 'RNC-03',
@@ -157,7 +215,7 @@ export const products: Product[] = [
   {
     id: 'tam-mgo-10mm',
     name: 'Tấm Eron - MGO 10mm cách nhiệt',
-    price: 350000,
+    price: 0,
     category: 'Tấm MGO chống cháy',
     categorySlug: 'mgo',
     sku: 'MGO-01',
@@ -169,7 +227,7 @@ export const products: Product[] = [
   {
     id: 'tam-mgo-5mm',
     name: 'Tấm MGO-Eron chống cháy 5mm',
-    price: 250000,
+    price: 0,
     category: 'Tấm MGO chống cháy',
     categorySlug: 'mgo',
     sku: 'MGO-02',
@@ -181,7 +239,7 @@ export const products: Product[] = [
   {
     id: 'tam-mgo-tong-hop',
     name: 'Tấm chống cháy MGO',
-    price: null,
+    price: 0,
     category: 'Tấm MGO chống cháy',
     categorySlug: 'mgo',
     sku: 'MGO-03',
@@ -194,7 +252,7 @@ export const products: Product[] = [
   {
     id: 'panel-xop-10cm',
     name: 'PANEL LÕI XỐP THƯỜNG DÀY 10 CM',
-    price: null,
+    price: 0,
     category: 'Tấm Panel chống cháy',
     categorySlug: 'panel',
     sku: 'PNL-01',
@@ -206,7 +264,7 @@ export const products: Product[] = [
   {
     id: 'panel-bong-khoang-100mm',
     name: 'PANEL LÕI BÔNG KHOÁNG DÀY 100 MM',
-    price: null,
+    price: 0,
     category: 'Tấm Panel chống cháy',
     categorySlug: 'panel',
     sku: 'PNL-02',
@@ -218,7 +276,7 @@ export const products: Product[] = [
   {
     id: 'panel-mai-rockwool',
     name: 'PANEL MÁI LÕI BÔNG KHOÁNG (ROCKWOOL)',
-    price: null,
+    price: 0,
     category: 'Tấm Panel chống cháy',
     categorySlug: 'panel',
     sku: 'PNL-03',
@@ -231,7 +289,7 @@ export const products: Product[] = [
   {
     id: 'keo-f200',
     name: 'Keo Silicone chống cháy Ssangkom Topseal F200',
-    price: null,
+    price: 0,
     category: 'Keo chống cháy',
     categorySlug: 'keo',
     sku: 'KEO-01',
@@ -243,7 +301,7 @@ export const products: Product[] = [
   {
     id: 'keo-m1',
     name: 'Keo silicone chống cháy Fixacryl M1 Grey 300 ml',
-    price: null,
+    price: 0,
     category: 'Keo chống cháy',
     categorySlug: 'keo',
     sku: 'KEO-02',
@@ -255,7 +313,7 @@ export const products: Product[] = [
   {
     id: 'keo-m1c',
     name: 'KEO SILICONE CHỐNG CHÁY LAN SELSIL M1C',
-    price: null,
+    price: 0,
     category: 'Keo chống cháy',
     categorySlug: 'keo',
     sku: 'KEO-03',
@@ -268,7 +326,7 @@ export const products: Product[] = [
   {
     id: 'ron-cua-thep',
     name: 'Ron chống cháy cửa thép',
-    price: null,
+    price: 0,
     category: 'Ron chống cháy',
     categorySlug: 'ron',
     sku: 'RON-01',
@@ -280,7 +338,7 @@ export const products: Product[] = [
   {
     id: 'ron-thanh',
     name: 'Ron chống cháy thanh',
-    price: null,
+    price: 0,
     category: 'Ron chống cháy',
     categorySlug: 'ron',
     sku: 'RON-02',
@@ -292,7 +350,7 @@ export const products: Product[] = [
   {
     id: 'ron-mem',
     name: 'Ron chống cháy mềm',
-    price: null,
+    price: 0,
     category: 'Ron chống cháy',
     categorySlug: 'ron',
     sku: 'RON-03',
@@ -301,7 +359,7 @@ export const products: Product[] = [
     description: `<p>Giải pháp linh hoạt cho các loại cửa có hình dạng đặc biệt hoặc các khe hở không đồng đều.</p>`,
     specs: {'Vật liệu': 'Polymer chống cháy', 'Đóng gói': 'Cuộn', 'Tính năng': 'Linh hoạt, ngăn khói'}
   },
-  
+
 ];
 
 // Định nghĩa danh mục sản phẩm để sử dụng cho sidebar và lọc

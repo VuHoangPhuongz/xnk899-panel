@@ -21,7 +21,7 @@ export default function HomePage() {
                 <div className="relative">
                     <div className="absolute -top-4 -left-4 w-full h-full border-4 border-green-primary rounded-lg z-0"></div>
                     <Image 
-                      src="/anh/gioi thieu cong ty.png" 
+                      src="/anh/anh gioi thieu.png" 
                       alt="Về chúng tôi"
                       width={600}
                       height={400}
@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION: DỰ ÁN ĐÃ TRIỂN KHAI */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+<section className="py-16 lg:py-24 bg-gray-50">
     <div className="container mx-auto px-4">
         <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold uppercase section-title text-blue-primary">
@@ -99,53 +99,58 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Dự án 1 */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <Link href="/du-an/kcn-keinhing-muramato" className="relative group overflow-hidden rounded-lg shadow-lg block">
                 <Image src="/anh/Công ty TNHH Keinhing Muramato Việt Nam.webp" alt="Dự án công ty Muramato" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent to-transparent text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
                     <h3 className="font-semibold">Công ty Keinhing Muramato Việt Nam</h3>
                 </div>
-            </div>
+            </Link>
             
             {/* Dự án 2 */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <Link href="/du-an/dh-gtvt-ha-noi" className="relative group overflow-hidden rounded-lg shadow-lg block">
                 <Image src="/anh/ĐH GTVT.webp" alt="Dự án ĐH GTVT" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
                     <h3 className="font-semibold">ĐH Giao thông Vận tải</h3>
                 </div>
-            </div>
+            </Link>
             
             {/* Dự án 3 */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <Link href="/du-an/marriott-da-nang" className="relative group overflow-hidden rounded-lg shadow-lg block">
                 <Image src="/anh/marriott-da-nang-68a481b7734b2.webp" alt="Dự án Marriot Đà Nẵng" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
                     <h3 className="font-semibold">Khách sạn Marriot Đà Nẵng</h3>
                 </div>
-            </div>
+            </Link>
             
             {/* Dự án 4 */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <Link href="/du-an/nha-may-rac-phu-son" className="relative group overflow-hidden rounded-lg shadow-lg block">
                 <Image src="/anh/phu-son-68a481bdd3a9c.webp" alt="Dự án nhà máy Phú Sơn" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
                     <h3 className="font-semibold">Nhà máy XL Rác Thải Phú Sơn</h3>
                 </div>
-            </div>
+            </Link>
             
-            {/* --- DỰ ÁN ĐƯỢC THÊM VÀO --- */}
             {/* Dự án 5 */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <Link href="/du-an/mh-innovation-vn" className="relative group overflow-hidden rounded-lg shadow-lg block">
                 <Image src="/anh/mh-innovation-vn-68a481b53c88d.webp" alt="Dự án công ty M&H INNOVATION" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
                     <h3 className="font-semibold">CÔNG TY TNHH M&H INNOVATION</h3>
                 </div>
-            </div>
+            </Link>
             
             {/* Dự án 6 */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
+            <Link href="/du-an/nha-may-soi-bao-long" className="relative group overflow-hidden rounded-lg shadow-lg block">
                 <Image src="/anh/nha-may-soi-cong-ty-tnhh-thuong-mai-bao-long-68a481b9afe19.webp" alt="Dự án nhà máy sợi Bảo Long" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
                     <h3 className="font-semibold">Nhà máy sợi Bảo Long</h3>
                 </div>
-            </div>
+            </Link>
 
         </div>
     </div>
