@@ -50,7 +50,7 @@ const Header = () => {
     <>
       <header id="header" className="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
         {/* Top bar */}
-        <div className="w-full bg-gradient-to-r from-blue-primary via-green-primary to-green-600 text-white text-sm">
+             <div className="w-full bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white text-sm">
           <div className="container mx-auto px-4 flex justify-between items-center py-2">
             <div className="flex items-center space-x-2">
               <i className="fas fa-phone-alt"></i>
