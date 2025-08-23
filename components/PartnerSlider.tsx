@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const partners = [
-     { src: "/anh/logo-songda.png", alt: "Sông Đà logo" },
+     { src: "/anh/789 bo quoc phong.jpg", alt: "Bộ quốc phòng logo" },
     { src: "/anh/Logo.svg", alt: "Conteccons Logo" },
     { src: "/anh/logocongtyimc6.png", alt: "IMC Logo" },
     // Thêm các logo khác nếu có, có thể lặp lại để slider trông đầy đặn hơn
