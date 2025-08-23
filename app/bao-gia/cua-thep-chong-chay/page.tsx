@@ -54,7 +54,7 @@ export default function BaoGiaCuaThepPage() {
                 </table>
                 
             </div>
-            <p>Báo giá Màn ngăn cháy phụ thuộc bởi nhiều yếu tố như các số liệu, kích thước, giới hạn chịu lửa, chi phí lắp đặt. Vì vậy, để nhận được báo giá chính xác và tốt nhất, Quý khách hàng vui lòng liên hệ trực tiếp với chúng tôi.</p>
+            <p>Báo giá cửa thép chống cháy phụ thuộc bởi nhiều yếu tố như các số liệu, kích thước, giới hạn chịu lửa, chi phí lắp đặt. Vì vậy, để nhận được báo giá chính xác và tốt nhất, Quý khách hàng vui lòng liên hệ trực tiếp với chúng tôi.</p>
                             <p className="font-semibold">
                                 Hotline: 0987822311 / 0987811158 / 0384 358 988 / 0383 522 018
                             </p>

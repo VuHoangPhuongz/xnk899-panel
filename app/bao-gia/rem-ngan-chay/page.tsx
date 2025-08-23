@@ -158,19 +158,19 @@ export default function BaoGiaRemPage() {
                                <div className="space-y-4 mt-6">
                                     <div>
                                         <h4><strong>Màn ngăn cháy có thể lắp đặt ở đâu?</strong></h4>
-                                        <p>Màn ngăn cháy có thể lắp đặt ở các vị trí cần ngăn cháy lan như thang cuốn, hành lang, khu vực sản xuất,...</p>
+                                        <p className="italic">Màn ngăn cháy có thể lắp đặt ở các vị trí cần ngăn cháy lan như thang cuốn, hành lang, khu vực sản xuất,...</p>
                                     </div>
                                     <div>
                                         <h4><strong>Thời gian lắp đặt mất bao lâu?</strong></h4>
-                                        <p>Tùy thuộc vào số lượng kích thước và độ phức tạp, thời gian lắp đặt thường mất từ 3-5 ngày.</p>
+                                        <p className="italic">Tùy thuộc vào số lượng kích thước và độ phức tạp, thời gian lắp đặt thường mất từ 3-5 ngày.</p>
                                     </div>
                                     <div>
                                         <h4><strong>Chi phí bảo trì hàng năm là bao nhiêu?</strong></h4>
-                                        <p>Chi phí bảo trì phụ thuộc vào số lượng và loại màn ngăn cháy. Vui lòng liên hệ để chúng tôi báo giá chi tiết.</p>
+                                        <p className="italic">Chi phí bảo trì phụ thuộc vào số lượng và loại màn ngăn cháy. Vui lòng liên hệ để chúng tôi báo giá chi tiết.</p>
                                     </div>
                                     <div>
                                         <h4><strong>Sản phẩm có đầy đủ giấy tờ PCCC không?</strong></h4>
-                                        <p>Tất cả sản phẩm màn ngăn cháy của chúng tôi đều có đầy đủ chứng nhận kiểm định của Cục Cảnh sát PCCC Việt Nam.</p>
+                                        <p className="italic">Tất cả sản phẩm màn ngăn cháy của chúng tôi đều có đầy đủ chứng nhận kiểm định của Cục Cảnh sát PCCC Việt Nam.</p>
                                     </div>
                                 </div>
                             </div>
