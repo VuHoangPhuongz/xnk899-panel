@@ -5,6 +5,7 @@ import Header from "@/components/Header"; // Sẽ tạo ở bước tiếp theo
 import Footer from "@/components/Footer"; // Sẽ tạo ở bước tiếp theo
 import { CartProvider } from "@/context/CartContext";
 import FixedActions from "@/components/FixedActions";
+import { Analytics } from '@vercel/analytics/next';
 // Tối ưu hóa font chữ với Next.js
 const roboto = Roboto({
   subsets: ["latin", "vietnamese"], // Thêm "vietnamese" để hỗ trợ tiếng Việt
@@ -38,7 +39,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <CartProvider> 
         <Header />
-        <main>{children}</main> {/* children chính là nội dung của từng trang con */}
+        <main>{children}<Analytics /></main> {/* children chính là nội dung của từng trang con */}
         <Footer />
         <FixedActions />
         </CartProvider> 
