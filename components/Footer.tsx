@@ -43,10 +43,11 @@ const Footer = () => {
                     <ul className="space-y-2">
                         {/* Các link này sẽ trỏ đến trang sản phẩm với filter tương ứng */}
                         <li><Link href="/san-pham?category=rem" className="hover:text-green-primary transition-colors">Rèm/Màn cuốn ngăn cháy</Link></li>
-                        <li><Link href="/san-pham?category=mgo" className="hover:text-green-primary transition-colors">Tấm MGO chống cháy</Link></li>
-                        <li><Link href="/san-pham?category=panel" className="hover:text-green-primary transition-colors">Tấm Panel chống cháy</Link></li>
                         <li><Link href="/san-pham?category=kinh-chong-chay" className="hover:text-green-primary transition-colors">Kính chống cháy</Link></li>
                         <li><Link href="/san-pham?category=cua-thep" className="hover:text-green-primary transition-colors">Cửa thép chống cháy</Link></li>
+                        <li><Link href="/san-pham?category=panel" className="hover:text-green-primary transition-colors">Tấm Panel chống cháy</Link></li>
+                        <li><Link href="/san-pham?category=mgo" className="hover:text-green-primary transition-colors">Tấm MGO chống cháy</Link></li>
+
                     </ul>
                 </div>
             </div>

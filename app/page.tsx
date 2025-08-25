@@ -3,7 +3,8 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import { newsData } from '@/data/news';
+import NewsCard from '@/components/NewsCard';
 // Tải các component slider ở phía client để không ảnh hưởng đến server
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false });
 const FeaturedProducts = dynamic(() => import('@/components/FeaturedProducts'), { ssr: false });
@@ -18,24 +19,28 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="relative">
-                    <div className="absolute -top-4 -left-4 w-full h-full border-4 border-green-primary rounded-lg z-0"></div>
+                
+                {/* KHỐI DIV HÌNH ẢNH ĐÃ ĐƯỢC CẬP NHẬT */}
+                <div className="border-4 border-green-primary rounded-xl overflow-hidden shadow-xl">
                     <Image 
+                      // ⚠️ Quan trọng: Thay bằng đường dẫn đến file ảnh collage của bạn
                       src="/anh/gioi thieu.png" 
-                      alt="Về chúng tôi"
+                      alt="Các giải pháp chống cháy của 899 IM-EX"
                       width={600}
-                      height={400}
-                      className="relative z-10 w-full h-auto rounded-lg shadow-xl object-cover"
+                      height={450}
+                      className="w-full h-auto object-cover"
                     />
                 </div>
+
+                {/* Khối div nội dung văn bản (giữ nguyên) */}
                 <div className="text-gray-700 leading-relaxed">
                     <h2 className="text-3xl lg:text-4xl font-bold text-blue-primary mb-6">
-                        Giới thiệu về 899 IMEX
+                        Giới thiệu về XNK và Xây Dựng 899
                     </h2>
                     <p className='mb-4'><strong>Công ty cổ phần xuất nhập khẩu và xây dựng 899</strong> xin gửi tới Quý khách hàng lời chào trân trọng nhất!</p>
-                    <p className='mb-4'>Với kinh nghiệm chuyên sâu về các sản phẩm PCCC, Công ty xuất nhập khẩu 899 phủ sóng toàn quốc các mặt hàng: Rèm/ Màn ngăn cháy, kính ngăn cháy hệ E, EI, khung thép ngăn cháy, và các sản phẩm ngăn cháy khác.</p>
+                    <p className='mb-4'>Hiện nay, tình trạng các tòa nhà văn phòng, nhà ở, hay khu vui chơi, giải trí hay xảy ra tai nạn về hỏa hoạn. Vì vậy việc xây dựng các hệ thống, thiết bị, vật tư đảm bảo phòng cháy chữa cháy là việc làm tất yếu.</p>
                     <div className="mt-8">
-                        <Link href="/gioi-thieu" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-800 via-green-600 to-transparent  text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
+                        <Link href="/gioi-thieu" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white font-semibold rounded-lg shadow-md hover:bg-green-secondary transition duration-300 ease-in-out transform hover:-translate-y-1">
                             XEM THÊM <span className="ml-2">›</span>
                         </Link>
                     </div>
@@ -154,6 +159,21 @@ export default function HomePage() {
         </div>
     </div>
 </section>
+<section className="py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold uppercase section-title text-blue-primary">
+              Tin Tức Mới Nhất
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Lấy 3 bài viết mới nhất để hiển thị */}
+            {newsData.slice(0, 3).map((article) => (
+              <NewsCard key={article.id} article={article} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* SECTION: ĐỐI TÁC */}
       <PartnerSlider />

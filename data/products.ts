@@ -291,8 +291,8 @@ export const products: Product[] = [
 export const categories = [
     { name: 'Tất cả sản phẩm', slug: 'all' },
     { name: 'Rèm/Màn cuốn ngăn cháy', slug: 'rem' },
-    { name: 'Tấm MGO chống cháy', slug: 'mgo' },
-    { name: 'Tấm Panel chống cháy', slug: 'panel' },
     { name: 'Kính chống cháy', slug: 'kinh-chong-chay' },
     { name: 'Cửa thép chống cháy', slug: 'cua-thep' },
+    { name: 'Tấm Panel chống cháy', slug: 'panel' },
+    { name: 'Tấm MGO chống cháy', slug: 'mgo' },
 ];
