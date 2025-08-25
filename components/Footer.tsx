@@ -11,6 +11,8 @@ const Footer = () => {
                       <Image 
                         src="/anh/logo-68a481b451012.webp" 
                         alt="XNK 899 Logo Footer" 
+                        width={120} 
+                        height={48}
                         className="h-12 w-auto"
                       />
                     </div>
