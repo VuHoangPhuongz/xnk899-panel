@@ -14,6 +14,94 @@ export type Product = {
 
 // Mảng chứa tất cả sản phẩm
 export const products: Product[] = [
+    {
+    
+    id: 'rem-1-lop',
+    name: 'Rèm/ màn ngăn cháy 1 lớp',
+    price: 0,
+    category: 'Rèm/Màn cuốn ngăn cháy',
+    categorySlug: 'rem',
+    sku: 'RNC-01',
+    images: ['/anh/man-ngan-chay-1-lop-68a481b6e3c76.webp'],
+    short_desc: 'Giải pháp PCCC hiệu quả, gọn nhẹ và thẩm mỹ cho các công trình hiện đại. Sản phẩm được làm từ vật liệu composite chống cháy cao cấp, có khả năng tự động sập xuống khi có tín hiệu báo cháy.',
+    description: `<p>Rèm ngăn cháy 1 lớp được thiết kế để thay thế cho các giải pháp cửa chống cháy truyền thống ở những khu vực cần không gian mở và tính thẩm mỹ cao như sảnh trung tâm thương mại, lối thoát hiểm, khu vực sản xuất...</p><h4>Ưu điểm nổi bật:</h4><ul><li>Thiết kế gọn nhẹ, hiện đại, tiết kiệm diện tích.</li><li>Tự động hoạt động khi có hỏa hoạn, đảm bảo an toàn tối đa.</li><li>Vật liệu cao cấp, đã được kiểm định PCCC theo tiêu chuẩn Việt Nam.</li><li>Dễ dàng lắp đặt, bảo trì và bảo dưỡng.</li></ul>`,
+    specs: {'Giới hạn chịu lửa': 'E 120 (chỉ ngăn lửa, không ngăn nhiệt)', 'Vật liệu': 'Vải thủy tinh phủ silicone/PU', 'Độ dày': '0.8mm - 2.0mm', 'Cơ chế hoạt động': 'Tự động, điều khiển bằng Motor và Hộp điều khiển trung tâm', 'Tiêu chuẩn': 'TCVN 9383:2012'}
+  },
+  {
+    id: 'rem-ei-90',
+    name: 'Rèm/ màn ngăn cháy EI 90 phút',
+    price: 0,
+    category: 'Rèm/Màn cuốn ngăn cháy',
+    categorySlug: 'rem',
+    sku: 'RNC-02',
+    images: ['/anh/ie-90-68a481af219a7.webp'],
+    short_desc: 'Sản phẩm rèm ngăn cháy cao cấp với giới hạn chịu lửa và cách nhiệt lên đến 90 phút, đáp ứng các tiêu chuẩn PCCC khắt khe nhất cho các công trình trọng điểm.',
+    description: `<p>Rèm ngăn cháy EI 90 là giải pháp an toàn tối ưu cho các khu vực có nguy cơ cháy nổ cao. Với cấu tạo nhiều lớp vật liệu chống cháy và cách nhiệt, sản phẩm đảm bảo ngăn chặn lửa và nhiệt độ hiệu quả trong 90 phút, tạo thời gian vàng cho công tác sơ tán và chữa cháy.</p><h4>Ứng dụng:</h4><ul><li>Nhà xưởng sản xuất, kho chứa hàng hóa có giá trị cao.</li><li>Tầng hầm, bãi đậu xe của các tòa nhà chung cư, trung tâm thương mại.</li><li>Phòng máy, phòng kỹ thuật, khu vực chứa thiết bị quan trọng.</li></ul>`,
+    specs: {'Giới hạn chịu lửa': 'EI 90 phút (ngăn lửa và cách nhiệt)', 'Vật liệu': 'Vải chống cháy đa lớp, bông gốm ceramic cách nhiệt', 'Độ dày': '3.0mm - 5.0mm', 'Cơ chế hoạt động': 'Tự động, điều khiển bằng Motor, có thể tích hợp UPS', 'Tiêu chuẩn': 'QCVN 06:2021/BXD'}
+  },
+  {
+    id: 'rem-ei-60',
+    name: 'Rèm/ màn ngăn cháy EI 60 phút',
+    price: 0,
+    category: 'Rèm/Màn cuốn ngăn cháy',
+    categorySlug: 'rem',
+    sku: 'RNC-03',
+    images: ['/anh/ie 60 test.webp'],
+    short_desc: 'Giải pháp cân bằng giữa chi phí và hiệu quả, cung cấp khả năng ngăn cháy và cách nhiệt trong 60 phút, phù hợp với đa số các công trình dân dụng và công nghiệp.',
+    description: `<p>Rèm ngăn cháy EI 60 là lựa chọn phổ biến nhất hiện nay. Sản phẩm không chỉ đảm bảo các yêu cầu về PCCC mà còn có thiết kế hiện đại, dễ dàng lắp đặt và vận hành.</p>`,
+    specs: {'Giới hạn chịu lửa': 'EI 60 phút (ngăn lửa và cách nhiệt)', 'Vật liệu': 'Vải thủy tinh phủ hợp chất chống cháy', 'Độ dày': '1.5mm - 2.5mm', 'Cơ chế hoạt động': 'Tự động, kết nối hệ thống báo cháy', 'Tiêu chuẩn': 'TCVN 9383:2012'}
+  },
+    {
+    "id": "kinh-chong-chay-e60-day-8mm",
+    "name": "Kính chống cháy E60, dày 8mm",
+    "price": 0,
+    "category": "Kính chống cháy",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-E60-8",
+    "images": ['/anh/kính E60.jpg'],
+    "short_desc": "Kính chống cháy loại E60 với độ dày 8mm, đạt giới hạn chịu lửa 60 phút, chỉ ngăn lửa và khói, không ngăn nhiệt. Phù hợp cho vách ngăn, cửa quan sát tại các khu vực yêu cầu PCCC cơ bản.",
+    "description": "<p><strong>Kính chống cháy E60, dày 8mm</strong> là giải pháp kinh tế cho các công trình cần đảm bảo an toàn PCCC theo quy định. Kính duy trì tính toàn vẹn (E) trong 60 phút khi tiếp xúc với lửa, ngăn chặn hiệu quả sự lan truyền của lửa và khói.</p><h4>Đặc điểm kỹ thuật:</h4><ul><li><strong>Giới hạn chịu lửa:</strong> E60 (chỉ ngăn lửa, không ngăn nhiệt).</li><li><strong>Độ dày:</strong> 8mm.</li><li><strong>Cấu tạo:</strong> Kính cường lực được xử lý đặc biệt.</li><li><strong>Ứng dụng:</strong> Cửa đi, cửa sổ, vách ngăn trong các tòa nhà văn phòng, chung cư, nhà xưởng.</li></ul>",
+    "specs": {
+      "Giới hạn chịu lửa": "E60 (60 phút)",
+      "Độ dày": "8mm",
+      "Loại kính": "Kính cường lực chống cháy",
+      "Khả năng cách nhiệt": "Không (Chỉ ngăn lửa)"
+    }
+  },
+  {
+    "id": "kinh-chong-chay-cach-nhiet-ei30-day-22mm",
+    "name": "Kính chống cháy cách nhiệt EI30, dày 22mm",
+    "price": 0,
+    "category": "Kính chống cháy cách nhiệt",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-EI30-22",
+    "images": ['/anh/ei30.jpg'],
+    "short_desc": "Kính chống cháy cách nhiệt EI30, dày 22mm, có khả năng ngăn lửa, khói và cả nhiệt lượng trong 30 phút. Đảm bảo an toàn cho lối thoát hiểm, giúp người di tản không bị ảnh hưởng bởi sức nóng của đám cháy.",
+    "description": "<p><strong>Kính chống cháy cách nhiệt EI30</strong> là loại kính cao cấp, vừa duy trì tính toàn vẹn (E) vừa có khả năng cách nhiệt (I) trong 30 phút. Khi có hỏa hoạn, một mặt kính tiếp xúc với lửa nhưng mặt còn lại vẫn giữ nhiệt độ an toàn, không gây bỏng khi chạm vào.</p><h4>Ưu điểm vượt trội:</h4><ul><li><strong>An toàn tối đa:</strong> Ngăn chặn cả lửa, khói và nhiệt, bảo vệ lối thoát hiểm.</li><li><strong>Tầm nhìn rõ ràng:</strong> Giữ được độ trong suốt ngay cả khi tiếp xúc với nhiệt độ cao.</li><li><strong>Cấu tạo nhiều lớp:</strong> Gồm nhiều lớp kính và lớp keo ngăn cháy cách nhiệt ở giữa.</li></ul>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI30 (30 phút)",
+      "Độ dày": "22mm",
+      "Loại kính": "Kính nhiều lớp có keo cách nhiệt",
+      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
+    }
+  },
+  {
+    "id": "kinh-chong-chay-cach-nhiet-ei90-day-38mm",
+    "name": "Kính chống cháy cách nhiệt EI90, dày 38mm",
+    "price": 0,
+    "category": "Kính chống cháy cách nhiệt",
+    "categorySlug": "kinh-chong-chay",
+    "sku": "KCC-EI90-38",
+    "images": ['/anh/ei 90.jpg'],
+    "short_desc": "Kính chống cháy cách nhiệt EI90, dày 38mm, cung cấp khả năng bảo vệ vượt trội, ngăn lửa, khói và nhiệt lên đến 90 phút. Giải pháp an toàn cho các công trình có yêu cầu PCCC nghiêm ngặt.",
+    "description": "<p><strong>Kính chống cháy cách nhiệt EI90, dày 38mm</strong> đáp ứng các tiêu chuẩn PCCC khắt khe nhất. Với khả năng chịu lửa và cách nhiệt lên tới 90 phút, sản phẩm là lựa chọn hàng đầu cho các khu vực trọng yếu như phòng máy, kho chứa vật liệu dễ cháy, và các khu vực cần thời gian di tản dài.</p><h4>Ứng dụng:</h4><ul><li>Vách kính ngăn cháy cho các khu vực có nguy cơ cháy nổ cao.</li><li>Cửa kính cho lối thoát hiểm trong các tòa nhà cao tầng, trung tâm thương mại.</li><li>Đảm bảo an toàn và tuân thủ Nghị định 136 về PCCC.</li></ul>",
+    "specs": {
+      "Giới hạn chịu lửa": "EI90 (90 phút)",
+      "Độ dày": "38mm",
+      "Loại kính": "Kính nhiều lớp có keo cách nhiệt cao cấp",
+      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
+    }
+  },
      {
     id: 'cua-thep-chong-chay-ei60',
     name: 'Cửa thép chống cháy EI60',
@@ -71,95 +159,9 @@ export const products: Product[] = [
       'Ứng dụng': 'Nhà máy lớn, kho hóa chất, tầng hầm, khu vực trọng điểm nguy cơ cháy nổ cao.'
     }
   },
-  // --- Rèm/Màn ngăn cháy ---
-  {
-    
-    id: 'rem-1-lop',
-    name: 'Rèm/ màn ngăn cháy 1 lớp',
-    price: 0,
-    category: 'Rèm/Màn cuốn ngăn cháy',
-    categorySlug: 'rem',
-    sku: 'RNC-01',
-    images: ['/anh/man-ngan-chay-1-lop-68a481b6e3c76.webp'],
-    short_desc: 'Giải pháp PCCC hiệu quả, gọn nhẹ và thẩm mỹ cho các công trình hiện đại. Sản phẩm được làm từ vật liệu composite chống cháy cao cấp, có khả năng tự động sập xuống khi có tín hiệu báo cháy.',
-    description: `<p>Rèm ngăn cháy 1 lớp được thiết kế để thay thế cho các giải pháp cửa chống cháy truyền thống ở những khu vực cần không gian mở và tính thẩm mỹ cao như sảnh trung tâm thương mại, lối thoát hiểm, khu vực sản xuất...</p><h4>Ưu điểm nổi bật:</h4><ul><li>Thiết kế gọn nhẹ, hiện đại, tiết kiệm diện tích.</li><li>Tự động hoạt động khi có hỏa hoạn, đảm bảo an toàn tối đa.</li><li>Vật liệu cao cấp, đã được kiểm định PCCC theo tiêu chuẩn Việt Nam.</li><li>Dễ dàng lắp đặt, bảo trì và bảo dưỡng.</li></ul>`,
-    specs: {'Giới hạn chịu lửa': 'E 120 (chỉ ngăn lửa, không ngăn nhiệt)', 'Vật liệu': 'Vải thủy tinh phủ silicone/PU', 'Độ dày': '0.8mm - 2.0mm', 'Cơ chế hoạt động': 'Tự động, điều khiển bằng Motor và Hộp điều khiển trung tâm', 'Tiêu chuẩn': 'TCVN 9383:2012'}
-  },
-  {
-    id: 'rem-ei-90',
-    name: 'Rèm/ màn ngăn cháy EI 90 phút',
-    price: 0,
-    category: 'Rèm/Màn cuốn ngăn cháy',
-    categorySlug: 'rem',
-    sku: 'RNC-02',
-    images: ['/anh/ie-90-68a481af219a7.webp'],
-    short_desc: 'Sản phẩm rèm ngăn cháy cao cấp với giới hạn chịu lửa và cách nhiệt lên đến 90 phút, đáp ứng các tiêu chuẩn PCCC khắt khe nhất cho các công trình trọng điểm.',
-    description: `<p>Rèm ngăn cháy EI 90 là giải pháp an toàn tối ưu cho các khu vực có nguy cơ cháy nổ cao. Với cấu tạo nhiều lớp vật liệu chống cháy và cách nhiệt, sản phẩm đảm bảo ngăn chặn lửa và nhiệt độ hiệu quả trong 90 phút, tạo thời gian vàng cho công tác sơ tán và chữa cháy.</p><h4>Ứng dụng:</h4><ul><li>Nhà xưởng sản xuất, kho chứa hàng hóa có giá trị cao.</li><li>Tầng hầm, bãi đậu xe của các tòa nhà chung cư, trung tâm thương mại.</li><li>Phòng máy, phòng kỹ thuật, khu vực chứa thiết bị quan trọng.</li></ul>`,
-    specs: {'Giới hạn chịu lửa': 'EI 90 phút (ngăn lửa và cách nhiệt)', 'Vật liệu': 'Vải chống cháy đa lớp, bông gốm ceramic cách nhiệt', 'Độ dày': '3.0mm - 5.0mm', 'Cơ chế hoạt động': 'Tự động, điều khiển bằng Motor, có thể tích hợp UPS', 'Tiêu chuẩn': 'QCVN 06:2021/BXD'}
-  },
-  {
-    id: 'rem-ei-60',
-    name: 'Rèm/ màn ngăn cháy EI 60 phút',
-    price: 0,
-    category: 'Rèm/Màn cuốn ngăn cháy',
-    categorySlug: 'rem',
-    sku: 'RNC-03',
-    images: ['/anh/ie 60 test.webp'],
-    short_desc: 'Giải pháp cân bằng giữa chi phí và hiệu quả, cung cấp khả năng ngăn cháy và cách nhiệt trong 60 phút, phù hợp với đa số các công trình dân dụng và công nghiệp.',
-    description: `<p>Rèm ngăn cháy EI 60 là lựa chọn phổ biến nhất hiện nay. Sản phẩm không chỉ đảm bảo các yêu cầu về PCCC mà còn có thiết kế hiện đại, dễ dàng lắp đặt và vận hành.</p>`,
-    specs: {'Giới hạn chịu lửa': 'EI 60 phút (ngăn lửa và cách nhiệt)', 'Vật liệu': 'Vải thủy tinh phủ hợp chất chống cháy', 'Độ dày': '1.5mm - 2.5mm', 'Cơ chế hoạt động': 'Tự động, kết nối hệ thống báo cháy', 'Tiêu chuẩn': 'TCVN 9383:2012'}
-  },
-  {
-    "id": "kinh-chong-chay-e60-day-8mm",
-    "name": "Kính chống cháy E60, dày 8mm",
-    "price": 0,
-    "category": "Kính chống cháy",
-    "categorySlug": "kinh-chong-chay",
-    "sku": "KCC-E60-8",
-    "images": ['/anh/kính E60.jpg'],
-    "short_desc": "Kính chống cháy loại E60 với độ dày 8mm, đạt giới hạn chịu lửa 60 phút, chỉ ngăn lửa và khói, không ngăn nhiệt. Phù hợp cho vách ngăn, cửa quan sát tại các khu vực yêu cầu PCCC cơ bản.",
-    "description": "<p><strong>Kính chống cháy E60, dày 8mm</strong> là giải pháp kinh tế cho các công trình cần đảm bảo an toàn PCCC theo quy định. Kính duy trì tính toàn vẹn (E) trong 60 phút khi tiếp xúc với lửa, ngăn chặn hiệu quả sự lan truyền của lửa và khói.</p><h4>Đặc điểm kỹ thuật:</h4><ul><li><strong>Giới hạn chịu lửa:</strong> E60 (chỉ ngăn lửa, không ngăn nhiệt).</li><li><strong>Độ dày:</strong> 8mm.</li><li><strong>Cấu tạo:</strong> Kính cường lực được xử lý đặc biệt.</li><li><strong>Ứng dụng:</strong> Cửa đi, cửa sổ, vách ngăn trong các tòa nhà văn phòng, chung cư, nhà xưởng.</li></ul>",
-    "specs": {
-      "Giới hạn chịu lửa": "E60 (60 phút)",
-      "Độ dày": "8mm",
-      "Loại kính": "Kính cường lực chống cháy",
-      "Khả năng cách nhiệt": "Không (Chỉ ngăn lửa)"
-    }
-  },
-  {
-    "id": "kinh-chong-chay-cach-nhiet-ei30-day-22mm",
-    "name": "Kính chống cháy cách nhiệt EI30, dày 22mm",
-    "price": 0,
-    "category": "Kính chống cháy cách nhiệt",
-    "categorySlug": "kinh-chong-chay",
-    "sku": "KCC-EI30-22",
-    "images": ['/anh/ei30.jpg'],
-    "short_desc": "Kính chống cháy cách nhiệt EI30, dày 22mm, có khả năng ngăn lửa, khói và cả nhiệt lượng trong 30 phút. Đảm bảo an toàn cho lối thoát hiểm, giúp người di tản không bị ảnh hưởng bởi sức nóng của đám cháy.",
-    "description": "<p><strong>Kính chống cháy cách nhiệt EI30</strong> là loại kính cao cấp, vừa duy trì tính toàn vẹn (E) vừa có khả năng cách nhiệt (I) trong 30 phút. Khi có hỏa hoạn, một mặt kính tiếp xúc với lửa nhưng mặt còn lại vẫn giữ nhiệt độ an toàn, không gây bỏng khi chạm vào.</p><h4>Ưu điểm vượt trội:</h4><ul><li><strong>An toàn tối đa:</strong> Ngăn chặn cả lửa, khói và nhiệt, bảo vệ lối thoát hiểm.</li><li><strong>Tầm nhìn rõ ràng:</strong> Giữ được độ trong suốt ngay cả khi tiếp xúc với nhiệt độ cao.</li><li><strong>Cấu tạo nhiều lớp:</strong> Gồm nhiều lớp kính và lớp keo ngăn cháy cách nhiệt ở giữa.</li></ul>",
-    "specs": {
-      "Giới hạn chịu lửa": "EI30 (30 phút)",
-      "Độ dày": "22mm",
-      "Loại kính": "Kính nhiều lớp có keo cách nhiệt",
-      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
-    }
-  },
-  {
-    "id": "kinh-chong-chay-cach-nhiet-ei90-day-38mm",
-    "name": "Kính chống cháy cách nhiệt EI90, dày 38mm",
-    "price": 0,
-    "category": "Kính chống cháy cách nhiệt",
-    "categorySlug": "kinh-chong-chay",
-    "sku": "KCC-EI90-38",
-    "images": ['/anh/ei 90.jpg'],
-    "short_desc": "Kính chống cháy cách nhiệt EI90, dày 38mm, cung cấp khả năng bảo vệ vượt trội, ngăn lửa, khói và nhiệt lên đến 90 phút. Giải pháp an toàn cho các công trình có yêu cầu PCCC nghiêm ngặt.",
-    "description": "<p><strong>Kính chống cháy cách nhiệt EI90, dày 38mm</strong> đáp ứng các tiêu chuẩn PCCC khắt khe nhất. Với khả năng chịu lửa và cách nhiệt lên tới 90 phút, sản phẩm là lựa chọn hàng đầu cho các khu vực trọng yếu như phòng máy, kho chứa vật liệu dễ cháy, và các khu vực cần thời gian di tản dài.</p><h4>Ứng dụng:</h4><ul><li>Vách kính ngăn cháy cho các khu vực có nguy cơ cháy nổ cao.</li><li>Cửa kính cho lối thoát hiểm trong các tòa nhà cao tầng, trung tâm thương mại.</li><li>Đảm bảo an toàn và tuân thủ Nghị định 136 về PCCC.</li></ul>",
-    "specs": {
-      "Giới hạn chịu lửa": "EI90 (90 phút)",
-      "Độ dày": "38mm",
-      "Loại kính": "Kính nhiều lớp có keo cách nhiệt cao cấp",
-      "Khả năng cách nhiệt": "Có (Ngăn nhiệt, lửa, khói)"
-    }
-  },
+  
+
+
   {
     "id": "kinh-chong-chay-cach-nhiet-ei120-day-38mm",
     "name": "Kính chống cháy cách nhiệt EI120, dày 38mm",

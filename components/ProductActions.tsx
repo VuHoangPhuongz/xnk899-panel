@@ -35,7 +35,7 @@ const ProductActions = ({ productId }: ProductActionsProps) => {
                 <i className="fa-solid fa-cart-plus mr-2"></i> Thêm vào giỏ hàng
             </button>
             <a 
-                href="https://zalo.me/0987811158" 
+                href="https://zalo.me/0384358988 " 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex-1 text-center bg-blue-500 text-white px-6 py-3 rounded-md font-bold uppercase hover:bg-blue-600 transition-colors no-underline"

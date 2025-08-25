@@ -9,7 +9,7 @@ import { products } from '@/data/products';
 import ProductCard from './ProductCard';
 
 // Lấy 8 sản phẩm đầu tiên làm sản phẩm nổi bật
-const featuredProducts = products.slice(0, 8);
+const featuredProducts = products.slice(0, 9);
 
 const FeaturedProducts = () => {
     return (
