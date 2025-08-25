@@ -48,46 +48,45 @@ export default function HomePage() {
       <FeaturedProducts />
 
       {/* SECTION: THẾ MẠNH */}
-      <section className="relative bg-gray-800 text-gray-200">
-          <div className="absolute inset-0 z-0">
-              <Image src="/anh/marriott-da-nang-68a481b7734b2.webp" alt="Background" fill style={{objectFit: 'cover'}} className="opacity-10"/>
-              <div className="absolute inset-0 bg-gray-900/80"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10 max-w-5xl w-full py-16 md:py-24">
-              <div className="grid md:grid-cols-2 gap-16 items-center">
-                  <div>
-                      <Image src="/anh/giay chung nhan.webp" alt="Chứng nhận chất lượng XNK 899" width={400} height={500} className="rounded-lg shadow-xl w-full h-auto"/>
-                  </div>
-                  <div>
-                      <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 uppercase section-title">Thế mạnh của chúng tôi</h2>
-                      <div className="space-y-6">
-                          <div className="flex items-start space-x-4">
-                              <i className="fa-solid fa-award text-orange-primary text-3xl w-8 text-center pt-1"></i>
-                              <div>
-                                  <h3 className="text-xl font-semibold text-white mb-1">CHẤT LƯỢNG HÀNG ĐẦU</h3>
-                                  <p className="text-gray-400">Sản phẩm nhập khẩu chính ngạch, có đầy đủ chứng nhận chất lượng theo tiêu chuẩn PCCC Việt Nam.</p>
-                              </div>
-                          </div>
-                          <div className="flex items-start space-x-4">
-                              <i className="fa-solid fa-handshake text-orange-primary text-3xl w-8 text-center pt-1"></i>
-                              <div>
-                                  <h3 className="text-xl font-semibold text-white mb-1">UY TÍN – CHUYÊN NGHIỆP</h3>
-                                  <p className="text-gray-400">Luôn đặt chữ TÍN lên hàng đầu, với đội ngũ nhân sự chuyên nghiệp và tận tâm.</p>
-                              </div>
-                          </div>
-                          <div className="flex items-start space-x-4">
-                                <i className="fa-solid fa-headset text-orange-primary text-3xl w-8 text-center pt-1"></i>
-                                <div>
-                                    <h3 className="text-xl font-semibold text-white mb-1">HỖ TRỢ 24/7</h3>
-                                    <p className="text-gray-400">Sẵn sàng tư vấn, giải đáp mọi thắc mắc của khách hàng một cách nhanh chóng và hiệu quả.</p>
-                                </div>
-                            </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
+      <section className="relative bg-blue-primary text-white">
+    <div className="absolute inset-0 z-0">
+        <Image src="/anh/marriott-da-nang-68a481b7734b2.webp" alt="Background" fill style={{objectFit: 'cover'}} className="opacity-10"/>
+        <div className="relative bg-blue-primary text-white"></div>
+    </div>
+    <div className="container mx-auto px-4 relative z-10 max-w-5xl w-full py-16 md:py-24">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <Image src="/anh/giay chung nhan.webp" alt="Chứng nhận chất lượng XNK 899" width={400} height={500} className="rounded-lg shadow-xl w-full h-auto"/>
+            </div>
+            <div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 uppercase section-title">Thế mạnh của chúng tôi</h2>
+                <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                        <i className="fa-solid fa-award text-orange-primary text-3xl w-8 text-center pt-1"></i>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white mb-1">CHẤT LƯỢNG HÀNG ĐẦU</h3>
+                            <p className="text-white">Sản phẩm nhập khẩu chính ngạch, có đầy đủ chứng nhận chất lượng theo tiêu chuẩn PCCC Việt Nam.</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                        <i className="fa-solid fa-handshake text-orange-primary text-3xl w-8 text-center pt-1"></i>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white mb-1">UY TÍN – CHUYÊN NGHIỆP</h3>
+                            <p className="text-white">Luôn đặt chữ TÍN lên hàng đầu, với đội ngũ nhân sự chuyên nghiệp và tận tâm.</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                        <i className="fa-solid fa-headset text-orange-primary text-3xl w-8 text-center pt-1"></i>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white mb-1">HỖ TRỢ 24/7</h3>
+                            <p className="text-white">Sẵn sàng tư vấn, giải đáp mọi thắc mắc của khách hàng một cách nhanh chóng và hiệu quả.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
       {/* SECTION: DỰ ÁN ĐÃ TRIỂN KHAI */}
 <section className="py-16 lg:py-24 bg-gray-50">
     <div className="container mx-auto px-4">

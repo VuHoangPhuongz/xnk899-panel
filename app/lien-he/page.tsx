@@ -69,7 +69,7 @@ export default function LienHePage() {
                   </div>
                   <div className="flex items-start space-x-4">
                       <i className="fa-solid fa-phone text-orange-primary text-xl mt-1 w-5 text-center"></i>
-                      <span ><strong className="text-gray-800 ">Hotline:</strong> 0987.811.158 / 0987.822.311 / 0384.358.988 / 0383.522.018</span>
+                      <span ><strong className="text-gray-800 ">Hotline:</strong> 0987.822.311 / 0384.358.988 / 0383.522.018</span>
                   </div>
                     <div className="flex items-start space-x-4">
                       <i className="fa-solid fa-envelope text-orange-primary text-xl mt-1 w-5 text-center"></i>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300">
+    <footer className="relative bg-blue-primary text-white">
         <div className="container mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div>
@@ -19,7 +19,7 @@ const Footer = () => {
                     <p className="font-bold text-white mb-2 uppercase">CÔNG TY CP XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</p>
                     <p className="text-sm leading-relaxed "><i className="fa-solid fa-location-dot w-4 mr-2"></i>Trụ sở: Số 97 ngõ 143 đường Xuân Phương, Phường Xuân Phương, Thành phố Hà Nội, Việt Nam</p>
                     <p className="text-sm leading-relaxed mt-2"><i className="fa-solid fa-location-dot w-4 mr-2"></i>Văn phòng: Housinco Premium, 288 Nguyễn Xiển, Thanh Liệt, Hà Nội</p>
-                    <p className="text-sm mt-2"><i className="fa-solid fa-phone w-4 mr-2"></i>Hotline:<br /> 0987.811.158 <br />0987 822 311 <br />0384 358 988<br />0383 522 018</p>
+                    <p className="text-sm mt-2"><i className="fa-solid fa-phone w-4 mr-2"></i>Hotline:<br /> 0987 822 311 <br />0384 358 988<br />0383 522 018</p>
                     <p className="text-sm mt-2"><i className="fa-solid fa-envelope w-4 mr-2"></i>Email: xnk899@gmail.com</p>
                 </div>
                 <div>
@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="bg-black/20 py-4">
+        <div className="relative bg-blue-900 text-white">
             <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
                 <p>© 2025 Bản quyền thuộc về Công ty CP XNK & XD 899</p>
             </div>
