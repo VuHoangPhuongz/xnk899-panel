@@ -52,9 +52,9 @@ const FixedActions = () => {
                 key={idx}
                 href={item.href}
                 target="_blank"
-                className="min-w-[140px] px-3 py-2 bg-blue-100 rounded-lg text-blue-600 font-medium text-sm hover:bg-blue-200 transition"
+                className="min-w-[100px] px-2 py-1 bg-blue-100 rounded-lg text-blue-600 font-medium text-sm hover:bg-blue-200 transition"
               >
-                Zalo: {item.text}
+                 {item.text}
               </a>
             ))}
           </div>
