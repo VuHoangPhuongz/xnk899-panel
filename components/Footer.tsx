@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="relative bg-blue-900 text-white">
+        <div className="relative bg-gray-800 text-white">
             <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
                 <p>© 2025 Bản quyền thuộc về Công ty CP XNK & XD 899</p>
             </div>
