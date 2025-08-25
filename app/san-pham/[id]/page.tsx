@@ -219,7 +219,7 @@ export default function ProductDetailPage() {
         </nav>
 
         {/* Main Product Section - Improved Responsive Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Product Images - Enhanced Mobile Experience */}
           <div className="order-1">
             {/* Main Image */}
@@ -296,7 +296,7 @@ export default function ProductDetailPage() {
                 <span className="mr-2">💰</span>
                 Giá: 
                 <a 
-                  href="tel:0987811158" 
+                  href="tel:0384358988" 
                   className="ml-2 hover:underline transition-all duration-200 hover:text-red-700"
                   aria-label="Gọi điện để biết giá"
                 >
