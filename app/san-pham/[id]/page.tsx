@@ -219,7 +219,7 @@ export default function ProductDetailPage() {
         </nav>
 
         {/* Main Product Section - Improved Responsive Grid */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Product Images - Enhanced Mobile Experience */}
           <div className="order-1">
             {/* Main Image */}

@@ -17,6 +17,7 @@ export default function SanPhamLayout({
           objectFit="cover" 
           className="opacity-40 z-0"
           priority
+          sizes="100vw"
         />
         {/* Lớp phủ màu */}
         <div className="absolute inset-0 bg-blue-primary/60 z-0"></div>
