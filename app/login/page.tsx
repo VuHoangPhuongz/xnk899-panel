@@ -3,34 +3,29 @@
 
 import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { FormEvent } from 'react';
+import { FormEvent, Suspense } from 'react';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const error = searchParams.get('error');
 
-  // Hàm xử lý khi người dùng nhấn nút "Đăng nhập"
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Ngăn trình duyệt tải lại trang
+    event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
 
-    // Gọi hàm signIn của NextAuth.js
     const result = await signIn('credentials', {
-      redirect: false, // Tắt tự động chuyển hướng để chúng ta có thể xử lý lỗi
-      email: email,
-      password: password,
+      redirect: false,
+      email,
+      password,
     });
 
-    // Kiểm tra kết quả
     if (result?.error) {
-      // Nếu có lỗi (ví dụ: sai mật khẩu), chuyển hướng lại trang login với thông báo lỗi
       router.push('/login?error=Email hoặc mật khẩu không chính xác');
     } else {
-      // Nếu đăng nhập thành công, chuyển hướng đến dashboard
       router.push('/dashboard');
     }
   };
@@ -45,10 +40,7 @@ export default function LoginPage() {
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label 
-              htmlFor="email" 
-              className="text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="email" className="text-sm font-medium text-gray-700">
               Email
             </label>
             <input
@@ -61,10 +53,7 @@ export default function LoginPage() {
             />
           </div>
           <div>
-            <label 
-              htmlFor="password" 
-              className="text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="password" className="text-sm font-medium text-gray-700">
               Mật khẩu
             </label>
             <input
@@ -77,7 +66,6 @@ export default function LoginPage() {
             />
           </div>
 
-          {/* Hiển thị thông báo lỗi nếu có trên URL */}
           {error && (
             <div className="p-3 text-sm text-red-800 bg-red-100 border border-red-200 rounded-md">
               {error}
@@ -95,5 +83,13 @@ export default function LoginPage() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }
