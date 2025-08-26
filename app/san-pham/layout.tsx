@@ -1,6 +1,7 @@
 import SharedProductSidebar from "@/components/SharedProductSidebar";
 import Link from 'next/link';
 import Image from 'next/image';
+
 export default function SanPhamLayout({
   children,
 }: {
@@ -8,14 +9,13 @@ export default function SanPhamLayout({
 }) {
   return (
     <>
-    <section className="relative bg-gray-800 text-white py-20">
+      <section className="relative bg-gray-800 text-white py-20">
         {/* Ảnh nền */}
-        <Image 
+        <Image
           src="/anh/marriott-da-nang-68a481b7734b2.webp"
-          alt="Banner trang sản phẩm" 
-          layout="fill" 
-          objectFit="cover" 
-          className="opacity-40 z-0"
+          alt="Banner trang sản phẩm"
+          fill
+          className="object-cover opacity-40 z-0"
           priority
           sizes="100vw"
         />
@@ -34,20 +34,25 @@ export default function SanPhamLayout({
           </div>
         </div>
       </section>
-    <div className="bg-gray-50">
-        <div className="container mx-auto px-4 py-12 lg:py-16">
-            <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">
-              <SharedProductSidebar />
-                {/* Cột trái chứa nội dung chính (danh sách hoặc chi tiết SP) */}
-                <main className="lg:col-span-3">
-                    {children}
-                </main>
 
-                {/* Cột phải chứa Sidebar */}
-                
-            </div>
+      <div className="bg-gray-50">
+        <div className="container mx-auto px-4 py-12 lg:py-16">
+          {/* Trên mobile: 1 cột -> sản phẩm trước, sidebar sau */}
+          {/* Trên desktop: grid 4 cột -> sidebar chiếm 1, sản phẩm chiếm 3 */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+            
+            {/* Nội dung chính */}
+            <main className="lg:col-span-3 order-1">
+              {children}
+            </main>
+
+            {/* Sidebar */}
+            <aside className="order-2 lg:order-1 lg:col-span-1">
+              <SharedProductSidebar />
+            </aside>
+          </div>
         </div>
-    </div>
+      </div>
     </>
   );
 }
