@@ -1,10 +1,22 @@
 // app/san-pham/layout.tsx
+import { Suspense } from 'react'; // 1. Import Suspense
 import SharedProductSidebar from "@/components/SharedProductSidebar";
 import Link from 'next/link';
 import Image from 'next/image';
-
-// (Giả sử bạn đã có file data/categories.ts như đã tạo ở các bước trước)
 import { categories } from '@/data/categories';
+
+// Component fallback UI cho Sidebar
+const SidebarSkeleton = () => (
+  <div className="bg-white p-6 rounded-lg shadow-md animate-pulse">
+    <div className="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+    <div className="space-y-2">
+      <div className="h-8 bg-gray-200 rounded"></div>
+      <div className="h-8 bg-gray-200 rounded"></div>
+      <div className="h-8 bg-gray-200 rounded"></div>
+      <div className="h-8 bg-gray-200 rounded"></div>
+    </div>
+  </div>
+);
 
 export default function SanPhamLayout({
   children,
@@ -42,8 +54,10 @@ export default function SanPhamLayout({
               {children}
             </main>
             <aside className="order-2 lg:order-1 lg:col-span-1">
-              {/* Truyền danh sách categories vào sidebar */}
-              <SharedProductSidebar categories={categories} />
+              {/* 2. Bọc Sidebar trong Suspense */}
+              <Suspense fallback={<SidebarSkeleton />}>
+                <SharedProductSidebar categories={categories} />
+              </Suspense>
             </aside>
           </div>
         </div>
