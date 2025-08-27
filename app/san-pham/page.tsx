@@ -1,31 +1,31 @@
 // app/san-pham/page.tsx
-import { products } from '@/data/products';
+import { getProducts } from '@/lib/actions';
+import { categories } from '@/data/categories'; // Import danh sách categories để sắp xếp
 import ProductCard from '@/components/ProductCard';
+import { Product } from '@prisma/client';
 
-export default function SanPhamPage({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
-  const initialCategory = (searchParams.category as string) || 'all';
+export default async function SanPhamPage() {
+  // 1. Lấy tất cả sản phẩm từ database
+  const allProducts = await getProducts();
 
-  const filteredProducts =
-    initialCategory === 'all'
-      ? products
-      : products.filter(p => p.categorySlug === initialCategory);
+  // 2. Tạo một bản đồ thứ tự cho các danh mục
+  const displayCategories = categories.filter(cat => cat.slug !== 'all');
+  const categoryOrder = new Map(
+    displayCategories.map((cat, index) => [cat.slug, index])
+  );
+
+  // 3. Sắp xếp mảng sản phẩm dựa trên thứ tự của danh mục
+  const sortedProducts = allProducts.sort((a, b) => {
+    const orderA = categoryOrder.get(a.categorySlug) ?? Infinity;
+    const orderB = categoryOrder.get(b.categorySlug) ?? Infinity;
+    return orderA - orderB;
+  });
 
   return (
-    <>
-      <h1 className="text-3xl font-bold mb-8 pb-4 border-b text-blue-primary">
-        Tất cả sản phẩm
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))
-        ) : (
-          <p className="col-span-full text-center text-gray-500">
-            Không tìm thấy sản phẩm nào.
-          </p>
-        )}
-      </div>
-    </>
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+      {sortedProducts.map(product => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
   );
 }

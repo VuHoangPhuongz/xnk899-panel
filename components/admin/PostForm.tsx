@@ -22,7 +22,7 @@ export default function PostForm({ post, formAction }: PostFormProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="date" className="block text-sm font-medium text-gray-700">Ngày đăng</label>
-          <input type="date" id="date" name="date" defaultValue={post?.date.substring(0, 10)} required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
+          <input type="date" id="date" name="date" defaultValue={post?.date.toISOString().substring(0, 10)} required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
         </div>
         <div>
           <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700">Link ảnh đại diện</label>

@@ -1,56 +1,41 @@
+// components/NewsSidebar.tsx
 import Link from 'next/link';
 import Image from 'next/image';
-import { newsData } from '@/data/news';
-import { categories } from '@/data/products';
+import { NewsArticle } from '@prisma/client'; // Import kiểu dữ liệu từ Prisma
 
-// Lấy 5 bài viết đầu tiên làm "Bài viết xem nhiều"
-const popularArticles = newsData.slice(0, 5);
-
-const NewsSidebar = () => {
-    return (
-        <aside className="lg:col-span-1 space-y-8 sticky top-28">
-            {/* Bài viết xem nhiều */}
-            <div className="bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-bold p-4 bg-gray-100 border-b rounded-t-lg text-blue-primary">BÀI VIẾT XEM NHIỀU</h3>
-                <ul className="space-y-4 p-4">
-                    {popularArticles.map(article => (
-                        <li key={article.id} className="flex items-center space-x-3">
-                            <Link href={`/tin-tuc/${article.slug}`} className="flex-shrink-0">
-                                <Image 
-                                    src={article.imageUrl} 
-                                    alt={article.title} 
-                                    width={64} 
-                                    height={64} 
-                                    className="w-16 h-16 object-cover rounded-md border" 
-                                />
-                            </Link>
-                            <div>
-                                <h4 className="text-sm font-semibold leading-tight">
-                                    <Link href={`/tin-tuc/${article.slug}`} className="hover:text-green-primary">
-                                        {article.title}
-                                    </Link>
-                                </h4>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            {/* Danh mục sản phẩm */}
-            <div className="bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-bold p-4 bg-gray-100 border-b rounded-t-lg text-blue-primary">DANH MỤC SẢN PHẨM</h3>
-                <ul className="space-y-1 p-4 text-sm">
-                    {categories.filter(cat => cat.slug !== 'all').map(category => (
-                         <li key={category.slug}>
-                            <Link href={`/san-pham?category=${category.slug}`} className="block w-full text-left px-4 py-2 rounded-md font-semibold hover:bg-blue-primary hover:text-white transition-colors">
-                                {category.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </aside>
-    );
-};
-
-export default NewsSidebar;
+export default function NewsSidebar({ recentPosts }: { recentPosts: NewsArticle[] }) {
+  return (
+    <aside className="space-y-8 sticky top-24">
+      {/* Phần bài viết mới nhất */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold mb-4 pb-2 border-b">Bài viết mới nhất</h3>
+        <ul className="space-y-4">
+          {recentPosts.map(post => (
+            <li key={post.id}>
+              <Link href={`/tin-tuc/${post.slug}`} className="flex items-center space-x-4 group">
+                <div className="flex-shrink-0 w-20 h-16 relative rounded-md overflow-hidden">
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {post.title}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {new Date(post.date).toLocaleDateString('vi-VN')}
+                  </p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* Bạn có thể thêm các widget khác ở đây, ví dụ: danh mục tin tức */}
+    </aside>
+  );
+}

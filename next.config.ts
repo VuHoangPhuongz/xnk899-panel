@@ -9,10 +9,14 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true, // 👈 bỏ qua TypeScript errors
   },
    images: {
+    domains: ['localhost'],
     remotePatterns: [
       {
+        
         protocol: 'https',
         hostname: 'via.placeholder.com',
+         pathname: '/**',
+           port: '',
       },
     ],
   },

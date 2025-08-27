@@ -18,7 +18,20 @@ export async function getProducts() {
 export async function getProductById(id: string) {
   return await prisma.product.findUnique({ where: { id } });
 }
-
+export async function getFilteredProducts(categorySlug?: string) {
+  if (!categorySlug || categorySlug === 'all') {
+    // Nếu không có category hoặc là 'all', lấy tất cả sản phẩm
+    return await prisma.product.findMany({ orderBy: { createdAt: 'desc' } });
+  } else {
+    // Nếu có category, lọc theo categorySlug
+    return await prisma.product.findMany({
+      where: {
+        categorySlug: categorySlug,
+      },
+      orderBy: { createdAt: 'desc' },
+    });
+  }
+}
 export async function createProduct(formData: FormData) {
   const specs = JSON.parse(formData.get('specs') as string || '{}');
   await prisma.product.create({
