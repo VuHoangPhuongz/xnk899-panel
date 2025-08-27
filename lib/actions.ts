@@ -267,3 +267,41 @@ export async function signOutAction() {
   cookies().set('session', '', { expires: new Date(0) });
   redirect('/login');
 }
+
+export async function getHeroSlides() {
+  return await prisma.heroSlide.findMany({
+    orderBy: {
+      order: 'asc', // Sắp xếp theo thứ tự
+    },
+  });
+}
+
+export async function createHeroSlide(url: string, alt: string) {
+  // Lấy thứ tự lớn nhất hiện tại và cộng thêm 1
+  const maxOrder = await prisma.heroSlide.aggregate({
+    _max: { order: true },
+  });
+  const newOrder = (maxOrder._max.order ?? -1) + 1;
+
+  await prisma.heroSlide.create({
+    data: { url, alt, order: newOrder },
+  });
+  revalidatePath('/'); // Cập nhật cache trang chủ
+}
+
+export async function deleteHeroSlide(id: string) {
+  await prisma.heroSlide.delete({ where: { id } });
+  revalidatePath('/');
+}
+
+// (Tùy chọn) Hàm để cập nhật thứ tự
+export async function updateHeroSlideOrder(slides: { id: string; order: number }[]) {
+  const updates = slides.map(slide => 
+    prisma.heroSlide.update({
+      where: { id: slide.id },
+      data: { order: slide.order },
+    })
+  );
+  await prisma.$transaction(updates);
+  revalidatePath('/');
+}
