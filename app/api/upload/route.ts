@@ -1,4 +1,4 @@
-// app/api/upload/route.ts
+// app/api/upload/route.ts (Phiên bản đã sửa)
 import { put } from '@vercel/blob';
 import { NextResponse } from 'next/server';
 
@@ -6,19 +6,27 @@ export async function POST(request: Request): Promise<NextResponse> {
   const { searchParams } = new URL(request.url);
   const filename = searchParams.get('filename');
 
+  // Kiểm tra xem có tên tệp và body không
   if (!filename || !request.body) {
-    return NextResponse.json({ message: 'No filename provided.' }, { status: 400 });
+    return NextResponse.json(
+      { message: 'Không có tên tệp hoặc nội dung tệp được cung cấp.' },
+      { status: 400 }
+    );
   }
 
   try {
-    const blob = await put(filename, request, {
+    // Sửa ở đây: Truyền request.body và xóa multipart: true
+    const blob = await put(filename, request.body, {
       access: 'public',
-      multipart: true, // Quan trọng cho Next.js 14+
     });
+    
+    // Trả về thông tin blob (bao gồm URL)
     return NextResponse.json(blob);
   } catch (error) {
-    console.error("Lỗi từ Vercel Blob:", error);
-    // Trả về một JSON lỗi rõ ràng
-    return NextResponse.json({ message: 'Upload to Vercel Blob failed.' }, { status: 500 });
+    console.error("Lỗi khi tải lên Vercel Blob:", error);
+    return NextResponse.json(
+      { message: 'Tải lên Vercel Blob thất bại.' },
+      { status: 500 }
+    );
   }
 }

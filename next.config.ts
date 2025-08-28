@@ -8,15 +8,14 @@ const nextConfig: NextConfig = {
    typescript: {
     ignoreBuildErrors: true, // 👈 bỏ qua TypeScript errors
   },
-   images: {
-    domains: ['localhost'],
+    images: {
     remotePatterns: [
       {
-        
         protocol: 'https',
-        hostname: 'via.placeholder.com',
-         pathname: '/**',
-           port: '',
+        hostname: '*.public.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+        
       },
     ],
   },

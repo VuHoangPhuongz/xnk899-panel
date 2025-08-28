@@ -5,7 +5,7 @@ import { PrismaClient } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
-
+// ✨ Thêm dòng này
 // Khởi tạo Prisma Client để tương tác với database
 const prisma = new PrismaClient();
 
@@ -32,42 +32,55 @@ export async function getFilteredProducts(categorySlug?: string) {
     });
   }
 }
-export async function createProduct(formData: FormData) {
-  const specs = JSON.parse(formData.get('specs') as string || '{}');
-  await prisma.product.create({
-    data: {
-      id: formData.get('id') as string, // Trong thực tế, nên dùng slug và để DB tự tạo id
-      name: formData.get('name') as string,
-      sku: formData.get('sku') as string,
-      price: Number(formData.get('price')) || null,
-      category: formData.get('category') as string,
-      categorySlug: formData.get('categorySlug') as string,
-     images: (formData.get('images') as string).split(',').map(img => img.trim()),
-      short_desc: formData.get('short_desc') as string,
-      description: formData.get('description') as string,
-      specs: specs,
+export async function createProduct(data: any) { // 1. Nhận vào object `data`
+  try {
+    await prisma.product.create({
+      data: {
+        id: data.slug,           // 2. Lấy dữ liệu trực tiếp từ `data.fieldName`
+        name: data.name,
+        sku: data.sku,
+        price: data.price,
+        category: data.category,
+        categorySlug: data.categorySlug,
+        images: data.images,
+        short_desc: data.short_desc,
+        description: data.description,
+        specs: data.specs,
+      }
+    });
+  } catch (error: any) {
+    if (error.code === 'P2002') { // Lỗi trùng lặp unique key (ví dụ: SKU hoặc ID)
+      return { error: `Lỗi: ${error.meta?.target} đã tồn tại. Vui lòng chọn một giá trị khác.` };
     }
-  });
+    return { error: 'Đã xảy ra lỗi không xác định. Vui lòng thử lại.' };
+  }
   revalidatePath('/(admin)/products', 'page');
   redirect('/products');
 }
 
-export async function updateProduct(id: string, formData: FormData) {
-  const specs = JSON.parse(formData.get('specs') as string || '{}');
-  await prisma.product.update({
-    where: { id },
-    data: {
-      name: formData.get('name') as string,
-      sku: formData.get('sku') as string,
-      price: Number(formData.get('price')) || null,
-      category: formData.get('category') as string,
-      categorySlug: formData.get('categorySlug') as string,
-      images: (formData.get('images') as string).split(',').map(img => img.trim()),
-      short_desc: formData.get('short_desc') as string,
-      description: formData.get('description') as string,
-      specs: specs,
-    }
-  });
+export async function updateProduct(id: string, data: any) { // 1. Nhận vào object `data`
+  try {
+    await prisma.product.update({
+      where: { id },
+      data: {
+        name: data.name,            // 2. Lấy dữ liệu trực tiếp từ `data.fieldName`
+        sku: data.sku,
+        price: data.price,
+        category: data.category,
+        categorySlug: data.categorySlug,
+        images: data.images,
+        short_desc: data.short_desc,
+        description: data.description,
+        specs: data.specs,
+      }
+    });
+  } catch (error: any) {
+    if (error.code === 'P2002') {
+        return { error: `Lỗi: ${error.meta?.target} đã tồn tại. Vui lòng chọn một giá trị khác.` };
+      }
+      return { error: 'Đã xảy ra lỗi không xác định. Vui lòng thử lại.' };
+  }
+
   revalidatePath('/(admin)/products', 'page');
   revalidatePath(`/san-pham/${id}`, 'page');
   redirect('/products');
@@ -192,13 +205,15 @@ export async function getSiteSettings() {
     settings = await prisma.siteSettings.create({
       data: {
         id: "main_settings",
-        phoneNumbers: "Điền số điện thoại",
+        // + Thêm giá trị mặc định cho các trường mới
+        headerPhoneNumbers: "SĐT Header",
         facebookUrl: "#",
         youtubeUrl: "#",
-        addressHQ: "Điền địa chỉ trụ sở",
-        addressOffice: "Điền địa chỉ văn phòng",
-        email: "email@example.com",
-        copyrightYear: new Date().getFullYear().toString(),
+        footerAddressHQ: "Địa chỉ trụ sở",
+        footerAddressOffice: "Địa chỉ văn phòng",
+        footerEmail: "email@example.com",
+        footerCopyrightYear: new Date().getFullYear().toString(),
+        footerPhoneNumbers: "SĐT Footer", // + Thêm giá trị mặc định
         primaryColor: "#1e40af",
         backgroundColor: "#ffffff",
       }
@@ -211,13 +226,15 @@ export async function updateSiteSettings(formData: FormData) {
     await prisma.siteSettings.update({
         where: { id: "main_settings" },
         data: {
-            phoneNumbers: formData.get('phoneNumbers') as string,
+            // + Cập nhật theo tên trường mới
+            headerPhoneNumbers: formData.get('headerPhoneNumbers') as string,
             facebookUrl: formData.get('facebookUrl') as string,
             youtubeUrl: formData.get('youtubeUrl') as string,
-            addressHQ: formData.get('addressHQ') as string,
-            addressOffice: formData.get('addressOffice') as string,
-            email: formData.get('email') as string,
-            copyrightYear: formData.get('copyrightYear') as string,
+            footerAddressHQ: formData.get('footerAddressHQ') as string,
+            footerAddressOffice: formData.get('footerAddressOffice') as string,
+            footerEmail: formData.get('footerEmail') as string,
+            footerCopyrightYear: formData.get('footerCopyrightYear') as string,
+            footerPhoneNumbers: formData.get('footerPhoneNumbers') as string, // + Thêm trường mới
             primaryColor: formData.get('primaryColor') as string,
             backgroundColor: formData.get('backgroundColor') as string,
         }
@@ -267,34 +284,58 @@ export async function signOutAction() {
   cookies().set('session', '', { expires: new Date(0) });
   redirect('/login');
 }
-
 export async function getHeroSlides() {
-  return await prisma.heroSlide.findMany({
-    orderBy: {
-      order: 'asc', // Sắp xếp theo thứ tự
-    },
-  });
+  // Vì chưa có auth, chúng ta sẽ xóa bỏ logic kiểm tra đăng nhập
+  // và chỉ tập trung vào việc lấy dữ liệu.
+  try {
+    const heroSlides = await prisma.heroSlide.findMany({
+      orderBy: {
+        order: 'asc',
+      },
+    });
+    return heroSlides;
+  } catch (error) {
+    console.error("Lỗi khi lấy dữ liệu hero slides:", error);
+    // Nếu có lỗi, trả về một mảng rỗng để tránh crash trang
+    return [];
+  }
 }
 
-export async function createHeroSlide(url: string, alt: string) {
-  // Lấy thứ tự lớn nhất hiện tại và cộng thêm 1
-  const maxOrder = await prisma.heroSlide.aggregate({
-    _max: { order: true },
+// Thêm một slide mới
+export async function createHeroSlide(formData: FormData) {
+  const url = formData.get('url') as string;
+  const alt = formData.get('alt') as string;
+
+  if (!url || !alt) {
+    return { error: 'URL ảnh và văn bản thay thế là bắt buộc.' };
+  }
+
+  // Tự động gán thứ tự lớn nhất + 1
+  const maxOrderSlide = await prisma.heroSlide.findFirst({
+    orderBy: { order: 'desc' },
   });
-  const newOrder = (maxOrder._max.order ?? -1) + 1;
+  const newOrder = maxOrderSlide ? maxOrderSlide.order + 1 : 0;
 
   await prisma.heroSlide.create({
-    data: { url, alt, order: newOrder },
+    data: {
+      url,
+      alt,
+      order: newOrder,
+    },
   });
+
   revalidatePath('/'); // Cập nhật cache trang chủ
+  revalidatePath('/(admin)/slides'); // Cập nhật cache trang admin
 }
 
+// Xóa một slide
 export async function deleteHeroSlide(id: string) {
   await prisma.heroSlide.delete({ where: { id } });
   revalidatePath('/');
+  revalidatePath('/(admin)/slides');
 }
 
-// (Tùy chọn) Hàm để cập nhật thứ tự
+// (Tùy chọn nâng cao) Cập nhật thứ tự các slide
 export async function updateHeroSlideOrder(slides: { id: string; order: number }[]) {
   const updates = slides.map(slide => 
     prisma.heroSlide.update({
@@ -304,4 +345,5 @@ export async function updateHeroSlideOrder(slides: { id: string; order: number }
   );
   await prisma.$transaction(updates);
   revalidatePath('/');
+  revalidatePath('/(admin)/slides');
 }

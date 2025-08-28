@@ -12,38 +12,38 @@ export const newsData: NewsArticle[] = [
   {
     id: 1,
     slug: '899-imex-ra-mat-man-cuon-ngan-chay-the-he-moi',
-    title: '899 IM-EX Ra Mắt Màn Cuốn Ngăn Cháy Tự Động – Bước Tiến Mới Trong Giải Pháp An Toàn',
-    excerpt: 'Trong bối cảnh yêu cầu PCCC ngày càng khắt khe, 899 IM-EX đã chính thức ra mắt màn cuốn ngăn cháy thế hệ mới, hứa hẹn trở thành giải pháp tối ưu...',
+    title: '899 IMEX Ra Mắt Màn Cuốn Ngăn Cháy Tự Động – Bước Tiến Mới Trong Giải Pháp An Toàn',
+    excerpt: 'Trong bối cảnh yêu cầu PCCC ngày càng khắt khe, 899 IMEX đã chính thức ra mắt màn cuốn ngăn cháy thế hệ mới, hứa hẹn trở thành giải pháp tối ưu...',
     imageUrl: '/anh/news/anh-thanh-pho.jpg', // Ảnh hồ và thành phố
     date: '2025-08-25',
     content: `
       <p><strong>Hà Nội</strong> – Trong bối cảnh các yêu cầu về phòng cháy chữa cháy ngày càng khắt khe, Công ty Cổ phần Xuất Nhập Khẩu & Xây Dựng 899 đã chính thức ra mắt màn cuốn ngăn cháy thế hệ mới – sản phẩm kết hợp công nghệ hiện đại và tiêu chuẩn an toàn quốc tế, hứa hẹn trở thành giải pháp tối ưu bảo vệ tính mạng và tài sản cho hàng nghìn công trình trên cả nước.</p>
       
       <figure class="my-6">
-        <img src="/anh/news/nhan-vien-tu van.jpg" alt="Nhân viên 899 IM-EX tư vấn cho cán bộ PCCC tại triển lãm" class="w-full rounded-lg shadow-md" />
+        <img src="/anh/news/nhan-vien-tu van.jpg" alt="Nhân viên 899 IMEX tư vấn cho cán bộ PCCC tại triển lãm" class="w-full rounded-lg shadow-md" />
       </figure>
 
       <h3>Bảo vệ toàn diện – An tâm tuyệt đối</h3>
-      <p>Được nghiên cứu và sản xuất trên dây chuyền công nghệ tiên tiến, màn cuốn ngăn cháy của 899 IM-EX có khả năng chống cháy và ngăn khói lan tới 90 phút, giúp kéo dài thời gian thoát hiểm và hạn chế thiệt hại khi xảy ra sự cố.</p>
+      <p>Được nghiên cứu và sản xuất trên dây chuyền công nghệ tiên tiến, màn cuốn ngăn cháy của 899 IMEX có khả năng chống cháy và ngăn khói lan tới 90 phút, giúp kéo dài thời gian thoát hiểm và hạn chế thiệt hại khi xảy ra sự cố.</p>
       <p>Với thiết kế gọn nhẹ, vận hành tự động hoặc bán tự động, sản phẩm phù hợp cho mọi loại công trình: từ trung tâm thương mại, cao ốc văn phòng, nhà máy sản xuất cho tới kho bãi, nhà xưởng.</p>
       
       <figure class="my-6">
-        <img src="/anh/news/man-cuon-san-pham.jpg" alt="Sản phẩm màn cuốn ngăn cháy tự động của 899 IM-EX" class="w-full rounded-lg shadow-md" />
+        <img src="/anh/news/man-cuon-san-pham.jpg" alt="Sản phẩm màn cuốn ngăn cháy tự động của 899 IMEX" class="w-full rounded-lg shadow-md" />
       </figure>
 
       <h3>Kinh nghiệm và uy tín đã được khẳng định</h3>
-      <p>Trải qua nhiều năm hoạt động trong lĩnh vực xây dựng và cung ứng giải pháp an toàn, 899 IM-EX đã trở thành đối tác tin cậy của hàng trăm dự án lớn nhỏ trên toàn quốc.</p>
+      <p>Trải qua nhiều năm hoạt động trong lĩnh vực xây dựng và cung ứng giải pháp an toàn, 899 IMEX đã trở thành đối tác tin cậy của hàng trăm dự án lớn nhỏ trên toàn quốc.</p>
       <p>Không chỉ cung cấp sản phẩm chất lượng, công ty còn sở hữu đội ngũ kỹ thuật viên giàu kinh nghiệm, sẵn sàng tư vấn, thiết kế và lắp đặt theo yêu cầu riêng biệt của từng khách hàng.</p>
       
       <figure class="my-6">
-        <img src="/anh/news/nha-may-san-xuat.jpg" alt="Nhà máy sản xuất các sản phẩm ngăn cháy của 899 IM-EX" class="w-full rounded-lg shadow-md" />
-        <figcaption class="text-center text-sm text-gray-500 mt-2">Nhà máy sản xuất các sản phẩm ngăn cháy của 899 IM-EX</figcaption>
+        <img src="/anh/news/nha-may-san-xuat.jpg" alt="Nhà máy sản xuất các sản phẩm ngăn cháy của 899 IMEX" class="w-full rounded-lg shadow-md" />
+        <figcaption class="text-center text-sm text-gray-500 mt-2">Nhà máy sản xuất các sản phẩm ngăn cháy của 899 IMEX</figcaption>
       </figure>
       
       <h3>Hình ảnh thực tế – Khẳng định chất lượng</h3>
       <p>Màn cuốn ngăn cháy 899 đã được lắp đặt thành công tại nhiều công trình trọng điểm, đáp ứng đầy đủ tiêu chuẩn PCCC Việt Nam và quốc tế. Sự bền bỉ, tính thẩm mỹ và hiệu quả ngăn cháy đã được minh chứng qua thời gian và phản hồi tích cực từ khách hàng.</p>
       
-      <h3>Cam kết của 899 IM-EX</h3>
+      <h3>Cam kết của 899 IMEX</h3>
       <ul>
         <li>Sản phẩm đạt tiêu chuẩn kiểm định an toàn</li>
         <li>Miễn phí khảo sát, tư vấn và thiết kế</li>
@@ -52,7 +52,7 @@ export const newsData: NewsArticle[] = [
       </ul>
       
       <figure class="my-6">
-        <img src="/anh/news/logo-va-chung-nhan.jpg" alt="Logo và các chứng nhận chất lượng của 899 IM-EX" class="w-full rounded-lg shadow-md" />
+        <img src="/anh/news/logo-va-chung-nhan.jpg" alt="Logo và các chứng nhận chất lượng của 899 IMEX" class="w-full rounded-lg shadow-md" />
       </figure>
 
       <h3>📞 Liên hệ:</h3>
@@ -67,11 +67,11 @@ export const newsData: NewsArticle[] = [
     id: 3,
     slug: '5-loi-ich-khi-chon-man-ngan-chay-899',
     title: '5 Lợi ích có được khi chọn màn ngăn cháy 899',
-    excerpt: 'Không chỉ dừng lại ở chức năng bảo vệ, sản phẩm màn cuốn ngăn cháy của 899 IM-EX còn mang đến sự tiện nghi, tính thẩm mỹ và độ bền vượt trội.',
+    excerpt: 'Không chỉ dừng lại ở chức năng bảo vệ, sản phẩm màn cuốn ngăn cháy của 899 IMEX còn mang đến sự tiện nghi, tính thẩm mỹ và độ bền vượt trội.',
     imageUrl: '/anh/news/5-loi-ich.jpg', // Ảnh chờ sẵn, bạn hãy đặt ảnh thật vào đây
     date: '2025-08-24',
     content: `
-      <p>Trong bối cảnh an toàn cháy nổ ngày càng được đặt lên hàng đầu, việc lựa chọn giải pháp phòng cháy hiệu quả không chỉ bảo vệ tài sản mà còn là bảo vệ tính mạng con người. <strong>Màn cuốn ngăn cháy</strong> của <strong>Công ty CP Xuất Nhập Khẩu 899 (899 IM-EX)</strong> chính là lựa chọn đáng tin cậy mà nhiều chủ đầu tư, doanh nghiệp và hộ gia đình đang tin dùng.</p>
+      <p>Trong bối cảnh an toàn cháy nổ ngày càng được đặt lên hàng đầu, việc lựa chọn giải pháp phòng cháy hiệu quả không chỉ bảo vệ tài sản mà còn là bảo vệ tính mạng con người. <strong>Màn cuốn ngăn cháy</strong> của <strong>Công ty CP Xuất Nhập Khẩu 899 (899 IMEX)</strong> chính là lựa chọn đáng tin cậy mà nhiều chủ đầu tư, doanh nghiệp và hộ gia đình đang tin dùng.</p>
       <p>Dưới đây là 5 lợi ích nổi bật mà bạn nhận được khi chọn màn ngăn cháy của chúng tôi:</p>
       
       <h3>1. An Toàn Tối Đa – Bảo Vệ Con Người và Tài Sản</h3>
@@ -87,9 +87,9 @@ export const newsData: NewsArticle[] = [
       <p>Sản phẩm được sản xuất từ vật liệu chất lượng cao, chống ăn mòn, chịu nhiệt tốt, <strong>tuổi thọ lên đến hàng chục năm</strong> nếu được bảo trì định kỳ. Đây là khoản đầu tư một lần nhưng mang lại giá trị lâu dài.</p>
       
       <h3>5. Dịch Vụ Trọn Gói – Hỗ Trợ Toàn Quốc</h3>
-      <p>Với đội ngũ kỹ thuật viên dày dặn kinh nghiệm, <strong>899 IM-EX</strong> cung cấp dịch vụ <strong>tư vấn – thiết kế – lắp đặt – bảo trì</strong> tại tất cả các tỉnh thành trên cả nước, đảm bảo khách hàng luôn yên tâm sử dụng.</p>
+      <p>Với đội ngũ kỹ thuật viên dày dặn kinh nghiệm, <strong>899 IMEX</strong> cung cấp dịch vụ <strong>tư vấn – thiết kế – lắp đặt – bảo trì</strong> tại tất cả các tỉnh thành trên cả nước, đảm bảo khách hàng luôn yên tâm sử dụng.</p>
 
-      <p>🔥 <strong>Kết luận:</strong> Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là <strong>đầu tư vào sự an toàn và bền vững</strong> cho công trình của bạn.</p>
+      <p>🔥 <strong>Kết luận:</strong> Chọn màn cuốn ngăn cháy của 899 IMEX không chỉ là mua một sản phẩm, mà là <strong>đầu tư vào sự an toàn và bền vững</strong> cho công trình của bạn.</p>
       <p>📞 <strong>Liên hệ ngay hôm nay</strong> để được tư vấn giải pháp phù hợp nhất cho nhu cầu của bạn.</p>
     `
   },
@@ -119,7 +119,7 @@ export const newsData: NewsArticle[] = [
         <img src="/anh/news/man-cuon-trung-tam-thuong-mai.jpg" alt="Màn cuốn ngăn cháy lắp đặt tại trung tâm thương mại" class="w-full rounded-lg shadow-md" />
       </figure>
 
-      <p>Với ưu điểm an toàn, tiện lợi và tính ứng dụng cao, màn cuốn ngăn cháy đang trở thành lựa chọn ưu tiên của nhiều công trình hiện đại trên toàn quốc.Chọn màn cuốn ngăn cháy của 899 IM-EX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn.</p>
+      <p>Với ưu điểm an toàn, tiện lợi và tính ứng dụng cao, màn cuốn ngăn cháy đang trở thành lựa chọn ưu tiên của nhiều công trình hiện đại trên toàn quốc.Chọn màn cuốn ngăn cháy của 899 IMEX không chỉ là mua một sản phẩm, mà là đầu tư vào sự an toàn và bền vững cho công trình của bạn.</p>
       
       <h3>📞 Liên hệ ngay hôm nay để được tư vấn giải pháp phù hợp nhất:</h3>
       <p>0987822311 / 0987811158 / 0384 358 988 / 0383 522 018 </p>
@@ -129,12 +129,12 @@ export const newsData: NewsArticle[] = [
     id: 4,
     slug: '899-imex-ghi-dau-an-tai-trien-lam-quoc-te-pccc-2025',
     title: 'Công ty 899 ghi dấu ấn tại Triển lãm Quốc tế về PCCC & CNCH 2025',
-    excerpt: 'Từ ngày 14 đến 16/8/2025, 899 IM-EX đã để lại nhiều dấu ấn với gian hàng trưng bày các giải pháp PCCC hiện đại tại SECC, TP. HCM.',
+    excerpt: 'Từ ngày 14 đến 16/8/2025, 899 IMEX đã để lại nhiều dấu ấn với gian hàng trưng bày các giải pháp PCCC hiện đại tại SECC, TP. HCM.',
     imageUrl: '/anh/news/trien-lam-pccc-2025.jpg',
     date: '2025-08-22',
     content: `
       <p>Từ ngày 14 đến 16/8/2025, tại Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC, TP. Hồ Chí Minh), Triển lãm Quốc tế về Kỹ thuật, Phòng cháy chữa cháy, Cứu nạn cứu hộ và An ninh – Secutech Vietnam 2025 đã diễn ra sôi nổi với sự tham gia của hàng trăm doanh nghiệp trong và ngoài nước.</p>
-      <p>Trong số đó, <strong>Công ty Cổ phần Xuất nhập khẩu và Xây dựng 899 (899 IM-EX)</strong> là một trong những đơn vị để lại nhiều dấu ấn với gian hàng trưng bày các sản phẩm và giải pháp phòng cháy chữa cháy hiện đại.</p>
+      <p>Trong số đó, <strong>Công ty Cổ phần Xuất nhập khẩu và Xây dựng 899 (899 IMEX)</strong> là một trong những đơn vị để lại nhiều dấu ấn với gian hàng trưng bày các sản phẩm và giải pháp phòng cháy chữa cháy hiện đại.</p>
       <p>Nhiều khách tham quan, nhà thầu và đối tác đã bày tỏ sự quan tâm đến các sản phẩm như màn ngăn cháy, kính ngắn cháy, cửa thép chống cháy,.. vốn được đánh giá cao về chất lượng và tính ứng dụng thực tế.</p>
       <h3>Khẳng định vị thế và trách nhiệm</h3>
       <p>Đại diện công ty cho biết, việc tham gia triển lãm không chỉ nhằm giới thiệu sản phẩm mà còn để lắng nghe phản hồi từ thị trường, kết nối với các đối tác trong và ngoài nước. “Chúng tôi xác định phòng cháy chữa cháy không chỉ là lĩnh vực kinh doanh, mà còn gắn liền với trách nhiệm xã hội và sự an toàn cộng đồng” – lãnh đạo 899 chia sẻ.</p>
@@ -228,7 +228,7 @@ export const newsData: NewsArticle[] = [
         <li><strong>Vệ sinh & bôi trơn:</strong> Trục cuốn và động cơ cần được bảo dưỡng để tránh kẹt.</li>
         <li><strong>Thử nghiệm giả lập:</strong> Tạo điều kiện thực tế để kiểm tra hoạt động của màn.</li>
       </ul>
-      <p>An toàn công trình không chỉ dừng lại ở bản thiết kế. Hãy để 899 IM-EX đồng hành cùng bạn trong hành trình bảo vệ tính mạng và tài sản.</p>
+      <p>An toàn công trình không chỉ dừng lại ở bản thiết kế. Hãy để 899 IMEX đồng hành cùng bạn trong hành trình bảo vệ tính mạng và tài sản.</p>
     `
   },
   {
@@ -243,7 +243,7 @@ export const newsData: NewsArticle[] = [
       <h3>Vật liệu chịu nhiệt vượt trội</h3>
       <p>Bông gốm là loại sợi gốm tổng hợp có khả năng chịu được nhiệt độ từ 1.260 đến 1.430°C. Vật liệu này không bắt lửa, không co ngót khi gặp nhiệt độ cao và có độ bền cơ học tốt.</p>
       <h3>Ứng dụng thực tế tại Việt Nam</h3>
-      <p>Công ty 899 IM-EX cho biết các sản phẩm màn cuốn ngăn cháy do đơn vị sản xuất đạt thời gian ngăn cháy từ 60 đến 180 phút. Đại diện công ty chia sẻ: “Bông gốm chính là yếu tố quan trọng để đảm bảo hiệu quả ngăn cháy và cách nhiệt. Đây là vật liệu mà chúng tôi coi như ‘trái tim’ của màn cuốn ngăn cháy.”</p>
+      <p>Công ty 899 IMEX cho biết các sản phẩm màn cuốn ngăn cháy do đơn vị sản xuất đạt thời gian ngăn cháy từ 60 đến 180 phút. Đại diện công ty chia sẻ: “Bông gốm chính là yếu tố quan trọng để đảm bảo hiệu quả ngăn cháy và cách nhiệt. Đây là vật liệu mà chúng tôi coi như ‘trái tim’ của màn cuốn ngăn cháy.”</p>
       <p>Khi các công trình ngày càng chú trọng yếu tố an toàn, việc kết hợp bông gốm và vải thủy tinh trong cấu tạo màn cuốn ngăn cháy đã trở thành giải pháp gần như bắt buộc.</p>
     `
   },

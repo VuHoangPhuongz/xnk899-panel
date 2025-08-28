@@ -30,36 +30,37 @@ export default async function AdminProductsPage() {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {products.map((product) => (
-              <tr key={product.id}>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <Image
-  src={
-    product.images && product.images[0] && product.images[0].startsWith("http")
-      ? product.images[0]
-      : "https://via.placeholder.com/40x40.png?text=No+Img"
-  }
-  alt={product.name || "No Image"}
-  width={40}
-  height={40}
-  className="object-cover rounded-md bg-gray-100"
-/>
-                </td>
-                <td className="px-6 py-4">
-                  <div className="text-sm font-medium text-gray-900">{product.name}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{product.sku}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{product.category}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-4">
-                  <Link href={`/products/${product.id}/edit`} className="text-indigo-600 hover:text-indigo-900">
-                    Sửa
-                  </Link>
-                  <form action={deleteProduct.bind(null, product.id)} style={{ display: 'inline' }}>
-                    <DeleteProductButton />
-                  </form>
-                </td>
-              </tr>
-            ))}
+            {products.map((product) => {
+              // ✨ Tối ưu hóa: Logic xác định URL ảnh được đưa ra ngoài cho dễ đọc
+              const imageUrl = product.images?.[0] || '/placeholder.png';
+
+              return (
+                <tr key={product.id}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Image
+                      src={imageUrl}
+                      alt={product.name || "Ảnh sản phẩm"}
+                      width={40}
+                      height={40}
+                      className="object-cover rounded-md bg-gray-100"
+                    />
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="text-sm font-medium text-gray-900">{product.name}</div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{product.sku}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{product.category}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-4">
+                    <Link href={`/products/${product.id}/edit`} className="text-indigo-600 hover:text-indigo-900">
+                      Sửa
+                    </Link>
+                    <form action={deleteProduct.bind(null, product.id)} style={{ display: 'inline' }}>
+                      <DeleteProductButton />
+                    </form>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

@@ -49,14 +49,23 @@ model Project {
 }
 
 model SiteSettings {
-  id              String @id @default("main_settings") // Chỉ có 1 hàng dữ liệu
-  phoneNumbers    String
+  id              String @id @default("main_settings")
+
+  // --- Header Settings ---
+  // Thêm @default cho các trường mới
+  headerPhoneNumbers String @default("SĐT Header")
   facebookUrl     String
   youtubeUrl      String
-  addressHQ       String
-  addressOffice   String
-  email           String
-  copyrightYear   String
+
+  // --- Footer Settings ---
+  // Thêm @default cho các trường mới
+  footerAddressHQ       String   @default("Địa chỉ trụ sở")
+  footerAddressOffice   String   @default("Địa chỉ văn phòng")
+  footerEmail           String   @default("email@example.com")
+  footerCopyrightYear   String   @default("2024")
+  footerPhoneNumbers    String   @default("SĐT Footer")
+
+  // --- Theme Settings ---
   primaryColor    String
   backgroundColor String
 
@@ -106,4 +115,12 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model HeroSlide {
+  id        String   @id @default(cuid())
+  url       String   // Đường dẫn ảnh
+  alt       String   // Văn bản thay thế
+  order     Int      // Thứ tự hiển thị
+  createdAt DateTime @default(now())
 }
