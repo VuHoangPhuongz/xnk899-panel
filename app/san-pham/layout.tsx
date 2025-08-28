@@ -4,7 +4,8 @@ import SharedProductSidebar from "@/components/SharedProductSidebar";
 import Link from 'next/link';
 import Image from 'next/image';
 import { categories } from '@/data/categories';
-
+import { getNewsArticles } from "@/lib/actions";
+import NewsSidebar from "@/components/NewsSidebar";
 // Component fallback UI cho Sidebar
 const SidebarSkeleton = () => (
   <div className="bg-white p-6 rounded-lg shadow-md animate-pulse">
@@ -18,11 +19,14 @@ const SidebarSkeleton = () => (
   </div>
 );
 
-export default function SanPhamLayout({
+export default async function SanPhamLayout({
+  
   children,
 }: {
   children: React.ReactNode;
 }) {
+    const recentPosts = await getNewsArticles(); 
+    const limitedPosts = recentPosts.slice(0, 5);
   return (
     <>
       <section className="relative bg-gray-800 text-white py-20">
@@ -53,11 +57,13 @@ export default function SanPhamLayout({
             <main className="lg:col-span-3 order-1 lg:order-2">
               {children}
             </main>
-            <aside className="order-2 lg:order-1 lg:col-span-1">
+            <aside className="order-2 lg:order-2 lg:col-span-1">
               {/* 2. Bọc Sidebar trong Suspense */}
               <Suspense fallback={<SidebarSkeleton />}>
                 <SharedProductSidebar categories={categories} />
+               
               </Suspense>
+               <NewsSidebar recentPosts={limitedPosts} />
             </aside>
           </div>
         </div>

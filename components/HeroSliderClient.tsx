@@ -1,9 +1,8 @@
-'use client';
+// components/HeroSliderClient.tsx
+'use client'; // Bắt buộc phải có để định nghĩa đây là Client Component
 
 import React from 'react';
 import Image from 'next/image';
-
-// Import các thành phần và module của Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 
@@ -12,35 +11,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-// Dữ liệu ảnh
-const slideImages = [
-  {
-    url: '/anh/slides/1.webp',
-    alt: 'Hình ảnh slider 1 - Tổng họp sản phẩm ngăn cháy',
-  },
-  {
-    url: '/anh/slides/2.webp',
-    alt: 'Hình ảnh slider 2 - Công nghệ và nhà máy sản xuất',
-  },
-  {
-    url: '/anh/slides/3.webp',
-    alt: 'Hình ảnh slider 3 - Màn ngăn cháy ',
-  },
-  {
-    url: '/anh/slides/4.webp',
-    alt: 'Hình ảnh slider 4 - Kính ngăn cháy',
-  },
-    {
-    url: '/anh/slides/5.webp',
-    alt: 'Hình ảnh slider 5 - Cửa thép chống cháy ',
-  },
-    {
-    url: '/anh/slides/6.webp',
-    alt: 'Hình ảnh slider 6 - Thông tin chung',
-  },
-];
+// Định nghĩa kiểu dữ liệu cho một slide để code rõ ràng hơn
+type Slide = {
+  id: string;
+  url: string;
+  alt: string;
+};
 
-const HeroSlider = () => {
+// Component này nhận dữ liệu 'slides' từ cha (là Server Component)
+export default function HeroSliderClient({ slides }: { slides: Slide[] }) {
   return (
     <section className="relative w-full h-[15vh] lg:h-[47vh]">
       <Swiper
@@ -55,8 +34,8 @@ const HeroSlider = () => {
         }}
         className="h-full"
       >
-        {slideImages.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={slide.id}>
             <div className="relative w-full h-full">
               <Image
                 src={slide.url}
@@ -71,12 +50,10 @@ const HeroSlider = () => {
           </SwiperSlide>
         ))}
         
-        {/* Custom Navigation Buttons */}
+        {/* Nút điều hướng */}
         <div className="swiper-button-prev !text-white !w-8 !h-8 sm:!w-10 sm:!h-10 !left-2 sm:!left-4 !bg-black/30 !rounded-full hover:!bg-black/50 transition-colors"></div>
         <div className="swiper-button-next !text-white !w-8 !h-8 sm:!w-10 sm:!h-10 !right-2 sm:!right-4 !bg-black/30 !rounded-full hover:!bg-black/50 transition-colors"></div>
       </Swiper>
     </section>
   );
 };
-
-export default HeroSlider;
