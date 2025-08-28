@@ -380,3 +380,10 @@ export async function updatePage(slug: string, content: string) {
     return { success: false, message: 'Cập nhật trang thất bại.' };
   }
 }
+export async function getMachinery() {
+  return await prisma.machinery.findMany({
+    orderBy: {
+      order: 'asc', // Sắp xếp theo thứ tự bạn đã định nghĩa
+    },
+  });
+}
