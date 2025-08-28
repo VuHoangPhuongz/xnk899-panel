@@ -8,23 +8,27 @@ const prisma = new PrismaClient();
 async function main() {
   console.log('Bắt đầu quá trình seeding...');
 
-  // --- Tạo tài khoản Admin ---
-  console.log('Tạo tài khoản admin...');  
-  const adminEmail = 'xnk899@gmail.com';
-  const adminPassword = 'xnk1!@123';
-  const hashedPassword = await bcrypt.hash(adminPassword, 10);
+  const pages = [
+    { slug: 'thu-ngo', title: 'Thư ngỏ / Giới thiệu chung' },
+    { slug: 'ho-so-nang-luc', title: 'Hồ sơ năng lực' },
+    { slug: 'co-so-vat-chat', title: 'Cơ sở vật chất' },
+    { slug: 'chinh-sach-chat-luong', title: 'Chính sách chất lượng' },
+    { slug: 'chinh-sach-bao-mat', title: 'Chính sách bảo mật' },
+  ];
 
-  await prisma.user.create({
-    data: {
-      email: adminEmail,
-      password: hashedPassword,
-      name: 'Admin User',
-    },
-  });
-
-  console.log('Seeding hoàn tất!');
+  for (const page of pages) {
+    await prisma.page.upsert({
+      where: { slug: page.slug },
+      update: {},
+      create: {
+        slug: page.slug,
+        title: page.title,
+        content: `<p>Nội dung cho trang <strong>${page.title}</strong>. Vui lòng cập nhật từ trang quản trị.</p>`,
+      },
+    });
+  }
+  console.log('Seeding các trang tĩnh hoàn tất.');
 }
-
 main()
   .catch((e) => {
     console.error(e);

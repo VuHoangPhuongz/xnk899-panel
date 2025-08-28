@@ -347,3 +347,36 @@ export async function updateHeroSlideOrder(slides: { id: string; order: number }
   revalidatePath('/');
   revalidatePath('/(admin)/slides');
 }
+
+export async function getAllPages() {
+  return await prisma.page.findMany({
+    orderBy: { title: 'asc' },
+  });
+}
+
+// Lấy nội dung một trang bằng slug
+export async function getPageBySlug(slug: string) {
+  return await prisma.page.findUnique({
+    where: { slug },
+  });
+}
+
+// Cập nhật nội dung một trang
+export async function updatePage(slug: string, content: string) {
+  try {
+    await prisma.page.update({
+      where: { slug },
+      data: { content },
+    });
+    // Revalidate lại đường dẫn của trang vừa cập nhật
+    revalidatePath(`/gioi-thieu/${slug}`);
+    // Revalidate lại trang chính của mục giới thiệu nếu slug là 'thu-ngo'
+    if (slug === 'thu-ngo' || slug === '') {
+      revalidatePath('/gioi-thieu');
+    }
+    return { success: true, message: 'Cập nhật trang thành công!' };
+  } catch (error) {
+    console.error(error);
+    return { success: false, message: 'Cập nhật trang thất bại.' };
+  }
+}

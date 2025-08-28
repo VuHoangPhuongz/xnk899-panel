@@ -11,6 +11,7 @@ const navLinks = [
   { name: 'Tin tức', href: '/posts' },
    { name: 'Cài đặt', href: '/settings' },
     { name: 'Hero Slider', href: '/slides' },
+     { name: 'pages', href: '/pages' },
 ];
 
 export default function AdminSidebar() {
