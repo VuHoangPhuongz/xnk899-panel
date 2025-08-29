@@ -387,3 +387,41 @@ export async function getMachinery() {
     },
   });
 }
+export async function getPartners() {
+  return await prisma.partner.findMany({
+    orderBy: {
+      order: 'asc',
+    },
+  });
+}
+
+export async function createPartner(formData: FormData) {
+  const name = formData.get('name') as string;
+  const logoUrl = formData.get('logoUrl') as string;
+
+  if (!name || !logoUrl) {
+    return { error: 'Tên và logo đối tác là bắt buộc.' };
+  }
+
+  const maxOrderPartner = await prisma.partner.findFirst({
+    orderBy: { order: 'desc' },
+  });
+  const newOrder = maxOrderPartner ? maxOrderPartner.order + 1 : 0;
+
+  await prisma.partner.create({
+    data: {
+      name,
+      logoUrl,
+      order: newOrder,
+    },
+  });
+
+  revalidatePath('/(admin)/partners');
+  revalidatePath('/'); // Revalidate trang chủ nơi slider hiển thị
+}
+
+export async function deletePartner(id: string) {
+  await prisma.partner.delete({ where: { id } });
+  revalidatePath('/(admin)/partners');
+  revalidatePath('/');
+}

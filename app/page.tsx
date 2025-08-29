@@ -1,16 +1,24 @@
-'use client';
-// Sử dụng dynamic import để tối ưu tốc độ tải trang
-import dynamic from 'next/dynamic';
+// app/page.tsx
+
+// 1. Xóa 'use client' ở đầu file (nếu có)
+
 import Link from 'next/link';
 import Image from 'next/image';
-import { newsData } from '@/data/news';
-import NewsCard from '@/components/NewsCard';
-// Tải các component slider ở phía client để không ảnh hưởng đến server
-const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false });
-const FeaturedProducts = dynamic(() => import('@/components/FeaturedProducts'), { ssr: false });
-const PartnerSlider = dynamic(() => import('@/components/PartnerSlider'), { ssr: false });
 
-export default function HomePage() {
+// 2. Import trực tiếp các Server Component và Actions
+import HeroSlider from '@/components/HeroSlider';
+import PartnerSlider from '@/components/PartnerSlider';
+import FeaturedProducts from '@/components/FeaturedProducts';
+import NewsCard from '@/components/NewsCard';
+import { getNewsArticles, getProjects } from '@/lib/actions'; // Import action để lấy dữ liệu
+
+// 3. Chuyển component thành một async function
+export default async function HomePage() {
+  
+  // 4. Lấy dữ liệu động cho các phần khác trên trang chủ
+  const latestNews = await getNewsArticles(); // Giả sử hàm này lấy tất cả, ta sẽ cắt sau
+  const projects = await getProjects();     // Tương tự, lấy tất cả và cắt
+
   return (
     <>
       <HeroSlider />
@@ -19,11 +27,8 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-                
-                {/* KHỐI DIV HÌNH ẢNH ĐÃ ĐƯỢC CẬP NHẬT */}
                 <div className="border-4 border-green-primary rounded-xl overflow-hidden shadow-xl">
                     <Image 
-                      // ⚠️ Quan trọng: Thay bằng đường dẫn đến file ảnh collage của bạn
                       src="/anh/gioi thieu.png" 
                       alt="Các giải pháp chống cháy của 899 IM-EX"
                       width={600}
@@ -31,8 +36,6 @@ export default function HomePage() {
                       className="w-full h-auto object-cover"
                     />
                 </div>
-
-                {/* Khối div nội dung văn bản (giữ nguyên) */}
                 <div className="text-gray-700 leading-relaxed">
                     <h2 className="text-3xl lg:text-4xl font-bold text-blue-primary mb-6">
                         Giới thiệu về XNK và Xây Dựng 899
@@ -52,8 +55,8 @@ export default function HomePage() {
       {/* SECTION: SẢN PHẨM NỔI BẬT */}
       <FeaturedProducts />
 
-      {/* SECTION: THẾ MẠNH */}
-      <section className="relative bg-blue-primary text-white">
+      {/* SECTION: THẾ MẠNH (giữ nguyên) */}
+            <section className="relative bg-blue-primary text-white">
     <div className="absolute inset-0 z-0">
         <Image src="/anh/marriott-da-nang-68a481b7734b2.webp" alt="Background" fill style={{objectFit: 'cover'}} className="opacity-10"/>
         <div className="relative bg-blue-primary text-white"></div>
@@ -92,74 +95,32 @@ export default function HomePage() {
         </div>
     </div>
 </section>
-      {/* SECTION: DỰ ÁN ĐÃ TRIỂN KHAI */}
-<section className="py-16 lg:py-24 bg-gray-50">
-    <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold uppercase section-title text-blue-primary">
-                Dự Án Đã Triển Khai
-            </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            {/* Dự án 1 */}
-            <Link href="/du-an/kcn-keinhing-muramato" className="relative group overflow-hidden rounded-lg shadow-lg block">
-                <Image src="/anh/Công ty TNHH Keinhing Muramato Việt Nam.webp" alt="Dự án công ty Muramato" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">Công ty Keinhing Muramoto Việt Nam</h3>
-                </div>
-            </Link>
-            
-            {/* Dự án 2 */}
-            <Link href="/du-an/dh-gtvt-ha-noi" className="relative group overflow-hidden rounded-lg shadow-lg block">
-                <Image src="/anh/ĐH GTVT.webp" alt="Dự án ĐH GTVT" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">ĐH Giao thông Vận tải</h3>
-                </div>
-            </Link>
-            
-            {/* Dự án 3 */}
-            <Link href="/du-an/marriott-da-nang" className="relative group overflow-hidden rounded-lg shadow-lg block">
-                <Image src="/anh/marriott-da-nang-68a481b7734b2.webp" alt="Dự án Marriot Đà Nẵng" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">Khách sạn Marriott Đà Nẵng</h3>
-                </div>
-            </Link>
-            
-            {/* Dự án 4 */}
-            <Link href="/du-an/nha-may-rac-phu-son" className="relative group overflow-hidden rounded-lg shadow-lg block">
-                <Image src="/anh/phu-son-68a481bdd3a9c.webp" alt="Dự án nhà máy Phú Sơn" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">Nhà máy XL Rác Thải Phú Sơn</h3>
-                </div>
-            </Link>
-            
-            {/* Dự án 5 */}
-            <Link href="/du-an/mh-innovation-vn" className="relative group overflow-hidden rounded-lg shadow-lg block">
-                <Image src="/anh/mh-innovation-vn-68a481b53c88d.webp" alt="Dự án công ty M&H INNOVATION" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">CÔNG TY TNHH M&H INNOVATION</h3>
-                </div>
-            </Link>
-            
-            {/* Dự án 6 */}
-            <Link href="/du-an/nha-may-soi-bao-long" className="relative group overflow-hidden rounded-lg shadow-lg block">
-                <Image src="/anh/nha-may-soi-cong-ty-tnhh-thuong-mai-bao-long-68a481b9afe19.webp" alt="Dự án nhà máy sợi Bảo Long" width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
-                    <h3 className="font-semibold">Nhà máy sợi Bảo Long</h3>
-                </div>
-            </Link>
 
+      {/* SECTION: DỰ ÁN ĐÃ TRIỂN KHAI (Dữ liệu động) */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl lg:text-4xl font-bold uppercase section-title text-blue-primary">
+                    Dự Án Đã Triển Khai
+                </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* 5. Render dữ liệu dự án từ database, chỉ lấy 6 dự án mới nhất */}
+              {projects.slice(0, 6).map((project) => (
+                <Link key={project.id} href={`/du-an/${project.slug}`} className="relative group overflow-hidden rounded-lg shadow-lg block">
+                  <Image src={project.imgSrc} alt={project.title} width={400} height={300} className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-r from-blue-800 via-green-600 to-transparent text-white">
+                      <h3 className="font-semibold">{project.title}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
         </div>
-    </div>
-</section>
-<section className="py-16 lg:py-24">
+      </section>
+
+      {/* SECTION: TIN TỨC MỚI NHẤT (Dữ liệu động) */}
+      <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold uppercase section-title text-blue-primary">
@@ -167,8 +128,8 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Lấy 3 bài viết mới nhất để hiển thị */}
-            {newsData.slice(0, 3).map((article) => (
+            {/* 6. Render dữ liệu tin tức từ database, chỉ lấy 3 bài mới nhất */}
+            {latestNews.slice(0, 3).map((article) => (
               <NewsCard key={article.id} article={article} />
             ))}
           </div>
