@@ -127,3 +127,12 @@ model Machinery {
 
   createdAt DateTime @default(now())
 }
+
+model Partner {
+  id        String   @id @default(cuid())
+  name      String   // Tên đối tác (dùng cho alt text)
+  logoUrl   String   // URL của ảnh logo
+  order     Int      // Thứ tự hiển thị
+
+  createdAt DateTime @default(now())
+}
