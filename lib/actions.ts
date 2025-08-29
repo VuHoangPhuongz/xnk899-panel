@@ -1,13 +1,13 @@
 // lib/actions.ts
 'use server';
 
-import { PrismaClient } from '@prisma/client';
+import prisma from './prisma';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
 // ✨ Thêm dòng này
 // Khởi tạo Prisma Client để tương tác với database
-const prisma = new PrismaClient();
+
 
 // --- PRODUCT ACTIONS ---
 
