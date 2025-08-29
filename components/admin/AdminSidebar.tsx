@@ -12,7 +12,7 @@ const navLinks = [
    { name: 'Cài đặt', href: '/settings' },
     { name: 'Hero Slider', href: '/slides' },
      { name: 'Pages', href: '/pages' },
-     { name: 'Paners', href: '/partners' },
+     { name: 'Partners', href: '/partners' },
 ];
 
 export default function AdminSidebar() {
