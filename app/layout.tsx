@@ -8,7 +8,7 @@ import { CartProvider } from "@/context/CartContext";
 import FixedActions from "@/components/FixedActions";
 import { Analytics } from '@vercel/analytics/next';
 import { getSiteSettings } from "@/lib/actions"; // 1. Import hàm lấy cài đặt
-
+import Script from "next/script";
 const roboto = Roboto({
   subsets: ["latin", "vietnamese"],
   weight: ["300", "400", "500", "700", "900"],
@@ -38,6 +38,18 @@ export default async function RootLayout({
   return (
     <html lang="vi" className="scroll-smooth">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L47GJ1JRX7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L47GJ1JRX7');
+          `}
+        </Script>
         <link 
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
