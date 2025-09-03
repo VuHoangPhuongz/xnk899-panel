@@ -15,8 +15,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "899 IMEX - Giải Pháp PCCC: Màn ngăn cháy, Kính chống cháy",
-  description: "Công ty XNK 899 chuyên cung cấp các vật liệu ngăn cháy công nghệ cao: rèm cuốn ngăn cháy EI, tấm MGO chống cháy, panel cách nhiệt, keo và ron PCCC. Sản phẩm nhập khẩu, đạt chuẩn.",
+  title: "899 IMEX - Giải Pháp PCCC: Rèm ngăn khói, ngăn cháy | Màn ngăn cháy cao cấp - Có kiểm định PCCC",
+  description: "Công ty cổ phần xnk & xây dựng 899 chuyên cung cấp và lắp đặt các vật liệu ngăn cháy công nghệ cao: rèm cuốn ngăn cháy EI, rèm xếp ngăn cháy, Kính chống cháy, cửa thép ngăn cháy, tấm MGO chống cháy, Panel cách nhiệt đảm bảo đủ tiêu chuẩn PCCC.",
   keywords: "rèm ngăn cháy, màn ngăn cháy, tấm mgo, panel chống cháy, vật liệu pccc, xnk 899, ei 60, ei 90",
 };
 
